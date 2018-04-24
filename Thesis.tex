@@ -14,24 +14,30 @@
 \usepackage{subfiles} % access files in subdirectories
 \usepackage{tabularx}
 \usepackage{float}
+\usepackage{csquotes}
 \usepackage{listings}
 \usepackage{fixltx2e}
 \usepackage[english]{babel}
 \usepackage{comment}
 \usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{glossaries}
+
 
 \usepackage[
 backend=biber,
-style=science,
-citestyle=authoryear
+style=ieee,
+maxbibnames=99
 ]{biblatex}
 \newcommand{\bibdirectory}{01_initial_try.bib}
 \newcommand{\latex}{\LaTeX\xspace}
 \newcommand{\tex}{\TeX\xspace}
 
-
+%glossary making
+\makeglossaries
+\input{Appendices/glossary_0.tex}
 \addbibresource{\bibdirectory}
-\hypersetup{urlcolor=blue, colorlinks=true, linkcolor=black}  % Colours hyperlinks in blue, but this can be distracting if there are many links.
+\hypersetup{urlcolor=blue, colorlinks=false, linkcolor=black}  % Colours hyperlinks in blue, but this can be distracting if there are many links.
 
 %% ----------------------------------------------------------------
 
@@ -82,7 +88,7 @@ Before we chose the assignment, we read about the basics of neural networks and 
 
 %The process from start to finish was demanding. There have been days and even weeks where we felt no progress was made, which was frustrating and made us doubt our ideas.
 
-% PROCESS ER IKKE FERDIG!
+% TODO PROCESS ER IKKE FERDIG!
 The process from start to finish was demanding, we have had days, even weeks were we felt no progress was made. This is of course frustrating and made us doubt our ideas very often. In the initial phase of the project time went by much faster than expected, we spent several weeks just researching the most optimal way to solve the product part of our project. After the initial phase of the project we all had basic ideas about how it could be solved in the best way possible. % Nevne noen?
 Although we had a lot of different ideas, we all quickly understood that in the first phase of coding, we should all use a method for high interaction and cooperation between us. This need of a solid method led us to pair programming, even though we were three. At first, this was extremely helpful, and it led to some creativity and a way to quickly respond to changes.
 % 
@@ -125,7 +131,9 @@ First of all, we would like to thank Ole Christian Eidheim for being both an ins
 
 %Erfaring viser at oppgavetekster endres underveis. Dere kan lime inn oppgaveteksten slik den var opprinnelig dersom det fortsatt er i samsvar med virkeligheten. Ellers gjør derekort rede for oppgaven slik den opprinnelig var,og slik den har utviklet seg underveis. Hvorfor ting har blitt som de har blitt, hører kanskje hjemme lenger ut i rapporten –det kommer litt an på hva det er.
 
+\textit{
 In this project, a handwriting recognition system for mathematical signs will be developed. The system will be used in a web application that is being developed at the Department of Teacher Education in collaboration with IDI. The system will use a standard machine learning algorithm such as convolutional neural networks that represent state-of-the-art handwriting recognition. Training data must be collected from students to train the network.
+}
 
 Since the beginning of the project, some changes were made to the assignment. Early on, it was not known if developing a system that would work well and enrich the functionality of the web application was actually achievable. Thus, there was decided to go in the direction of developing a proof of concept, which could be developed further. 
 
@@ -137,7 +145,6 @@ What makes our schools bachelor's projects somewhat unique is the fact that we a
 
 %The assignment quickly went in the direction of a proof of concept work, because it was not guaranteed that we would come up with something that would enrich the functionality of their current web application.
 %In addition to this, the assignment was limited to focus on the handwriting recognition itself, and not all the possible ways to implement it into their web application. \\
-\\
 %Nonetheless the assignment was challenging and finding a reasonable scientific problem related to the assignment was quite demanding. Especially if there was no direct correlation between the assignment and the scientific problem.
 }
 \clearpage % Assignment ended, start a new page 
@@ -172,9 +179,12 @@ Since symbols look alike they can easy be misinterpreted and based on their cont
 \listoffigures  % Write out the List of Figures
 
 %% ----------------------------------------------------------------
-%\lhead{\emph{List of Tables}}  % Set the left side page header to "List of Tables"
-%\listoftables  % Write out the List of Tables
+\lhead{\emph{List of Tables}}  % Set the left side page header to "List of Tables"
+\listoftables  % Write out the List of Tables
 
+
+\lhead{\emph{List of Listings (Code and Snippets)}}
+\lstlistoflistings
 %% ----------------------------------------------------------------
 %\setstretch{1.5}  % Set the line spacing to 1.5, this makes the following tables easier to read
 \clearpage  % Start a new page
@@ -217,7 +227,7 @@ Since symbols look alike they can easy be misinterpreted and based on their cont
 
 \input{Chapters/Chapter2_Theory} 
 
-%\input{Chapters/Chapter3_Method}
+\input{Chapters/Chapter3_Method}
 
 %\input{Chapters/Chapter4_Results}
 
@@ -241,7 +251,8 @@ Since symbols look alike they can easy be misinterpreted and based on their cont
 
 \addtocontents{toc}{\vspace{2em}}  % Add a gap in the Contents, for aesthetics
 \backmatter
-
+%% ----------------------------------------------------------------
+\printglossary
 %% ----------------------------------------------------------------
 \printbibliography 
 

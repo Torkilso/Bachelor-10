@@ -17,13 +17,13 @@ In education, the usage of digital tools has increased.
 
 In education the usage of digital tools to present and distribute tasks to students has increased [0]. % trenger kilde
 
-This includes tasks with multiple choice, graphs, geometric models and algebra. Traditionally these tools does not support dynamic input in form of digital ink, which makes the tools somewhat unrealistic from classic math on paper. \\
+This includes tasks with multiple choice, graphs, geometric models and algebra. Traditionally these tools does not support dynamic input in form of digital ink, which makes the tools somewhat unrealistic from classic math on paper.
 %To compensate for a static 
 
 % this needs data to backup my statements
-\\ % FUCK JEG TRENGER FAKTA! %Matistikk does have Geogebra integration which is working as intended, but a model for interpreting handwritten math is desired because it would, if implemented in a right way increase the efficiency for both the teachers and the students.
+% FUCK JEG TRENGER FAKTA! %Matistikk does have Geogebra integration which is working as intended, but a model for interpreting handwritten math is desired because it would, if implemented in a right way increase the efficiency for both the teachers and the students.
 \section{Problem definition} % TODO review if this is actually somehting that we can find out etc...% 1st draft
-How can proportionality and relativity be used in recurrent neural networks? \\ Our problem was created after being presented with our project task, which is a task to create a module for interpreting handwritten mathematical symbols. The task itself was focused on creating an generic module which could easily be used in both existing and upcoming projects for the department of teacher education at Norwegian University of Science and Technology. \\ \\
+How can proportionality and relativity be used in recurrent neural networks? \\ Our problem was created after being presented with our project task, which is a task to create a module for interpreting handwritten mathematical symbols. The task itself was focused on creating an generic module which could easily be used in both existing and upcoming projects for the department of teacher education at Norwegian University of Science and Technology.
 %Eventually the project came to a crossroad between creating a module which were to serve 
 
 
@@ -52,7 +52,7 @@ The results are divided into at least three parts. \\
     This section will describe the data/product which will serve as a foundation for answering our problem/hypothesis in chapter 1.1.
     
     \item Engineering results
-    This section will describe the goals set in the start of this project. In a clearly defined product and goal this would be the vision document, in this projects case it would be much more up to the external mentors. %??
+    This section will describe the goals set in the start of this project. In a clearly defined product and goal this would be the vision document, in this projects case it would be much more up to the product owners. %??
     
     \item Administrative results
     This section will go into the process behind this project, from the planning stage to the finishing touches on the thesis. In addition to the process we will also talk about our goals set early in the project phase, and how our goals changed according to our progress and knowledge. Eventually we will arrive at methodology and how there was made attempts to follow agile methodologies.
@@ -71,7 +71,7 @@ To explain the different sections, the questions linked to each section is liste
     In addition to discussing the hypothesis we are to discuss how our results can be interpreted in combination with or as an answer to our hypothesis or scientific problem.
     
     \item Engineering results
-    How did the software part of this project turn out? Were the external mentors satisfied with the result? Which requirements were met and which were not? Why did the results become what they are? What went good? What went bad?
+    How did the software part of this project turn out? Were the product owners satisfied with the result? Which requirements were met and which were not? Why did the results become what they are? What went good? What went bad?
     
     \item Administrative results
     What went good or bad as a result of choosing a specific process, approach or technology? What went good or bad regardless of the chosen process, method or technology?
@@ -84,15 +84,16 @@ To explain the different sections, the questions linked to each section is liste
 In addition to discussing our results, the weaknesses of this work should is to be discussed, how it could have been done differently and so forth. 
 
 \subsection{Chapter 6 Conclusion}
-The purpose of this work is to find ways of how to use machine learning to recognize handwritten mathematical symbols. Our external mentors have a need, and our goal is to fulfill that need in the best way possible. We hope to accomplish exactly that by examining the different approaches to an issue like this and try to achieve desired results.\\
+The purpose of this work is to find ways of how to use machine learning to recognize handwritten mathematical symbols. Our product owners have a need, and our goal is to fulfill that need in the best way possible. We hope to accomplish exactly that by examining the different approaches to an issue like this and try to achieve desired results.\\
 In addition to the project 
 
 \subsection{Attachments}
+This explains itself, our attachments are included here. 
 
 \section{Target audience}
 % INTRODUSERE TARGET AUDIENCE
-%Even though machine learning is a hot topic these days, we encourage the reader to be open to some of the technical aspects in which we hope to present you with. 
-
+Machine learning is an extremely large field, with enormous potential. We encourage the reader to be open to some technical aspects including our thoughts and process from start to finish. Machine learning is quite complex and we hope to inspire students and others new to machine learning. With that said, both our report and code is meant for a reader with some knowledge about software, linear algebra and numerical mathematics.
+%Machine learning is a complicated field with a lot of attention these days, an article from The Guardian \cite{gibbs_googles_2018} states that Google's AI is beeing used in a drone project.
 
 \subsection{Report} % Er dette et godt ord??
 This project report is meant for everyone curious about an specific introduction to practical examples of machine learning using neural networks. The specific part is linked to this projects assignment, which is to use different approaches to achieve an respectable accuracy.\\
@@ -101,15 +102,15 @@ Even though this report is meant as an introduction to a complicated field, we h
 
 
 \subsection{Application}
-The application which consists of an simple back end and a front end library is available to use under the MIT license. As previously stated, the application is specifically created to fit the needs of our external mentors, but the front end library can be used in a more general matter. % TODO bruk bilder, figurer eller lignende av applikasjonen (?)
+The application which consists of an simple back end and a front end library is available to use under the MIT license \parencite{_mit_????}. As previously stated, the application is specifically created to fit the needs of our product owners, but the front end library can be used in a more general matter. % TODO bruk bilder, figurer eller lignende av applikasjonen (?)
 
 
 \section{CROHME}
-CROHME is an abbreviation for Competition on Recognition of Online Handwritten Mathematical Expressions, this competition inspired our work and provided both tools and data for research purposes.\\
-The data provided by CROHME was sequential data in a format specified by W3C, called InkML. %https://www.w3.org/TR/InkML/
-%InkML is a format well suited for supervised learning, we had our sequential data and a label or truth.\\
-
-% TODO legg inn litt eksempel på inkml (Sekvensiell data)
+CROHME is an abbreviation for Competition on Recognition of Online Handwritten Mathematical Expressions.
+CROHME is a competition for recognizing online handwritten mathematical symbols. CROHME is organized by International Conference on Frontiers in Handwriting Recognition. \\ 
+CROHME 2016 \parencite{mouchere_icfhr2016_2016} concluded with that handwriting is still a challenge to be solved, even after six years of competitions. Ratings on the individual tasks was accomplished, but overall it requires first of all, the segmentation to be perfect. An error in the segmentation process will supply the next steps with incorrect information and a bad foundation to perform classification on.
+% si noe om "junk" ? filtrering osv er ikke lett
+The winner of CROHME 2016 and other competition years, was MyScript. MyScript has a commercial solution which has rich functionality and good results, but they managed to achieve those results with their own private data set. \parencite{mouchere_icfhr2016_2016}  \\ 
 
 \section{Purpose}
 % Interpret mathematical symbols and expressions and figure out how rnn/cnn/... can be used to obtain desirable accuracy
@@ -117,20 +118,26 @@ The data provided by CROHME was sequential data in a format specified by W3C, ca
 %\section{Cooperation with the department of Teacher Education, NTNU}
 % Owners of matistikk...
 % Collection of data (?) and the help we needed to exclude/include some symbols.
-The purpose of this project is both to create something useful for our external mentors, while exploring the possibilities and limitations of recognition of handwritten mathematical symbols. In addition to creating something useful, we hope to inspire further work on the subject. Choices made during the project were strongly influenced by previous work, for example \cite{thoma_-line_2015} and \cite{lu_recognition_????}.
-
+The purpose of this project is both to create something useful for our product owners, while exploring the possibilities and limitations of recognition of handwritten mathematical symbols. In addition to creating something useful, we hope to inspire further work on the subject. Choices made during the project were strongly influenced by previous work, for example \cite{thoma_-line_2015} and \cite{lu_recognition_????}.
 \section{Abbreviations}  % Set the left side page header to "Abbreviations"
-
+\begin{table}[H]
 \begin{tabular}{ l l }
 \textbf{ANN} & Artificial Neural Network \\
 \textbf{CNN} & Convolutional Neural Network \\
 \textbf{CPU} & Central Processing Unit \\
-\textbf{CROHME} & Competition on Recognition of Online Handwritten Mathematical Expressions \\
+\textbf{CROHME} & Competition on Recognition of Online Handwritten Mathematical Expressions\\
 \textbf{GPU} & Graphics Processing Unit \\
+\textbf{GUI} & Graphical User Interface \\
+\textbf{ICFHR} & International Conference on Frontiers in Handwriting Recognition \\
 \textbf{ILU} & Department of Teacher Education \\
 \textbf{InkML} & Ink Markup Language \\
 \textbf{JSON} & JavaScript Object Notation \\
 \textbf{LSTM} & Long Short-Term Memory \\
+\textbf{MLP} & Multilayer Perceptrons \\
+\textbf{MNIST} & Modified National Institute of Standards and Technology database \\
+\textbf{OCR} & Optical Character Recognition \\
 \textbf{RNN} & Recurrent Neural Network \\
 \end{tabular}
-
+\label{table:abbreviations}
+\caption{A list of abbreviations used.}
+\end{table}
