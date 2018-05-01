@@ -14,6 +14,7 @@
 \usepackage{subfiles} % access files in subdirectories
 \usepackage{tabularx}
 \usepackage{float}
+\usepackage{amsmath}
 \usepackage{csquotes}
 \usepackage{listings}
 \usepackage{fixltx2e}
@@ -80,7 +81,7 @@ maxbibnames=99
 
 
 % Hvorfor ble oppgaven valgt
-The assignment was chosen for several reasons. We were all interested in the contents of the assignment, and we saw this as a great opportunity to explore the machine learning world and learn new technologies. We had little to none prior experience with machine learning, and we knew this would be challenging. This however, made the assignment more interesting since we were motivated to learn and curious about ways to solve the problem.
+The assignment was chosen for several reasons. We were all interested in the contents of the assignment, and we saw this as a great opportunity to explore the machine learning world and learn new technologies. We had little to none prior experience with machine learning, and we knew this would be challenging. This however, made the assignment more interesting as we were motivated to learn and curious about ways to solve the problems related.
 
 Before we chose the assignment, we read about the basics of neural networks and the mathematics behind them. We quickly understood that a lot of the math we have learned in previous courses was relevant, and being able to make use of this knowledge further increased our interest for the assignment. % siste setning må omformuleres muligens, litt bedre flyt, ellers kung
 
@@ -155,11 +156,11 @@ What makes our schools bachelor's projects somewhat unique is the fact that we a
 \abstract{
 \addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
 
-The Thesis Abstract is written here (and usually kept to just this page). The page is kept centered vertically so can expand into the blank space above the title too\ldots
-While symbols are quite easy to recognize, handwritten math is still a challenge even with the technologies that exist today.\\
-Since symbols look alike they can easy be misinterpreted and based on their context, they can mean completely different things.
- 
+In this thesis we researched different approaches for recognizing handwritten mathematical symbols and expressions. Interpreting different typographic styles has historically been a challenging task, however, recent improvements in both hardware and software for machine learning have made the task more approachable.
 
+The purpose of the assignment was to create a module which interprets mathematical symbols and expressions. We created an example system to display how our module can be integrated into an independent system. Combined, the module and example system provide the complete functionality as specified by our project owners. 
+
+Through our research, we explored different methods in pre- and post-processing of digital handwriting in order to best classify mathematical expressions. Our two approaches were to process drawings into images (using convolutional networks) and interpreting raw trace data (using recurrent networks). The combination of both approaches gave the best result and is the architecture used in our final model.
 }
 
 \clearpage  % Abstract ended, start a new page
@@ -229,11 +230,11 @@ Since symbols look alike they can easy be misinterpreted and based on their cont
 
 \input{Chapters/Chapter3_Method}
 
-%\input{Chapters/Chapter4_Results}
+\input{Chapters/Chapter4_Results}
 
-%\input{Chapters/Chapter5_Discussion}
+\input{Chapters/Chapter5_Discussion}
 
-%\input{Chapters/Chapter6_Conclusion}
+\input{Chapters/Chapter6_Conclusion}
 
 
 %% ----------------------------------------------------------------
@@ -254,7 +255,6 @@ Since symbols look alike they can easy be misinterpreted and based on their cont
 %% ----------------------------------------------------------------
 \printglossary
 %% ----------------------------------------------------------------
-\printbibliography 
-
-\end{document}  % The End
-%% ----------------------------------------------------------------
+\printbibliography
+% END
+\end{document}
