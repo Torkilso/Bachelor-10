@@ -5,12 +5,11 @@
 % SKLEARN
 % NUMPY
 
-
 \section{Handwriting recognition}
 % history
 % on-line and off-line
 % 
-Handwriting recognition systems are computer systems that can recognize characters and symbols written by hand. These systems have been continuously developed and researched ever since the ancient days of computers \parencite{simon_off-line_1992}, beginning with the optical character recognition (OCR) systems in the 1950s \parencite{mori_historical_1992}. The early OCR systems were very limited in terms of hardware, which resulted in a great deal of testing and failing. Researchers had high aspirations for handwriting recognition, but progress was slow and it gained the reputation of being an extremely difficult problem \parencite{simon_off-line_1992}. As hardware and computers became more advanced, the OCR and handwriting recognition systems followed in the same direction. Hardware has usually been the bottleneck for these systems (trenger kilde).
+Handwriting recognition systems are computer systems that can recognize characters and symbols written by hand. These systems have been continuously developed and researched since the early days of computers \parencite{simon_off-line_1992}, beginning with the optical character recognition (OCR) systems in the 1950s \parencite{mori_historical_1992}. The early OCR systems were very limited in terms of hardware, which resulted in a great deal of testing and failing. Researchers had high aspirations for handwriting recognition, but progress was slow and it gained the reputation of being an extremely difficult problem \parencite{simon_off-line_1992}. As hardware and computers became more advanced, the OCR and handwriting recognition systems followed in the same direction. Hardware has usually been the bottleneck for these systems (trenger kilde).
 
 When computational power increased, using artificial neural networks became more popular, also for handwriting recognition. For example, in (TODO kilde fukushima, wake), a neural network was trained to recognize 35 symbols. Since then, neural networks has been used in many solutions, and has proven to be a major contributor to the field, as it is one of the most used tools in the leading solutions today (some of these are presented in section \ref{recognition of handwritten mathematics}).
 
@@ -50,17 +49,66 @@ In the pre-processing step the raw input data is prepared for analysis. Raw inpu
 
 A common task in pre-processing is to normalize the input data. This simply means that all the data is scaled to the same value range. As a result, the data samples are cleaned for values that are not valid. For handwriting recognition, normalizing generalizes the different writing styles by removing some of the variations [preprocessing kilde - Huang et al].
 
-Since the input can be offline or online, there are many techniques that can be used to prepare the data. Common tasks in pre-processing for offline data includes removal of noise from the images and converting greyscale images to binary images \cite{priya_online_2016}. The images could also be padded to not contain any blank space.
+Since the input can be offline or online, there are many techniques that can be used to prepare the data. Common tasks in pre-processing for offline data includes removal of noise from the images and converting greyscale images to binary images \cite{priya_online_2016}. The images could also be scaled and modified to not contain any blank or empty space.
 
 [image of binarization]
 
-Online data can be pre-processed in completely different ways than offline data. The data samples consists of coordinates, which can be used in many ways. For example, the coordinates can be plotted and lines can be drawn between them. Without any pre-processing these plots might have sharp edges and overall be a false representation of handwriting. Smoothing could be applied to the coordinates to fix this by using interpolation of points. The data samples might also need to be parsed to a format that is more suitable for processing, for example matrices or arrays.
+Online data can be pre-processed in completely different ways than offline data. The data samples consists of coordinates, which can be used in many ways. For example, the coordinates can be plotted and lines can be drawn between them. This is often called a polygonal chain. Without any pre-processing these plots might have sharp edges and overall be a false representation of handwriting. Smoothing could be applied to the coordinates to fix this by using interpolation of points. The data samples might also need to be parsed to a format that is more suitable for processing, for example matrices or arrays.
 
 [image of the smoothing]
 
-\subsubsection{The segmentation problem} \label{the_segmentation_problem}
 
-The segmentation problem deals with segmenting symbols from traces. Finding out if two traces that overlap belongs to the same symbol or not is difficult because they can overlap in countless ways.
+To normalize all input vectors to have the same number of data points, a variation of the Ramer Douglas Peucker (RDP)\cite{ramer_douglas_peucker} algorithm was used . The RDP algorithm attempts to simplify a polygonal chain, while minimizing the difference between the original and the  simplified chain. The simplification process works by finding data points which influences the shape of a polygonal chain less than a fixed epsilon. 
+
+The algorithm can be modified to decrease the number of data points to a fixed number. This can be done by iterating all the data points three at a time, and removing the middle point with lowest perpendicular distance to a line drawn between the two endpoints.
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+    
+        %Datapoints
+        \fill[blue] (-3, 0) circle (0.1cm);
+        \fill[blue] (1, 2) circle (0.1cm);
+        \fill[blue] (6, 0) circle (0.1cm);
+
+        \draw[-] (-3, 0) -- (6, 0);
+        \draw[dashed] (-3,0) -- (1, 2);
+        \draw[dashed] (1, 2) -- (6, 0);
+        
+        \draw[red, -] (1, 2) -- (1, 0);
+        \draw[red, -] (0.9, 2) -- (1.1, 2);
+        \draw[red, -] (0.9, 0) -- (1.1, 0);
+        \node at (1.7, 0.9) {$dist_p$};
+
+    \end{tikzpicture}
+    \caption{Figure of calculating the perpendicular distance to a line drawn between two endpoints}
+    \label{fig:my_label}
+\end{figure}
+\label{ramer_douglas_peucker}
+
+
+
+In order to normalize data points from different sources, all points needs to be scaled within a specific range. 
+
+We define a roof $r$, a floor $f$ and a coordinate vector \textbf{x}.
+
+\begin{equation} \label{eqn:scale_linear_by_column}
+\begin{split}
+    \textbf{x} = [x_1, x_2, x_3, \dots, x_n] \\
+    x_{max} = max(x) \\
+    x_{min} = min(x) \\
+    d = x_{max} - x_{min} \\
+    s = r - \frac{(r - f) \cdot (x_{max} - \textbf{x})}{d}
+\end{split}
+\end{equation}
+
+
+\label{scale_linear_by_column}
+% CITE: https://gist.github.com/perrygeo/4512375
+
+\subsubsection{Segmentation} \label{Segmentation}
+% TODO MER!
+The segmentation problem deals with segmenting symbols from traces. Finding out if two traces that overlap belongs to the same symbol or not is difficult because they can overlap in countless ways. 
 
 \begin{figure}[H]
 \centering
@@ -92,11 +140,22 @@ After all the symbols have been segmented and classified, there might still be s
 
 The results of the classification might also contain errors. In some cases a contextual analysis of the sequence of characters might correct some of these mistakes. Analyzing the sequence of characters might reveal poor grammar and words that does not exist. These words could then be switched with similar words that is valid.
 
-\subsection{Recognition of handwritten mathematics} 
+\subsection{\LaTeX}
+\label{latex}
+% Talk about it from a historical perspective
+% Talk about how CROHME have advanced the art of recognizing handwritten math.
+% Talk about how it can be used
+
+% Talk about 
+\LaTeX is a tool for preparing documents for high-quality typesetting. 
+
+It is most regularly used in the creation of technical or scientific documents, but it is versatile. Thus, it's useful in almost any type of publishing.\parencite{_introduction_2018} \\ % tynn suppe, men vanskelig å finne mer
+
+\section{Recognition of handwritten mathematics} 
 \label{recognition of handwritten mathematics}
 Recognition of handwritten mathematics is a field in handwriting recognition that deals with mathematical symbols and expressions. This field has many of the same problems as recognition of words and characters, however, there is also a new problem that must be dealt with. Just as regular language, mathematics has a set of grammatical or positional rules that should be followed. For example, there are fractions, exponents and square roots that has to be interpreted correctly. This two-dimensional notation requires new processing techniques compared to analyzing regular words.
 
-A context of how all the symbols fit together has to be built by looking at positional values. This context search could be done in the post-processing step, using the results of the classification for guidance. The classification of symbols might also be completely wrong, as the truth to a symbol has many context-dependencies [Kilde - zanibbi, blostein]. For instance, the decimal separator "." and the multiplication operator "$\cdot$" must be interpreted based on their position to their surroundings.
+A context of how all the symbols fit together has to be built by looking at positional values. This context search could be done in the post-processing step, using the results of the classification for guidance. The classification of symbols might also be completely wrong, as the truth to a symbol has many context-dependencies [Kilde - zanibbi, blostein]. For instance, the decimal separator "." and the multiplication operator "$\cdot$" must be interpreted based on their position to their surroundings. T
 
 \begin{figure}[H]
   \centering
@@ -106,6 +165,7 @@ A context of how all the symbols fit together has to be built by looking at posi
 
 Mathematical notation uses a large amount of different symbols. There are numbers, variables, operators and structural symbols. With a rising amount of symbols to classify, there are room for more mistakes to be made by the classification system.
 
+%END
 \subsection{Previous work and existing solutions}
 There is a lot of work previously done in recognition of handwritten mathematics, and many solutions has been made. The first work in this field dates back to the 60s and has gradually grown ever since \cite{mouchere_icfhr2016_2016}. Researchers from all over the world has published theses and many bachelor- and master-theses from students has contributed with ideas and solutions. For example, in [Kilde - Matsakis 1999] from 1999 a system that uses a gaussian classifier for recognition of handwritten mathematics is presented. [trenger et eksempel til?]
 
@@ -138,19 +198,6 @@ caption={\textbf{\gls{InkML}} example of three traces, each with an file-unique 
 </traceGroup>
 \end{lstlisting}
 \end{minipage}
-
-
-\section{\LaTeX}
-\label{latex}
-% Talk about it from a historical perspective
-% Talk about how CROHME have advanced the art of recognizing handwritten math.
-% Talk about how it can be used
-
-% Talk about 
-\LaTeX is a tool for preparing documents for high-quality typesetting. 
-
-It is most regularly used in the creation of technical or scientific documents, but it is versatile. Thus, it's useful in almost any type of publishing.\parencite{_introduction_2018} \\ % tynn suppe, men vanskelig å finne mer
-
 
 \section{Machine learning}
 \label{machine_learning}
@@ -290,14 +337,14 @@ Activation functions in artificial neural networks has inspiration from how neur
     \caption{Three activation functions plotted on the interval [-4,4].}
 \end{figure}
 
-One purpose of an activation function is to introduce nonlinearity into the model. A network without nonlinearity can not represent functions which are nonlinear, despite having multiple layers. On the other hand, it is proved that. \cite{leshno1993multilayer}
+One purpose of an activation function is to introduce nonlinearity into the model. A network without nonlinearity can not represent functions which are nonlinear, despite having multiple layers. On the other hand, it is proved that. \cite{leshno1993multilayer} % TODO SJEKK OM DENNE ER FERDIG ?
 
 \begin{quote}
 A standard multilayer feedforward network with a locally bounded piecewise
 continuous activation function can approximate any continuous function to any degree of
 accuracy if and only if the network's activation function is not a polynomial.
 \end{quote}
- An example of the importance of nonlinearity in neural networks can shown in the exclusive-OR problem. \parencite{jain_artificial_1996}\cite{sharma_understanding_2018}
+ An example of the importance of nonlinearity in neural networks can shown in the exclusive-OR problem illustrated in the figure below. The black dots can not be separated from the white using a single line. On the other hand, a combination of nonlinear functions can create arbitrary shapes to separate the white and black dots. \parencite{jain_artificial_1996}\cite{sharma_understanding_2018}. 
 
 \begin{figure}[H]
   \centering
@@ -627,7 +674,12 @@ Notice how the prediction did on the correct answer A is the only number which i
     \end{split}
 \end{equation}
 
-\subsection{Training with backpropagation}
+\subsection{Training neural networks}
+
+[Generellt om treningsfasen, litt om epochs, ]
+
+
+\subsubsection{Training with backpropagation}
 \label{training_with_backpropagation}
 
 Backpropagation is an algorithm used in the training of a neural network. The algorithm was introduced by \cite{werbos_beyond_1974}, however, it was not until 1986, in \cite{rumelhart_learning_1986} that the importance of the algorithm was acknowledged [KILDE - brilliant.org - backpropagation]. This section will lightly explain the algorithm without going into details for the underlying mathematics. 
@@ -735,7 +787,7 @@ For the neural network in figure \ref{fig:backprop_one}, the error from the outp
     \label{fig:backprop_one} 
 \end{figure}
 
-\subsection{Backpropagating through time}
+\subsubsection{Backpropagating through time}
 % Bra kilde: http://axon.cs.byu.edu/~martinez/classes/678/Papers/Werbos_BPTT.pdf
 % Denne seksjonen kan flyttes til RNN hvis det passer bedre
 
@@ -905,14 +957,15 @@ In equation \ref{eqn:mat_decomp} A is our original matrix, Q is an nxn matrix wh
 \end{equation}
 Both the vanishing and exploding gradient issues both originate from the scaling according to the diagonal matrix with eigenvalues $diag(\lambda)$, with repeated multiplication by A. Vanishing gradient makes it difficult to find out in which direction parameters should move in order to move the cost function. While exploding gradients makes learning unstable. \cite{goodfellow_deep_2016} \\
 
-Another issue with artificial neural networks is "dead" neurons, this is a direct cause of using the rectified linear unit also known as ReLU. ReLU \ref{eqn:relu} is widely used to not get caught in between gradient issues, but they may cause weights to be updated in a way that makes the neuron unable to activate again. This is an irreversible consequence of setting the learning rate too high. \cite{_cs231n_????}
+Another issue with artificial neural networks is "dead" neurons, this is a direct cause of using the rectified linear unit also known as ReLU. ReLU \ref{eqn:relu} is widely used to not get caught in between gradient issues, but they may cause weights to be updated in a way that makes the neuron unable to activate again. This is an irreversible consequence of setting the learning rate too high.\cite{_cs231n_????}
+ % Må forklare mer her?
 
 \section{Feedforward neural networks}
 % 
-Feedforward neural networks is also often referred to as deep feedforward networks or multilayer perceptrons (MLPs) are the most typical of deep learning models. The ultimate goal of feedforward neural networks is to approximate some function \textbf{f}, for example a task to classify (map) an input x to a specific class y. y = \textbf{f*(x)} in mathematical notation. The networks mapping is defined as y = \textbf{f(x,$\theta$)} where $\theta$ is learned in the way that \textbf{f} is approximated in the best way possible. \\ 
+Feedforward neural networks are also often referred to as deep feedforward networks or multilayer perceptrons (MLPs) are the most typical of deep learning models. The ultimate goal of feedforward neural networks is to approximate some function \textbf{f}, for example a task to classify (map) an input x to a specific class y. y = \textbf{f*(x)} in mathematical notation. The networks mapping is defined as y = \textbf{f(x,$\theta$)} where $\theta$ is learned in the way that \textbf{f} is approximated in the best way possible. \\ 
 \cite{goodfellow_deep_2016}[p.~163] explains why networks such as these are called feedforward.
 \begin{displayquote}[\cite{goodfellow_deep_2016}]
-These models are called \textbf{feedforward} because information flows through the function being evaluated from \textbf{x}, through the intermediate computations used to define f, and finally to the output \textbf{y}. There are no \textbf{feedback} connections in which outputs of the model are fed back into itself.
+\textit{These models are called \textbf{feedforward} because information flows through the function being evaluated from \textbf{x}, through the intermediate computations used to define f, and finally to the output \textbf{y}. There are no \textbf{feedback} connections in which outputs of the model are fed back into itself.}
 \end{displayquote}
 
 
@@ -990,7 +1043,7 @@ The actual function that usually exists in machine learning libraries is \textbf
 %In summary the convolutional layer accepts a volume of size \textbf{$W_1$ x $H_1$ x $D_1$}. In addition to a volume, it needs to provide four \gls{hyperparameters}. These \gls{hyperparameters} are the number of filters \textbf{K}, their spartial extent \textbf{F}, the stride \textbf{S} and the ammount of zero padding \textbf{P}. 
 A convolutional layer has typically three stages, the first is to do the convolutions as illustrated in \ref{fig:kernel_applied}, these are linear activations. When all the convolutions are done, they are passed through a nonlinear activation function. An example of a \gls{nonlinear} activation function is the sigmoid function \ref{eqn:sigmoid}. Furthermore this stage is often referred to as the \textbf{detector} stage.
 
-The last stage of the a typical convolutional layer is when we apply a \textbf{pooling function}\parencite{zhou_computation_1988} to further modify the output. A \textbf{pooling function} is able to replace the output of a small area with a summary of the nearby outputs. There are multiple pooling functions, in our project and for our purpose we went with \textbf{max pooling}. The max pooling function uses a pooling unit which has a specified size, for example 2x2. The pooling unit in a max pooling function simply outputs the maximum activation of it's region(2x2), a max pooling function with a pooling unit region of 2x2 would turn 24x24 neurons to 12x12 neurons. \parencite{goodfellow_deep_2016} \parencite{nielsen_neural_2015}
+The last stage of the a typical convolutional layer is when we apply a \textbf{pooling function}\parencite{zhou_computation_1988} to further modify the output. A \textbf{pooling function} is able to replace the output of a small area with a summary of the nearby outputs. There are multiple pooling functions, in our project and for our purpose we went with \textbf{max pooling}. The max pooling function uses a pooling unit which has a specified size, for example 2x2. The pooling unit in a max pooling function simply outputs the maximum activation of it's region(2x2), a max pooling function with a pooling unit region of 2x2 would turn 24x24 neurons to 12x12 neurons. \cite{goodfellow_deep_2016} \cite{nielsen_neural_2015}
 
 \section{Recurrent neural networks}
 % sequences
@@ -1005,7 +1058,7 @@ Data provided by the CROHME competitions is sequential ink coordinates as illust
 \subsection{Long short-term memory}
 Long short-term memory unit is a type of computational unit often used in recurrent neural network. LSTM networks were introduces in 1997 by Sepp Hochreiter and Jürgen Schmidhuber\ref{Long Short-term Memory}, and has been later improved in further research, for instance by adding a forget gate\ref{Learning to Forget: Continual Prediction with LSTM}. These units can be utilized to keep important information over time, as opposed to traditional recurrent units, by adding new information on top of old state and not overriding it for each timestep. This is described in \cite{Empirical evaluation of gated recurrent neural networks on sequence modeling}.
 
-\begin{quote}
+\begin{quote} % TODO FINN KILDE ???? Even skrev dette?
     Unlike to the traditional recurrent unit which overwrites its content at each time-step (see Eq. (2)),
     an LSTM unit is able to decide whether to keep the existing memory via the introduced gates.
     Intuitively, if the LSTM unit detects an important feature from an input sequence at early stage, it

@@ -4,27 +4,33 @@
 \section{Motivation} % needs restructuring, we are finding out a way to combine cnn and rnn's, not develop 
 % proof of concept++++++
 
-In education, the usage of digital tools has increased. 
-
-%static input system
-%preferable with more dynamic input
-%more freedom to the student
-%the student can show their thoughts in a more precise way (?)
-%Something about matistikk
-
-%Some of these tools uses a static system to let the students answer tasks, such as Matistikk, which is a web application for practising math. The main
+In education, the usage of digital tools has increased. In mathematics this is also true, but the digital tools in mathematics have been falling behind on some areas. Take GeoGebra for example, it is an amazing tool which fulfills your needs with style. What digital mathematics tools are missing is a way to provide input in more dynamic ways. % FUCK dette er vanskelig...
 
 
-In education the usage of digital tools to present and distribute tasks to students has increased [0]. % trenger kilde
+%In education the usage of digital tools to present and distribute tasks to students has increased [0]. % trenger kilde
 
-This includes tasks with multiple choice, graphs, geometric models and algebra. Traditionally these tools does not support dynamic input in form of digital ink, which makes the tools somewhat unrealistic from classic math on paper.
-%To compensate for a static 
+%This includes tasks with multiple choice, graphs, geometric models and algebra. Traditionally these tools does not support dynamic input in form of digital ink, which makes the tools somewhat unrealistic from classic math on paper.
 
-% this needs data to backup my statements
-% FUCK JEG TRENGER FAKTA! %Matistikk does have Geogebra integration which is working as intended, but a model for interpreting handwritten math is desired because it would, if implemented in a right way increase the efficiency for both the teachers and the students.
 \section{Problem definition} % TODO review if this is actually somehting that we can find out etc...% 1st draft
-How can proportionality and relativity be used in recurrent neural networks? \\ Our problem was created after being presented with our project task, which is a task to create a module for interpreting handwritten mathematical symbols. The task itself was focused on creating an generic module which could easily be used in both existing and upcoming projects for the department of teacher education at Norwegian University of Science and Technology.
-%Eventually the project came to a crossroad between creating a module which were to serve 
+How does accuracy compare between a convolutional neural network and a recurrent neural network when recognizing mathematical symbols?
+
+On the subject of recognizing mathematical symbols, how does the different types of artificial neural networks compare?
+
+How can artificial neural networks be used to obtain highest available accuracy when classifying mathematical symbols?
+
+
+
+How does applying recurrent neural networks and include a third dimensionality affect prediction accuracy on classification of online handwritten mathematical symbols, compared to two dimensional convolutional neural networks?
+
+How does a convolutional neural network perform versus a recurrent neural network on the subject of handwritten mathematical symbols?
+
+How can recurrent neural networks contribute to convolutional neural networks when classifying mathematical symbols?
+
+How does a combination of off-line and on-line classification of mathematical symbols perform in terms of classification accuracy?
+
+
+
+\\ Our problem was created after being presented with our project task, which is a task to create a module for interpreting handwritten mathematical symbols. The task itself was at first focused on creating an generic module which could easily be used in both existing and upcoming projects for the department of teacher education at Norwegian University of Science and Technology. After some discussion the project became more focused on creating a proof of concept. Thus, the task became more research based and focused on getting a high accuracy on the recognition part. %Eventually the project came to a crossroad between creating a module which were to serve 
 
 
 \section{Structure of the report}
@@ -52,7 +58,7 @@ The results are divided into at least three parts.
     This section will describe the data/product which will serve as a foundation for answering our problem/hypothesis in chapter 1.1.
     
     \item Engineering results
-    This section will describe the goals set in the start of this project. In a clearly defined product and goal this would be the vision document, in this projects case it would be much more up to the product owners. %??
+    This section will describe the proof of concept application that the project participants are to create. Normally there would be a direct correlation between a vision document and this subsection.
     
     \item Administrative results
     This section will go into the process behind this project, from the planning stage to the finishing touches on the thesis. In addition to the process we will also talk about our goals set early in the project phase, and how our goals changed according to our progress and knowledge. Eventually we will arrive at methodology and how there was made attempts to follow agile methodologies.
@@ -60,9 +66,7 @@ The results are divided into at least three parts.
 \end{enumerate}
 
 \subsection{Chapter 5 Discussion}
-The discussion is also divided into the same parts as Chapter 4. % TODO eholde hvem?
-In this chapter we are to answer some questions.
-%Why, or why didn't or hypothesis hold?
+This chapter will consist of discussion around our results and how we achieved these results. 
 
 To explain the different sections, the questions linked to each section is listed underneath.
 \begin{enumerate}
@@ -88,12 +92,12 @@ The purpose of this work is to find ways of how to use machine learning to recog
 In addition to the project 
 
 \subsection{Attachments}
-This explains itself, our attachments are included here. 
+The projects attachments are included here.
 
 \section{Target audience}
 % INTRODUSERE TARGET AUDIENCE
-Machine learning is an extremely large field, with enormous potential. We encourage the reader to be open to some technical aspects including our thoughts and process from start to finish. Machine learning is quite complex and we hope to inspire students and others new to machine learning. With that said, both our report and code is meant for a reader with some knowledge about software, linear algebra and numerical mathematics.
-%Machine learning is a complicated field with a lot of attention these days, an article from The Guardian \cite{gibbs_googles_2018} states that Google's AI is beeing used in a drone project.
+Machine learning is an extremely large field, with enormous potential. We encourage the reader to be open to some technical aspects including thoughts and choices made during the project. Machine learning is quite complex and we hope to inspire students and others new to machine learning. With that said, both our report and code is meant for a reader with some knowledge about software engineering, linear algebra and numerical mathematics.
+
 
 \subsection{Report} % Er dette et godt ord??
 This project report is meant for everyone curious about an specific introduction to practical examples of machine learning using neural networks. The specific part is linked to this projects assignment, which is to use different approaches to achieve an respectable accuracy.\\
@@ -102,7 +106,7 @@ Even though this report is meant as an introduction to a complicated field, we h
 
 
 \subsection{Application}
-The application which consists of an simple back end and a front end library is available to use under the MIT license \parencite{_mit_????}. As previously stated, the application is specifically created to fit the needs of our product owners, but the front end library can be used in a more general matter. % TODO bruk bilder, figurer eller lignende av applikasjonen (?)
+The application which consists of an simple back end and a front end library is available to use under the MIT license \cite{_mit_????}. As previously stated, the application is specifically created to fit the needs of our product owners, but the front end library can be used in a more general matter. % TODO bruk bilder, figurer eller lignende av applikasjonen (?)
 
 
 %\section{CROHME} % Teori
@@ -113,12 +117,8 @@ The application which consists of an simple back end and a front end library is 
 %The winner of CROHME 2016 and other competition years, was MyScript. MyScript has a commercial solution which has rich functionality and good results, but they managed to achieve those results with their own private data set. \parencite{mouchere_icfhr2016_2016}  \\ 
 
 \section{Purpose}
-% Interpret mathematical symbols and expressions and figure out how rnn/cnn/... can be used to obtain desirable accuracy
+The purpose of this project is both to create something useful for our product owners, while exploring the possibilities and limitations of recognition of handwritten mathematical symbols. In addition to creating something useful, we hope to inspire further work on the subject. Choices made during the project were strongly influenced by previous work, for example Martin Thoma, 2015 \cite{thoma_-line_2015} and Catherine Lu and Karanveer Mohan \cite{lu_recognition_2015}.
 
-%\section{Cooperation with the department of Teacher Education, NTNU}
-% Owners of matistikk...
-% Collection of data (?) and the help we needed to exclude/include some symbols.
-The purpose of this project is both to create something useful for our product owners, while exploring the possibilities and limitations of recognition of handwritten mathematical symbols. In addition to creating something useful, we hope to inspire further work on the subject. Choices made during the project were strongly influenced by previous work, for example \cite{thoma_-line_2015} and \cite{lu_recognition_????}.
 \section{Abbreviations}  % Set the left side page header to "Abbreviations"
 \begin{table}[H]
 \begin{tabular}{ l l }
@@ -138,7 +138,10 @@ The purpose of this project is both to create something useful for our product o
 \textbf{MNIST} & Modified National Institute of Standards and Technology database \\
 \textbf{OCR} & Optical Character Recognition \\
 \textbf{RNN} & Recurrent Neural Network \\
+\textbf{GRU} & Gated Recurrent Unit \\
+\textbf{LSTM} & Long Short-Term Memory \\
+
 \end{tabular}
 \label{table:abbreviations}
-\caption{A list of abbreviations used.}
+\caption{A list of abbreviations used, in alphabetical order.}
 \end{table}
