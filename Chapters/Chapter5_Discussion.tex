@@ -1,42 +1,111 @@
 \chapter{Discussion}
 \lhead{\emph{Discussion}}
 
-Det er naturlig å dele dette kapitlet på samme måte som kapittel 4.
-
 \section{Scientific result}
 
 Her skal dere drøfte årsaker til at resultatene ble som de ble, spesielt der det er avvik fra planer og oppsatte mål. 
 Hvorfor holdt hypotesene, eller hvorfor holdt ikke hypotesene? 
 Drøft hvordan resultatene kan forstås i forhold til eller som svar på problemstillingen.
 
-Why did we start with CNN, and why did it not fulfill our goals.
-(write about how it loses information about time dimention).
 
-Why did RNN help our goal, and why what are possible reasons RNN performs better than CNN.
+Starting out with recognizing symbols using a convolutional neural network was a decision made early in the project. A lot of previous research on recognizing similar images such as with the MNIST dataset already existed, and using images as input data was therefore a safe direction when creating a minimal viable product (MVP). 
 
-Why did we combine RNN and CNN, and what are possible reasons they performed better combined than individually.
+The convolutional neural network's performance can be seen in \ref{fig:CNN_44000}. Its performance on the test dataset was very good, and it kept increasing over time. However, as a consequence of our relativly small train dataset, the network did not show the same accuracy on the test/validation data, and the real dataset. This model was prone to overfitting, even when including several dropout layers.
+
+
+When traces are converted to images, a lot of sequential data is lost. Similar looking symbols are often drawn in different ways, however end up looking similar when the drawing is finished. This is information lost when turning the input data into images, and therefore may result in lower prediction accuracy than a network which includes this information.
+
+Recurrent neural networks has shown good results when predicting sequential data, for instance when predicting cursive handwriting, a comparable problem to predicting mathematical symbols. A recurrent neural network was therefore a natural choice in order to the include the sequential information form the test dataset. 
+
+Creating a RNN model includes its own challenges. Specifically the format on its input data. A tracegroup which should be converted to a prediction includes a large variance in amount of datapoints, and different number of traces. A lot of work was therefore spent on turning the input data into a format the RNN model could predict. This included reducing number of datapoints, padding the input arrays, and combining traces to a single trace, while still keeping information about which traces were seperate. A lot of inspiration was taken from google's quickdraw, and its open source code. \cite{_recurrent_????} 
+
+It can be seen in \ref{fig:RNN_44000} that the recurrent neural network managed to perform better on the validation dataset, and did not have the same problems with overfitting as the CNN model. On the other side, the RNN model was actually underfitting the train dataset, even after 40 epochs.
+
+The two different models were very different, both in model architecture, and the format of input data. Therefore, it was interesting to see whether the models could perform better predictions combined, than each model individually. As seen in \ref{fig:combined_CNN_RNN_44000}, the combined model performed better than both the CNN and RNN on the test dataset, and the real dataset. 
+
+With an accuracy of 98.28\% on the test dataset, the combined model had an accuracy of 1.77\% better than the CNN model, and an accuracy of 0.93\% better than the RNN. The difference was even larger on the real dataset, with 1.52\% better accuracy than the RNN. This indicates that the combined model handles data from different sources better, however the dataset is too small to make this conclusion.
+
 
 \subsection{}
 
 \section{The final product}
 
+
+
+
 Hvordan ble sluttproduktet? 
+
+
 Fikk oppdragsgiver det som var forventet? 
 Hvilke krav ble oppfylt? 
-Hvilke krav ble ikke oppfylt? 
+Hvilke krav ble ikke oppfylt?
+
+Det var ingen krav satt, vi skulle finne ut om det var mulig å gjøre noe slikt
+
 Hvorfor ble resultatene som de ble?
+
+enkelte områder kunne vært bedre, vi hadde ingen erfaring fra før
+
 Hva var bra?
 Hva var ikke så bra? 
+
+
+\subsection{}
+Sammenlign med andre løsninger: myscript, drawpix math, forskningsartikler
+
 
 \subsection{Process, approach and technology}
 
 Hva ble bra på grunn av valgt prosess, fremgangsmåte og teknologi? 
+
+
+
 Hva ble ikke bra på grunn av valgt prosess, fremgangsmåte og teknologi? 
 Hva ble bra eller dårlig uavhengig av valgt prosess, fremgangsmåte og teknologi?
 
 \subsection{Strengths and weaknesses}
-Styrker
-Svakheter
+
+The system developed has both strengths and weaknesses. In general, 
+
+Strengths:
+
+The classification model is accurate
+
+The model presents probabilities
+
+Live feedback to some degree
+
+The system is easy to implement
+
+
+Weaknesses:
+
+The training set used to train the final model was small.
+
+Some symbols did not have enough training samples.
+
+The system is sensitive to noisy input. 
+
+Correctly segmenting the input symbols requires them to not have any overlapping traces.
+
+Equals sign logic
+
+Multiplication sign logic is hardcoded
+
+Timestamps is not used.
+
+Deleting on the front end.
+
+Front end is a byte buggy.
+
+New user might find it unusual to use, maybe they dont understand the segmentation part
+
+A lot of data is sent to the server
+
+Heavy preprocessing
+
+
+
 
 \section{}
 
@@ -46,17 +115,17 @@ Svakheter
 %Sett resultatene inn i en samfunnsmessig og økonomisk, eventuelt også miljømessig, sammenheng. 
 No more need for paper, save the planet, save money
 
-
 \subsection{Ethics}
 Analyser relevante etiske problemstillinger i forhold til resultatene fra arbeidet
 
-Hmmmm
+Less identity if everyone sends latex instead of handwriting.
+
+Do we need this section
 
 \section{The development process}
 \subsection{Teamwork}
-Studenter som jobber i gruppe skal skrive et avsnittder de reflekterer over gruppearbeidet og hvordan det har fungert.(Dette kommer i tillegg til det individuelle refleksjonsnotatet som skal leveres.
+%Studenter som jobber i gruppe skal skrive et avsnittder de reflekterer over gruppearbeidet og hvordan det har fungert.(Dette kommer i tillegg til det individuelle refleksjonsnotatet som skal leveres.
 
 \subsection{Professional ethics}
-Alle skal reflektere kort over profesjonsetiske problemstillinger i forhold til egen eller gruppens gjennomføring av oppgaven,
-
-[kan AI ta over verden? :)]
+%Alle skal reflektere kort over profesjonsetiske problemstillinger i forhold til egen eller gruppens gjennomføring av oppgaven,
+Can AI one day rule the world???

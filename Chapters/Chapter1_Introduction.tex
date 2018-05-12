@@ -4,72 +4,79 @@
 \section{Motivation} % needs restructuring, we are finding out a way to combine cnn and rnn's, not develop 
 % proof of concept++++++
 
-In education, the usage of digital tools has increased. In mathematics this is also true, but the digital tools in mathematics have been falling behind on some areas. Take GeoGebra for example, it is an amazing tool which fulfills your needs with style. What digital mathematics tools are missing is a way to provide input in more dynamic ways. % FUCK dette er vanskelig...
+Usage of digital tools in education is increasing, and testing student's performance is moving toward digital platforms. However, mathematics is a subject where most testing still is done on pen and paper. Few good digital tools exist for writing and validating mathematical handwritten expressions. By using machine learning to validate student's submission, the benefits of using digital tools for tests within the subject may improve, and therefore increase adoption of digital tools for mathematics.
+
+
+%In education, the usage of digital tools has increased. In mathematics this is also true, but the digital tools in mathematics have been falling behind on some areas. Take GeoGebra for example, it is an amazing tool which fulfills your needs with style. What digital mathematics tools are missing is a way to provide input in more dynamic ways. % FUCK dette er vanskelig...
 
 
 %In education the usage of digital tools to present and distribute tasks to students has increased [0]. % trenger kilde
 
 %This includes tasks with multiple choice, graphs, geometric models and algebra. Traditionally these tools does not support dynamic input in form of digital ink, which makes the tools somewhat unrealistic from classic math on paper.
 
-\section{Problem definition} % TODO review if this is actually somehting that we can find out etc...% 1st draft
-How does accuracy compare between a convolutional neural network and a recurrent neural network when recognizing mathematical symbols?
+\section{Problem definition} 
+\label{problem_definition}
+%On the subject of recognizing mathematical symbols, how does the different types of artificial neural networks compare?
 
-On the subject of recognizing mathematical symbols, how does the different types of artificial neural networks compare?
-
-How can artificial neural networks be used to obtain highest available accuracy when classifying mathematical symbols?
-
+%How can artificial neural networks be used to obtain highest available accuracy when classifying mathematical symbols?
 
 
-How does applying recurrent neural networks and include a third dimensionality affect prediction accuracy on classification of online handwritten mathematical symbols, compared to two dimensional convolutional neural networks?
+%How does a convolutional neural network perform versus a recurrent neural network on the subject of handwritten mathematical symbols?
 
-How does a convolutional neural network perform versus a recurrent neural network on the subject of handwritten mathematical symbols?
+%How does a combination of recurrent and convolutional neural network's 
 
-How can recurrent neural networks contribute to convolutional neural networks when classifying mathematical symbols?
+How does a combination of recurrent and convolutional neural network's accuracy perform towards classifying handwritten mathematical symbols?
 
-How does a combination of off-line and on-line classification of mathematical symbols perform in terms of classification accuracy?
+%How can recurrent neural networks contribute to convolutional neural networks when classifying mathematical symbols?
+
+%How does a combination of off-line and on-line classification of mathematical symbols perform in terms of classification accuracy?
 
 
 
-\\ Our problem was created after being presented with our project task, which is a task to create a module for interpreting handwritten mathematical symbols. The task itself was at first focused on creating an generic module which could easily be used in both existing and upcoming projects for the department of teacher education at Norwegian University of Science and Technology. After some discussion the project became more focused on creating a proof of concept. Thus, the task became more research based and focused on getting a high accuracy on the recognition part. %Eventually the project came to a crossroad between creating a module which were to serve 
-
+%Our problem was created after being presented with our project task, which is a task to create a module for interpreting handwritten mathematical symbols. The task itself was at first focused on creating an generic module which could easily be used in both existing and upcoming projects for the department of teacher education at NTNU. After some discussion the project became more focused on creating a proof of concept. Thus, the task became more research based and focused on getting a high accuracy on the recognition part. 
 
 \section{Structure of the report}
 \subsection{Chapter 1 Introduction}
-The introduction introduces important thoughts, concepts and motivation behind this project without going in depth.
-
-All of the concepts introduced in this chapter are required to understand both relevance and motivation.
+The introduction consists of the motivation behind the project, the problem definition and some practical information about the thesis. In addition, a list of abbreviations is included at the end of the chapter.
 
 \subsection{Chapter 2 Theory}
-The theory consists of relevant theory to understand both approach, limitations, choices and eventually conclusion.\\
-By our project definition we are to expect that the reader is at a level of a 2nd year computer engineering student at our own department. \\
-Even though we know that the 2nd year computer engineering student does have the conceptual knowledge required to understand the theory behind neural networks, some of the mathematics will be explained.
+To understand this thesis and choices made a lot of theory has to be understood. This chapter consists of relevant topics in handwriting recognition and machine learning to cover this. Some of the theory in machine learning and neural networks is heavy in terms of mathematics, however, this is not covered here. Instead, the concepts is explained in a more general way with references for further reading.
 
-\subsection{Chapter 3 Method}
-This chapter has a direct correlation with chapter two. Here the choices and technology in chapter two are justified. 
-In addition, we will also discuss tools that made our project flow optimal.
+\subsection{Chapter 3 Technology and Method}
 
-% IS THIS RIGHT? % "Referansearkitektur????"
-% Some algorithms, general domain model......
+This chapter will specify the technology used in the project and describe how the final product works. The purpose of this chapter is to give insight to how the results can be reproduced. Details about the different steps our recognition system undergoes is presented. 
+
+This chapter also includes a section explaining how the authors worked together and the different roles used in the development.
 
 \subsection{Chapter 4 Results}
-The results are divided into at least three parts.
+The results are divided into three parts:
 \begin{enumerate}
-    \item Scientific results
-    This section will describe the data/product which will serve as a foundation for answering our problem/hypothesis in chapter 1.1.
+    \item \textbf{Scientific results}
     
-    \item Engineering results
-    This section will describe the proof of concept application that the project participants are to create. Normally there would be a direct correlation between a vision document and this subsection.
+    This section will describe the results associated with the problem definition in section \ref{problem_definition}.
+    %This section will describe the data/product which will serve as a foundation for answering our problem/hypothesis in chapter 1.1.
     
-    \item Administrative results
-    This section will go into the process behind this project, from the planning stage to the finishing touches on the thesis. In addition to the process we will also talk about our goals set early in the project phase, and how our goals changed according to our progress and knowledge. Eventually we will arrive at methodology and how there was made attempts to follow agile methodologies.
+    \item \textbf{Engineering results}
+    
+    This section will describe the status of the system made at the time of delivery and how the system fulfills the assignment.
+    %This section will describe the proof of concept application that the project participants are to create. Normally there would be a direct correlation between a vision document and this subsection.
+    
+    \item \textbf{Administrative results}
+    
+    The goals in terms of project planning and how we managed time will be discussed in this chapter. This section will also contain how these goals changed accordingly to the progress being made and the methodology used in the development.
+    %This section will go into the process behind this project, from the planning stage to the finishing touches on the thesis. In addition to the process we will also talk about our goals set early in the project phase, and how our goals changed according to our progress and knowledge. Eventually we will arrive at methodology and how there was made attempts to follow agile methodologies.
     
 \end{enumerate}
 
 \subsection{Chapter 5 Discussion}
-This chapter will consist of discussion around our results and how we achieved these results. 
+This chapter consist of discussion about the results and how they were achieved.
+
+% vent med denne til vi har fylt kapitell 5 litt
 
 To explain the different sections, the questions linked to each section is listed underneath.
 \begin{enumerate}
+
+
     \item Scientific results
     Why did, or why didn't our hypothesis or scientific problem hold?
     In addition to discussing the hypothesis we are to discuss how our results can be interpreted in combination with or as an answer to our hypothesis or scientific problem.
@@ -94,19 +101,20 @@ In addition to the project
 \subsection{Attachments}
 The projects attachments are included here.
 
+%Systemdokumentasjon
+
 \section{Target audience}
-% INTRODUSERE TARGET AUDIENCE
-Machine learning is an extremely large field, with enormous potential. We encourage the reader to be open to some technical aspects including thoughts and choices made during the project. Machine learning is quite complex and we hope to inspire students and others new to machine learning. With that said, both our report and code is meant for a reader with some knowledge about software engineering, linear algebra and numerical mathematics.
+Machine learning is an extremely large field, with enormous potential. We encourage the reader to be open to some technical aspects including thoughts and choices made during the project. Machine learning is quite complex and we hope to inspire students and others new to machine learning. With that said, both our report and code is meant for a reader with some knowledge about software engineering, linear algebra and numerical mathematics. 
 
-
-\subsection{Report} % Er dette et godt ord??
-This project report is meant for everyone curious about an specific introduction to practical examples of machine learning using neural networks. The specific part is linked to this projects assignment, which is to use different approaches to achieve an respectable accuracy.\\
+%Mye fra forrige avsnitt blir gjentatt her
+%\subsection{Report} % Er dette et godt ord??
+%This project report is meant for everyone curious about an specific introduction to practical examples of machine learning using neural networks. The specific part is linked to this projects assignment, which is to use different approaches to achieve an respectable accuracy.\\
 % line break
-Even though this report is meant as an introduction to a complicated field, we have based our writing on that the reader has knowledge equivalent to an 2nd year computer engineering student at Norwegian University of Science and Technology in Trondheim. Thus, some of the fundamentals are excluded. % ok setning?
+%Even though this report is meant as an introduction to a complicated field, we have based our writing on that the reader has knowledge equivalent to an 2nd year computer engineering student at Norwegian University of Science and Technology in Trondheim. Thus, some of the fundamentals are excluded. % ok setning?
 
 
 \subsection{Application}
-The application which consists of an simple back end and a front end library is available to use under the MIT license \cite{_mit_????}. As previously stated, the application is specifically created to fit the needs of our product owners, but the front end library can be used in a more general matter. % TODO bruk bilder, figurer eller lignende av applikasjonen (?)
+The application consists of an simple back end and a front end library and is available to use under the MIT license \cite{_mit_????}. As previously stated, the application is specifically created to fit the needs of our product owners, however, the front end library can be used in a more general matter. % TODO bruk bilder, figurer eller lignende av applikasjonen (?)
 
 
 %\section{CROHME} % Teori
@@ -116,8 +124,12 @@ The application which consists of an simple back end and a front end library is 
 % si noe om "junk" ? filtrering osv er ikke lett
 %The winner of CROHME 2016 and other competition years, was MyScript. MyScript has a commercial solution which has rich functionality and good results, but they managed to achieve those results with their own private data set. \parencite{mouchere_icfhr2016_2016}  \\ 
 
+%Tror egt ikke vi trenger den her, vi kan prøve å flette den litt sammen med motivation
 \section{Purpose}
-The purpose of this project is both to create something useful for our product owners, while exploring the possibilities and limitations of recognition of handwritten mathematical symbols. In addition to creating something useful, we hope to inspire further work on the subject. Choices made during the project were strongly influenced by previous work, for example Martin Thoma, 2015 \cite{thoma_-line_2015} and Catherine Lu and Karanveer Mohan \cite{lu_recognition_2015}.
+The purpose of this project is both to create something useful for our product owners, while exploring the possibilities and limitations of recognition of handwritten mathematical symbols. In addition, we hope to inspire further work on the subject. 
+
+%Litt rart og ha det her under purpose
+Choices made during the project were strongly influenced by previous work, for example Martin Thoma, 2015 \cite{thoma_-line_2015} and Catherine Lu and Karanveer Mohan \cite{lu_recognition_2015}.
 
 \section{Abbreviations}  % Set the left side page header to "Abbreviations"
 \begin{table}[H]
@@ -127,16 +139,21 @@ The purpose of this project is both to create something useful for our product o
 \textbf{CNN} & Convolutional Neural Network \\
 \textbf{CPU} & Central Processing Unit \\
 \textbf{CROHME} & Competition on Recognition of Online Handwritten Mathematical Expressions\\
+\textbf{CSS} & Cascading Style Sheets \\
 \textbf{GPU} & Graphics Processing Unit \\
 \textbf{GUI} & Graphical User Interface \\
+\textbf{HTML} & HyperText Markup Language \\ 
 \textbf{ICFHR} & International Conference on Frontiers in Handwriting Recognition \\
+\textbf{IDE} & Integrated Development Environment \\
 \textbf{ILU} & Department of Teacher Education \\
 \textbf{InkML} & Ink Markup Language \\
 \textbf{JSON} & JavaScript Object Notation \\
 \textbf{LSTM} & Long Short-Term Memory \\
 \textbf{MLP} & Multilayer Perceptrons \\
 \textbf{MNIST} & Modified National Institute of Standards and Technology database \\
+\textbf{NTNU} & Norwegian University of Science and Technology \\
 \textbf{OCR} & Optical Character Recognition \\
+\textbf{RDP} & Ramer-Douglas-Peucker algorithm \\
 \textbf{RNN} & Recurrent Neural Network \\
 \textbf{GRU} & Gated Recurrent Unit \\
 \textbf{LSTM} & Long Short-Term Memory \\
