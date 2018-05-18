@@ -1,0 +1,1694 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{_mit_????}{online}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labeltitlesource}{title}
+      \field{title}{The {MIT} License {|} Open Source Initiative}
+      \field{urlday}{12}
+      \field{urlmonth}{4}
+      \field{urlyear}{2018}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb The MIT License | Open Source Initiative:/home/havard/Zotero/storage/PJ5MMQ98/MIT.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://opensource.org/licenses/MIT
+      \endverb
+      \verb{url}
+      \verb https://opensource.org/licenses/MIT
+      \endverb
+    \endentry
+    \entry{thoma_-line_2015}{article}{}
+      \name{author}{1}{}{%
+        {{hash=140f3f1af8537ad5e6f9e6ef92c046d8}{%
+           family={Thoma},
+           familyi={T\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{140f3f1af8537ad5e6f9e6ef92c046d8}
+      \strng{fullhash}{140f3f1af8537ad5e6f9e6ef92c046d8}
+      \strng{bibnamehash}{140f3f1af8537ad5e6f9e6ef92c046d8}
+      \strng{authorbibnamehash}{140f3f1af8537ad5e6f9e6ef92c046d8}
+      \strng{authornamehash}{140f3f1af8537ad5e6f9e6ef92c046d8}
+      \strng{authorfullhash}{140f3f1af8537ad5e6f9e6ef92c046d8}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Finding the name of an unknown symbol is often hard, but writing the symbol is easy. This bachelor's thesis presents multiple systems that use the pen trajectory to classify handwritten symbols. Five preprocessing steps, one data augmentation algorithm, five features and five variants for multilayer Perceptron training were evaluated using 166898 recordings which were collected with two crowdsourcing projects. The evaluation results of these 21 experiments were used to create an optimized recognizer which has a {TOP}1 error of less than 17.5\% and a {TOP}3 error of 4.0\%. This is an improvement of 18.5\% for the {TOP}1 error and 29.7\% for the {TOP}3 error.}
+      \field{day}{29}
+      \field{eprinttype}{arxiv}
+      \field{journaltitle}{{arXiv}:1511.09030 [cs]}
+      \field{month}{11}
+      \field{title}{On-line Recognition of Handwritten Mathematical Symbols}
+      \field{urlday}{6}
+      \field{urlmonth}{3}
+      \field{urlyear}{2018}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.5445/IR/1000048047
+      \endverb
+      \verb{eprint}
+      \verb 1511.09030
+      \endverb
+      \verb{file}
+      \verb arXiv\:1511.09030 PDF:/home/havard/Zotero/storage/64WZQMVT/Thoma - 2015 - On-line Recognition of Handwritten Mathematical Sy.pdf:application/pdf;arXiv.org Snapshot:/home/havard/Zotero/storage/4ULI9GCT/1511.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1511.09030
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1511.09030
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition}
+    \endentry
+    \entry{lu_recognition_2015}{article}{}
+      \name{author}{2}{}{%
+        {{hash=53b45bdfad37aa0e2ee926f8d2427ba6}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Catherine},
+           giveni={C\bibinitperiod}}}%
+        {{hash=432e0d66e814fb5fbeaf98f2d327456e}{%
+           family={Mohan},
+           familyi={M\bibinitperiod},
+           given={Karanveer},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{6aa49a7a7419aa275cfc16a3ab9947bd}
+      \strng{fullhash}{6aa49a7a7419aa275cfc16a3ab9947bd}
+      \strng{bibnamehash}{6aa49a7a7419aa275cfc16a3ab9947bd}
+      \strng{authorbibnamehash}{6aa49a7a7419aa275cfc16a3ab9947bd}
+      \strng{authornamehash}{6aa49a7a7419aa275cfc16a3ab9947bd}
+      \strng{authorfullhash}{6aa49a7a7419aa275cfc16a3ab9947bd}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We further investigate the problem of recognizing handwritten mathematical expressions, which we also chose for our {CS}221 ﬁnal project [3]. Being able to change handwritten expressions into {LATEX} has applications for consumers and academics. While large amounts of work have been done for digit and character recognition [2] [10], much less progress has been made surrounding handwritten expression recognition. To the best of our knowledge, no papers have been published applying Convolutional Neural Networks ({CNNs}) to the task of handwritten expression recognition. We build an end-to-end system using our best {CNN} model to go from strokes to symbols to a {LATEX} expression. We also compare our results to other systems; experimental evaluation suggests that {CNNs} are a powerful tool for handwritten mathematical expression recognition.}
+      \field{langid}{english}
+      \field{title}{Recognition of Online Handwritten Mathematical Expressions Using Convolutional Neural Networks}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{pages}{7}
+      \range{pages}{1}
+      \verb{file}
+      \verb Lu and Mohan - Recognition of Online Handwritten Mathematical Exp.pdf:/home/havard/Zotero/storage/2W4QHNNT/Lu and Mohan - Recognition of Online Handwritten Mathematical Exp.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{simon_off-line_1992}{article}{}
+      \name{author}{1}{}{%
+        {{hash=b604c9ca55ee56bf60a45d2fbd1dd376}{%
+           family={Simon},
+           familyi={S\bibinitperiod},
+           given={J.\bibnamedelimi C.},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{b604c9ca55ee56bf60a45d2fbd1dd376}
+      \strng{fullhash}{b604c9ca55ee56bf60a45d2fbd1dd376}
+      \strng{bibnamehash}{b604c9ca55ee56bf60a45d2fbd1dd376}
+      \strng{authorbibnamehash}{b604c9ca55ee56bf60a45d2fbd1dd376}
+      \strng{authornamehash}{b604c9ca55ee56bf60a45d2fbd1dd376}
+      \strng{authorfullhash}{b604c9ca55ee56bf60a45d2fbd1dd376}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The state of the art in handwriting recognition, especially in cursive word recognition, is surveyed, and some basic notions are reviewed in the field of picture recognition, particularly, line image recognition. The usefulness of `regular' versus `singular' classes of features is stressed. These notions are applied to obtain a graph, G , representing a line image, and also to find an `axis' as the regular part of G. The complements to G of the axis are the `tarsi', singular parts of G, which correspond to informative features of a cursive word. A segmentation of the graph is obtained, giving a symbolic description chain ({SDC}). Using one or more as robust anchors, possible words in a list of words are selected. Candidate words are examined to see if the other letters fit the rest of the {SDC}. Good results are obtained for clean images of words written by several persons}
+      \field{issn}{0018-9219}
+      \field{journaltitle}{Proceedings of the {IEEE}}
+      \field{month}{7}
+      \field{number}{7}
+      \field{title}{Off-line cursive word recognition}
+      \field{volume}{80}
+      \field{year}{1992}
+      \field{dateera}{ce}
+      \field{pages}{1150\bibrangedash 1161}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1109/5.156476
+      \endverb
+      \verb{file}
+      \verb IEEE Xplore Abstract Record:/home/havard/Zotero/storage/TSYLQZUX/156476.html:text/html
+      \endverb
+      \keyw{Character recognition,Handwriting recognition,Background noise,cursive word recognition,graph,graph theory,Graphics,handwriting recognition,Image recognition,Image segmentation,line image recognition,optical character recognition,Pattern recognition,picture recognition,Pixel,Robustness,segmentation,Speech recognition,symbolic description chain}
+    \endentry
+    \entry{mori_historical_1992}{article}{}
+      \name{author}{3}{}{%
+        {{hash=6533cb6deeb36f994215f2f265fa024e}{%
+           family={Mori},
+           familyi={M\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=2807c1c32e8571bcc11298daa005e1bb}{%
+           family={Suen},
+           familyi={S\bibinitperiod},
+           given={C.Y.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=4168e03e64dae59856fd686c19d20c7f}{%
+           family={Yamamoto},
+           familyi={Y\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{6fb781a7abc4a7f975aca01f60559872}
+      \strng{fullhash}{6fb781a7abc4a7f975aca01f60559872}
+      \strng{bibnamehash}{6fb781a7abc4a7f975aca01f60559872}
+      \strng{authorbibnamehash}{6fb781a7abc4a7f975aca01f60559872}
+      \strng{authornamehash}{6fb781a7abc4a7f975aca01f60559872}
+      \strng{authorfullhash}{6fb781a7abc4a7f975aca01f60559872}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{00189219}
+      \field{journaltitle}{Proceedings of the {IEEE}}
+      \field{langid}{english}
+      \field{month}{7}
+      \field{number}{7}
+      \field{title}{Historical review of {OCR} research and development}
+      \field{urlday}{10}
+      \field{urlmonth}{4}
+      \field{urlyear}{2018}
+      \field{volume}{80}
+      \field{year}{1992}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1029\bibrangedash 1058}
+      \range{pages}{30}
+      \verb{doi}
+      \verb 10.1109/5.156468
+      \endverb
+      \verb{file}
+      \verb Mori et al. - 1992 - Historical review of OCR research and development.pdf:/home/havard/Zotero/storage/2VY2MLX7/Mori et al. - 1992 - Historical review of OCR research and development.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://ieeexplore.ieee.org/document/156468/
+      \endverb
+      \verb{url}
+      \verb http://ieeexplore.ieee.org/document/156468/
+      \endverb
+    \endentry
+    \entry{fukushima_handwritten_????}{article}{}
+      \name{author}{2}{}{%
+        {{hash=23d96062ed18321873ac4b8b6e2fc816}{%
+           family={Fukushima},
+           familyi={F\bibinitperiod},
+           given={Kunihiko},
+           giveni={K\bibinitperiod}}}%
+        {{hash=d2838494bf1135d039620a754ef54d24}{%
+           family={Wake},
+           familyi={W\bibinitperiod},
+           given={Nobuaki},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{7050f69c2ffa7bd3aae06679d0119696}
+      \strng{fullhash}{7050f69c2ffa7bd3aae06679d0119696}
+      \strng{bibnamehash}{7050f69c2ffa7bd3aae06679d0119696}
+      \strng{authorbibnamehash}{7050f69c2ffa7bd3aae06679d0119696}
+      \strng{authornamehash}{7050f69c2ffa7bd3aae06679d0119696}
+      \strng{authorfullhash}{7050f69c2ffa7bd3aae06679d0119696}
+      \field{sortinit}{8}
+      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A neural network model of visual pattern recognition, called the neocognitron, was previously proposed by one of the present authors. It is capable of deformation-invariant visual pattern recognition. In this paper, we discuss a patternrecognition system which works with the mechanism of the neocognitron. The system has been trained to recognize 35 handwritten alphanumeric characters. The ability to correctly recognize deformed characters depends highly on the choice of the training pattern set. This paper offers some techniques for selecting training patterns useful for deformation-invariant recognition of a large number of characters.}
+      \field{langid}{english}
+      \field{title}{Handwritten Alphanumeric Character Recognition by the Neocognitron}
+      \field{pages}{11}
+      \range{pages}{1}
+      \verb{file}
+      \verb Fukushima and Wake - Handwritten Alphanumeric Character Recognition by .pdf:/home/havard/Zotero/storage/H6JCV4FF/Fukushima and Wake - Handwritten Alphanumeric Character Recognition by .pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{priya_online_2016}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=abb4e957326918e7c12211de8d94357f}{%
+           family={Priya},
+           familyi={P\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=3ea22b622ca46b247d297872c71bcf59}{%
+           family={Mishra},
+           familyi={M\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=087bf7ed5614068cf6578747087dd2de}{%
+           family={Raj},
+           familyi={R\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=d2c64a2d7002b1ec8efa168af1f97bc5}{%
+           family={Mandal},
+           familyi={M\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=c949e8c257773eed3295997e09ada128}{%
+           family={Datta},
+           familyi={D\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{2ea70f79564e440c6d7bb3333546595c}
+      \strng{fullhash}{c927d1578253c6e2d7659559d4e3e470}
+      \strng{bibnamehash}{c927d1578253c6e2d7659559d4e3e470}
+      \strng{authorbibnamehash}{c927d1578253c6e2d7659559d4e3e470}
+      \strng{authornamehash}{2ea70f79564e440c6d7bb3333546595c}
+      \strng{authorfullhash}{c927d1578253c6e2d7659559d4e3e470}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Handwritten character recognition has been one of the most fascinating research among the various researches in field of image processing. In Handwritten character recognition method the input is scanned from images, documents and real time devices like tablets, tabloids, digitizers etc. which are then interpreted into digital text. There are basically two approaches - Online Handwritten recognition which takes the input at run time and Offline Handwritten Recognition which works on scanned images. In this paper we have discussed the architecture, the steps involved, and the various proposed methodologies of offline and online character recognition along with their comparison and few applications.}
+      \field{booktitle}{2016 International Conference on Communication and Signal Processing ({ICCSP})}
+      \field{eventtitle}{2016 International Conference on Communication and Signal Processing ({ICCSP})}
+      \field{month}{4}
+      \field{shorttitle}{Online and offline character recognition}
+      \field{title}{Online and offline character recognition: A survey}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{pages}{0967\bibrangedash 0970}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1109/ICCSP.2016.7754291
+      \endverb
+      \verb{file}
+      \verb IEEE Xplore Abstract Record:/home/havard/Zotero/storage/GZEAKUQT/7754291.html:text/html
+      \endverb
+      \keyw{Neural networks,Training,Character recognition,Computers,digital text,Feature extraction,Handwriting recognition,handwritten character recognition,Handwritten recognition,image processing,image recognition,offline character recognition,online character recognition,scanned images,text detection,Writing}
+    \endentry
+    \entry{huang_preprocessing_2007}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=db0d676fee8ab399692bd7bccbe06a93}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={B.\bibnamedelimi Q.},
+           giveni={B\bibinitperiod\bibinitdelim Q\bibinitperiod}}}%
+        {{hash=2167edc9ebef29c75d84d5afc08e11a1}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Y.\bibnamedelimi B.},
+           giveni={Y\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=3ca677c867e85c5d5cc8d52c66bc1b1f}{%
+           family={Kechadi},
+           familyi={K\bibinitperiod},
+           given={M.\bibnamedelimi T.},
+           giveni={M\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{6ce1351db87599be8a85903b12ee06ae}
+      \strng{fullhash}{6ce1351db87599be8a85903b12ee06ae}
+      \strng{bibnamehash}{6ce1351db87599be8a85903b12ee06ae}
+      \strng{authorbibnamehash}{6ce1351db87599be8a85903b12ee06ae}
+      \strng{authornamehash}{6ce1351db87599be8a85903b12ee06ae}
+      \strng{authorfullhash}{6ce1351db87599be8a85903b12ee06ae}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper proposes a new preprocessing technique for online handwriting. The approach is to ﬁrst remove the hooks of the strokes by using changed-angle threshold with length threshold, then ﬁlter the noise by using a smoothing technique, which is the combination of the Cubic Spline and the equal-interpolation methods. Finally, the handwriting is normalised. Experiments are carried out using the benchmark {UNIPEN} database. The experimental results show that our preprocessing technique can improve the recognition rates by at least 10\%.}
+      \field{isbn}{978-0-7695-2976-9}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{title}{Preprocessing Techniques for Online Handwriting Recognition}
+      \field{urlday}{24}
+      \field{urlmonth}{4}
+      \field{urlyear}{2018}
+      \field{year}{2007}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{793\bibrangedash 800}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/ISDA.2007.31
+      \endverb
+      \verb{file}
+      \verb Huang et al. - 2007 - Preprocessing Techniques for Online Handwriting Re.pdf:/home/havard/Zotero/storage/N9JF46M4/Huang et al. - 2007 - Preprocessing Techniques for Online Handwriting Re.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://ieeexplore.ieee.org/document/4389705/
+      \endverb
+      \verb{url}
+      \verb http://ieeexplore.ieee.org/document/4389705/
+      \endverb
+    \endentry
+    \entry{h_algorithms_2011}{incollection}{}
+      \name{author}{2}{}{%
+        {{hash=3b4b718bdbf3704d17005fa10a477db1}{%
+           family={H},
+           familyi={H\bibinitperiod},
+           given={Douglas\bibnamedelima David},
+           giveni={D\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=75b06428e58beaa8fe6fa6f94e210800}{%
+           family={K},
+           familyi={K\bibinitperiod},
+           given={Peucker\bibnamedelima Thomas},
+           giveni={P\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley-Blackwell}%
+      }
+      \strng{namehash}{79ad40134fb38e9f8a4c5254d16b4d70}
+      \strng{fullhash}{79ad40134fb38e9f8a4c5254d16b4d70}
+      \strng{bibnamehash}{79ad40134fb38e9f8a4c5254d16b4d70}
+      \strng{authorbibnamehash}{79ad40134fb38e9f8a4c5254d16b4d70}
+      \strng{authornamehash}{79ad40134fb38e9f8a4c5254d16b4d70}
+      \strng{authorfullhash}{79ad40134fb38e9f8a4c5254d16b4d70}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Summary This chapter contains sections titled: References}
+      \field{booktitle}{Classics in Cartography}
+      \field{isbn}{978-0-470-66948-8}
+      \field{title}{Algorithms for the Reduction of the Number of Points Required to Represent a Digitized Line or its Caricature}
+      \field{year}{2011}
+      \field{dateera}{ce}
+      \field{pages}{15\bibrangedash 28}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1002/9780470669488.ch2
+      \endverb
+      \verb{urlraw}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1002/9780470669488.ch2
+      \endverb
+      \verb{url}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1002/9780470669488.ch2
+      \endverb
+      \keyw{algorithms,chains approximating lines ‐ sequence of end‐to‐end vectors,directed at deleting points ‐ the simplest,epistemological practice ‐ algorithms,facilitating their reproduction at different scales and projections,for reduction of number of points required to represent a digitized line or its caricature,interactive computer programme ‐ ability to ‘learn’ from actions of an operator,line reduction by selection of every sixth point,lines from maps and photographs ‐ recorded numerically for cartographic manipulation,resulting data sets of extracted functions ‐ economical in terms of storage space required,subjective selection of representative points}
+    \endentry
+    \entry{mouchere_icfhr2016_2016}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=d353bcddbb9f2c7c4ec21df3c8b5fae6}{%
+           family={Mouchère},
+           familyi={M\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=bef23cc3551c1bbc774986fd4c875ef6}{%
+           family={Viard-Gaudin},
+           familyi={V\bibinithyphendelim G\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=512671b181753092050edb1108c950fd}{%
+           family={Zanibbi},
+           familyi={Z\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=66802d2462c803f7d5a94a91ac0b488b}{%
+           family={Garain},
+           familyi={G\bibinitperiod},
+           given={U.},
+           giveni={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{92ef4b8b3e1d9181d142e9e6355ec72b}
+      \strng{fullhash}{1fe274275319636b35becff333ab4447}
+      \strng{bibnamehash}{1fe274275319636b35becff333ab4447}
+      \strng{authorbibnamehash}{1fe274275319636b35becff333ab4447}
+      \strng{authornamehash}{92ef4b8b3e1d9181d142e9e6355ec72b}
+      \strng{authorfullhash}{1fe274275319636b35becff333ab4447}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper presents an overview of the 5th Competition on Recognition of Online Handwritten Mathematical Expressions ({CROHME}). As in previous years, the main task is formula recognition from handwritten strokes (Task 1). Additional tasks include classification of isolated symbols (Task 2a), classification of isolated valid and invalid symbols (Task 2b), a new task on parsing formula structure from valid handwritten symbols (Task 3), and parsing expressions with matrices (Task 4, experimental). In total, eleven (11) research labs registered for the competition, with six (6) teams submitting results. Innovations for this {CROHME} included providing a corpus of formulae from Wikipedia to train language models, and an online system for result submission. The highest recognition rates were obtained by {MyScript} corporation (Task 1. 67.65\%, 2a. 92.81\%, 2b. 86.77\%, 3. 84.38\%, and 4. 68.40\%). Using only provided training data, the highest recognition rates were obtained by {WIRIS} corporation (Task 1. 49.61\%, Task 3. 78.80\%, Task 4. 56.40\%), the Tokyo University of Agriculture and Technology (Task 2a. 92.28\%), and {RIT} (Task 2b. 83.34\%). The competition results suggest that recognition of handwritten formulae remains a difficult structural pattern recognition task.}
+      \field{booktitle}{2016 15th International Conference on Frontiers in Handwriting Recognition ({ICFHR})}
+      \field{month}{10}
+      \field{title}{{ICFHR}2016 {CROHME}: Competition on Recognition of Online Handwritten Mathematical Expressions}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{pages}{607\bibrangedash 612}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/ICFHR.2016.0116
+      \endverb
+      \keyw{Training,Handwriting recognition,handwritten character recognition,handwriting recognition,Electronic publishing,Encyclopedias,formula recognition,formula structure parsing,{ICFHR}2016 {CROHME},image classification,Internet,isolated symbol classification,mathematical expression recognition,mathematics computing,Measurement,{MyScript} corporation,online handwritten mathematical expression recognition,performance evaluation,{RIT},spatial relations,structural pattern recognition,Tokyo University of Agriculture and Technology,{WIRIS} corporation}
+    \endentry
+    \entry{mouchere_advancing_2016}{article}{}
+      \name{author}{4}{}{%
+        {{hash=c2555b69a0decfae2ef1fa5fb184bd63}{%
+           family={Mouchère},
+           familyi={M\bibinitperiod},
+           given={Harold},
+           giveni={H\bibinitperiod}}}%
+        {{hash=50ffdbea856f721f1d02eb157120456a}{%
+           family={Zanibbi},
+           familyi={Z\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod}}}%
+        {{hash=4043c92a7ba1ba84ee3a4ed96b33104b}{%
+           family={Garain},
+           familyi={G\bibinitperiod},
+           given={Utpal},
+           giveni={U\bibinitperiod}}}%
+        {{hash=36f68b254fcc91c8357ed7356ca24f2e}{%
+           family={Viard-Gaudin},
+           familyi={V\bibinithyphendelim G\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{291cea1b1fcc245ac572586f9c06c799}
+      \strng{fullhash}{21c28f9edcad331bce282447f30e0198}
+      \strng{bibnamehash}{21c28f9edcad331bce282447f30e0198}
+      \strng{authorbibnamehash}{21c28f9edcad331bce282447f30e0198}
+      \strng{authornamehash}{291cea1b1fcc245ac572586f9c06c799}
+      \strng{authorfullhash}{21c28f9edcad331bce282447f30e0198}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{The {CROHME} competitions have helped organize the ﬁeld of handwritten mathematical expression recognition. This paper presents the evolution of the competition over its ﬁrst 4 years, and its contributions to handwritten math recognition, and more generally structural pattern recognition research. The competition protocol, evaluation metrics and datasets are presented in detail. Participating systems are analyzed and compared in terms of the central mathematical expression recognition tasks: (1) symbol segmentation, (2) classiﬁcation of individual symbols, (3) symbol relationships and (4) structural analysis (parsing). The competition led to the development of label graphs, which allow recognition results with conﬂicting segmentations to be directly compared and quantiﬁed using Hamming distances. We introduce structure confusion histograms that provide frequencies for incorrect subgraphs corresponding to ground-truth label subgraphs of a given size and present structure confusion histograms for symbol bigrams (two symbols with a relationship) for {CROHME} 2014 systems.}
+      \field{issn}{1433-2833, 1433-2825}
+      \field{journaltitle}{International Journal on Document Analysis and Recognition ({IJDAR})}
+      \field{langid}{english}
+      \field{month}{6}
+      \field{number}{2}
+      \field{shorttitle}{Advancing the state of the art for handwritten math recognition}
+      \field{title}{Advancing the state of the art for handwritten math recognition: the {CROHME} competitions, 2011–2014}
+      \field{urlday}{10}
+      \field{urlmonth}{4}
+      \field{urlyear}{2018}
+      \field{volume}{19}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{173\bibrangedash 189}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1007/s10032-016-0263-5
+      \endverb
+      \verb{file}
+      \verb Mouchère et al. - 2016 - Advancing the state of the art for handwritten mat.pdf:/home/havard/Zotero/storage/VXCX6CIJ/Mouchère et al. - 2016 - Advancing the state of the art for handwritten mat.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/s10032-016-0263-5
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/s10032-016-0263-5
+      \endverb
+    \endentry
+    \entry{chee_ink_2011}{online}{}
+      \name{author}{11}{}{%
+        {{hash=8758d9807114cfe37438052d6fc02200}{%
+           family={Chee},
+           familyi={C\bibinitperiod},
+           given={Yi-Min},
+           giveni={Y\bibinithyphendelim M\bibinitperiod}}}%
+        {{hash=ddad3d380c369a050452c8766fa0df93}{%
+           family={Franke},
+           familyi={F\bibinitperiod},
+           given={Katrin},
+           giveni={K\bibinitperiod}}}%
+        {{hash=e6b74f73dfb9363d5112fcdd9367e1cb}{%
+           family={Froumentin},
+           familyi={F\bibinitperiod},
+           given={Max},
+           giveni={M\bibinitperiod}}}%
+        {{hash=c0f4e237bff8b48ee9872d8f2d37eeaa}{%
+           family={Madhvanath},
+           familyi={M\bibinitperiod},
+           given={Sriganesh},
+           giveni={S\bibinitperiod}}}%
+        {{hash=e717c723f5508b8037e50247f1bf5295}{%
+           family={Magaña},
+           familyi={M\bibinitperiod},
+           given={Jose-Antonio},
+           giveni={J\bibinithyphendelim A\bibinitperiod}}}%
+        {{hash=dfc4aee2d3fef0fe3afe9642a7c39244}{%
+           family={Pakosz},
+           familyi={P\bibinitperiod},
+           given={Grégory},
+           giveni={G\bibinitperiod}}}%
+        {{hash=8b3bc0eed347092d44a500628a4aa420}{%
+           family={Russell},
+           familyi={R\bibinitperiod},
+           given={Gregory},
+           giveni={G\bibinitperiod}}}%
+        {{hash=12d7e14d2530e9a9ac79f65b4aa1fc28}{%
+           family={Muthuselvam},
+           familyi={M\bibinitperiod},
+           given={Selvaraj},
+           giveni={S\bibinitperiod}}}%
+        {{hash=c4ee0b07e8c6ff6b87d42e733be6e486}{%
+           family={Seni},
+           familyi={S\bibinitperiod},
+           given={Giovanni},
+           giveni={G\bibinitperiod}}}%
+        {{hash=c144ba3cf1e345bec7524ae7e4beb886}{%
+           family={Tremblay},
+           familyi={T\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod}}}%
+        {{hash=602333cc9638bdf5b57a30d78b9d4b74}{%
+           family={Yaeger},
+           familyi={Y\bibinitperiod},
+           given={Larry},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{c7cd3c6a6db83f658658eafe3fb80919}
+      \strng{fullhash}{73889b32fc3d0148f801626d2feb7483}
+      \strng{bibnamehash}{73889b32fc3d0148f801626d2feb7483}
+      \strng{authorbibnamehash}{73889b32fc3d0148f801626d2feb7483}
+      \strng{authornamehash}{c7cd3c6a6db83f658658eafe3fb80919}
+      \strng{authorfullhash}{73889b32fc3d0148f801626d2feb7483}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{day}{20}
+      \field{month}{9}
+      \field{shorttitle}{Ink Markup Language}
+      \field{title}{Ink Markup Language ({InkML})}
+      \field{titleaddon}{Ink Markup Language ({InkML})}
+      \field{type}{W3C Recommendation 20 September 2011}
+      \field{urlday}{6}
+      \field{urlmonth}{3}
+      \field{urlyear}{2018}
+      \field{year}{2011}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Ink Markup Language (InkML):/home/havard/Zotero/storage/33KJX96F/InkML.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.w3.org/TR/InkML/
+      \endverb
+      \verb{url}
+      \verb https://www.w3.org/TR/InkML/
+      \endverb
+    \endentry
+    \entry{murphy_machine_2012}{book}{}
+      \name{author}{1}{}{%
+        {{hash=57a45a819d1ea44f0e40dfcdeeaa4140}{%
+           family={Murphy},
+           familyi={M\bibinitperiod},
+           given={Kevin\bibnamedelima P.},
+           giveni={K\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge, {MA}}%
+      }
+      \list{publisher}{1}{%
+        {{MIT} Press}%
+      }
+      \strng{namehash}{57a45a819d1ea44f0e40dfcdeeaa4140}
+      \strng{fullhash}{57a45a819d1ea44f0e40dfcdeeaa4140}
+      \strng{bibnamehash}{57a45a819d1ea44f0e40dfcdeeaa4140}
+      \strng{authorbibnamehash}{57a45a819d1ea44f0e40dfcdeeaa4140}
+      \strng{authornamehash}{57a45a819d1ea44f0e40dfcdeeaa4140}
+      \strng{authorfullhash}{57a45a819d1ea44f0e40dfcdeeaa4140}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{isbn}{978-0-262-01802-9}
+      \field{langid}{english}
+      \field{pagetotal}{1067}
+      \field{series}{Adaptive computation and machine learning series}
+      \field{shorttitle}{Machine learning}
+      \field{title}{Machine learning: a probabilistic perspective}
+      \field{year}{2012}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb Murphy - 2012 - Machine learning a probabilistic perspective.pdf:/home/havard/Zotero/storage/DTB7T7GE/Murphy - 2012 - Machine learning a probabilistic perspective.pdf:application/pdf
+      \endverb
+      \keyw{Machine learning,Probabilities}
+    \endentry
+    \entry{cline_predictive_2017}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=106dee5d62408dc9656688967eb09424}{%
+           family={Cline},
+           familyi={C\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=12f8d2c514936181e57019f6306425ab}{%
+           family={Niculescu},
+           familyi={N\bibinitperiod},
+           given={R.\bibnamedelimi S.},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=2d8a07ed7110991ef1b780f6addab97b}{%
+           family={Huffman},
+           familyi={H\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=ea6071138c52bcf29630c039055dc028}{%
+           family={Deckel},
+           familyi={D\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{3282e5b2fbeed4c70074d171d2afbd54}
+      \strng{fullhash}{16d819c07ec3ce4808db500f6b7c8ce0}
+      \strng{bibnamehash}{16d819c07ec3ce4808db500f6b7c8ce0}
+      \strng{authorbibnamehash}{16d819c07ec3ce4808db500f6b7c8ce0}
+      \strng{authornamehash}{3282e5b2fbeed4c70074d171d2afbd54}
+      \strng{authorfullhash}{16d819c07ec3ce4808db500f6b7c8ce0}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2017 Annual Reliability and Maintainability Symposium ({RAMS})}
+      \field{month}{1}
+      \field{title}{Predictive maintenance applications for machine learning}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{pages}{1\bibrangedash 7}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/RAM.2017.7889679
+      \endverb
+      \keyw{Analytical models,Connectors,Data models,environmental variable,failure analysis,failure signature,Inspection,learning (artificial intelligence),machine learning,Machine Learning,machine performance,maintenance engineering,maintenance planning,planning,Predicted Failure Analysis,predictive maintenance,Predictive maintenance,Predictive Maintenance,Predictive models,production engineering computing,reliability}
+    \endentry
+    \entry{goodfellow_deep_2016}{book}{}
+      \name{author}{3}{}{%
+        {{hash=5d2585c11210cf1d4512e6e0a03ec315}{%
+           family={Goodfellow},
+           familyi={G\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod}}}%
+        {{hash=40a8e4774982146adc2688546f54efb2}{%
+           family={Bengio},
+           familyi={B\bibinitperiod},
+           given={Yoshua},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=ccec1ccd2e1aa86960eb2e872c6b7020}{%
+           family={Courville},
+           familyi={C\bibinitperiod},
+           given={Aaron},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {{MIT} Press}%
+      }
+      \strng{namehash}{3ae53fe582e8a815b118d26947eaa326}
+      \strng{fullhash}{3ae53fe582e8a815b118d26947eaa326}
+      \strng{bibnamehash}{3ae53fe582e8a815b118d26947eaa326}
+      \strng{authorbibnamehash}{3ae53fe582e8a815b118d26947eaa326}
+      \strng{authornamehash}{3ae53fe582e8a815b118d26947eaa326}
+      \strng{authorfullhash}{3ae53fe582e8a815b118d26947eaa326}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Deep Learning}
+      \field{year}{2016}
+      \field{dateera}{ce}
+    \endentry
+    \entry{_cs231n_????}{online}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labeltitlesource}{title}
+      \field{title}{{CS}231n Convolutional Neural Networks for Visual Recognition - Neural Networks 1}
+      \field{urlday}{20}
+      \field{urlmonth}{4}
+      \field{urlyear}{2018}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb CS231n Convolutional Neural Networks for Visual Recognition:/home/havard/Zotero/storage/BS2YSCSD/neural-networks-1.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb http://cs231n.github.io/neural-networks-1/
+      \endverb
+      \verb{url}
+      \verb http://cs231n.github.io/neural-networks-1/
+      \endverb
+    \endentry
+    \entry{_multi-layer_????}{online}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labeltitlesource}{title}
+      \field{title}{Multi-Layer Neural Network}
+      \field{titleaddon}{stanfort.edu}
+      \verb{urlraw}
+      \verb http://ufldl.stanford.edu/tutorial/supervised/MultiLayerNeuralNetworks/
+      \endverb
+      \verb{url}
+      \verb http://ufldl.stanford.edu/tutorial/supervised/MultiLayerNeuralNetworks/
+      \endverb
+    \endentry
+    \entry{smith_scientist_1997}{book}{}
+      \name{author}{1}{}{%
+        {{hash=a1e4c9b197870fea6123471fddda3c0e}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Steven\bibnamedelima W.},
+           giveni={S\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {California Technical Publishing}%
+      }
+      \strng{namehash}{a1e4c9b197870fea6123471fddda3c0e}
+      \strng{fullhash}{a1e4c9b197870fea6123471fddda3c0e}
+      \strng{bibnamehash}{a1e4c9b197870fea6123471fddda3c0e}
+      \strng{authorbibnamehash}{a1e4c9b197870fea6123471fddda3c0e}
+      \strng{authornamehash}{a1e4c9b197870fea6123471fddda3c0e}
+      \strng{authorfullhash}{a1e4c9b197870fea6123471fddda3c0e}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Scientist and Engineer's Guide to Digital Signal Processing}
+      \field{year}{1997}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb http://www.dspguide.com
+      \endverb
+      \verb{url}
+      \verb http://www.dspguide.com
+      \endverb
+      \keyw{book dsp imported}
+    \endentry
+    \entry{mcculloch_logical_1943}{article}{}
+      \name{author}{2}{}{%
+        {{hash=ab276c79cb07a4e40e320974b3e17abb}{%
+           family={{McCulloch}},
+           familyi={M\bibinitperiod},
+           given={Warren\bibnamedelima S},
+           giveni={W\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=c5a56e799cdf785e814246c091d36e73}{%
+           family={Pitts},
+           familyi={P\bibinitperiod},
+           given={Walter},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{eab08eddb4719c72a337c996dc1d1bc6}
+      \strng{fullhash}{eab08eddb4719c72a337c996dc1d1bc6}
+      \strng{bibnamehash}{eab08eddb4719c72a337c996dc1d1bc6}
+      \strng{authorbibnamehash}{eab08eddb4719c72a337c996dc1d1bc6}
+      \strng{authornamehash}{eab08eddb4719c72a337c996dc1d1bc6}
+      \strng{authorfullhash}{eab08eddb4719c72a337c996dc1d1bc6}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The bulletin of mathematical biophysics}
+      \field{number}{4}
+      \field{title}{A logical calculus of the ideas immanent in nervous activity}
+      \field{volume}{5}
+      \field{year}{1943}
+      \field{dateera}{ce}
+      \field{pages}{115\bibrangedash 133}
+      \range{pages}{19}
+    \endentry
+    \entry{jain_artificial_1996}{article}{}
+      \name{author}{3}{}{%
+        {{hash=9ee29fa046999b31c2634e59233a0eca}{%
+           family={Jain},
+           familyi={J\bibinitperiod},
+           given={A.\bibnamedelimi K.},
+           giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=32928b237f876080a4c73d015420fe3f}{%
+           family={Mao},
+           familyi={M\bibinitperiod},
+           given={Jianchang},
+           giveni={J\bibinitperiod}}}%
+        {{hash=02b684269e49fa46726e8cc71dff492d}{%
+           family={Mohiuddin},
+           familyi={M\bibinitperiod},
+           given={K.\bibnamedelimi M.},
+           giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{7f50eaa742c88697abbc16080032a459}
+      \strng{fullhash}{7f50eaa742c88697abbc16080032a459}
+      \strng{bibnamehash}{7f50eaa742c88697abbc16080032a459}
+      \strng{authorbibnamehash}{7f50eaa742c88697abbc16080032a459}
+      \strng{authornamehash}{7f50eaa742c88697abbc16080032a459}
+      \strng{authorfullhash}{7f50eaa742c88697abbc16080032a459}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0018-9162}
+      \field{journaltitle}{Computer}
+      \field{month}{3}
+      \field{number}{3}
+      \field{title}{Artificial neural networks: a tutorial}
+      \field{volume}{29}
+      \field{year}{1996}
+      \field{dateera}{ce}
+      \field{pages}{31\bibrangedash 44}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1109/2.485891
+      \endverb
+      \keyw{neural nets,{ANN} application,artificial computational model,artificial neural networks,Artificial neural networks,basic biological neuron,Biological neural networks,Biological system modeling,Biology computing,character recognition,Computer architecture,Concurrent computing,Humans,Integrated circuit interconnections,interconnected simple processors,learning processes,massively parallel systems,network architectures,neurophysiology,Parallel processing,Tutorial}
+    \endentry
+    \entry{leshno_multilayer_1993}{article}{}
+      \name{author}{4}{}{%
+        {{hash=049edb158a50c71989347ee731860f1b}{%
+           family={Leshno},
+           familyi={L\bibinitperiod},
+           given={Moshe},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d5f907ad8ed9f97f167cbb342eb9f6e6}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Vladimir\bibnamedelima Ya},
+           giveni={V\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+        {{hash=dd74c7fbb9c42c0ffe2c20ef9666f59b}{%
+           family={Pinkus},
+           familyi={P\bibinitperiod},
+           given={Allan},
+           giveni={A\bibinitperiod}}}%
+        {{hash=826c6510225a8fe3d36e12e39fd5ebc8}{%
+           family={Schocken},
+           familyi={S\bibinitperiod},
+           given={Shimon},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{bc83473d21da66afdae62ec8a27fc3a5}
+      \strng{fullhash}{22639e02990c4751478335bd273d9602}
+      \strng{bibnamehash}{22639e02990c4751478335bd273d9602}
+      \strng{authorbibnamehash}{22639e02990c4751478335bd273d9602}
+      \strng{authornamehash}{bc83473d21da66afdae62ec8a27fc3a5}
+      \strng{authorfullhash}{22639e02990c4751478335bd273d9602}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Neural networks}
+      \field{number}{6}
+      \field{title}{Multilayer feedforward networks with a nonpolynomial activation function can approximate any function}
+      \field{volume}{6}
+      \field{year}{1993}
+      \field{dateera}{ce}
+      \field{pages}{861\bibrangedash 867}
+      \range{pages}{7}
+    \endentry
+    \entry{sharma_understanding_2018}{book}{}
+      \name{author}{1}{}{%
+        {{hash=be19dd034d32e46b77204ecf73279330}{%
+           family={Sharma},
+           familyi={S\bibinitperiod},
+           given={Aditya},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{be19dd034d32e46b77204ecf73279330}
+      \strng{fullhash}{be19dd034d32e46b77204ecf73279330}
+      \strng{bibnamehash}{be19dd034d32e46b77204ecf73279330}
+      \strng{authorbibnamehash}{be19dd034d32e46b77204ecf73279330}
+      \strng{authornamehash}{be19dd034d32e46b77204ecf73279330}
+      \strng{authorfullhash}{be19dd034d32e46b77204ecf73279330}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Understanding Activation Functions in Deep Learning {|} Learn {OpenCV}}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.learnopencv.com/understanding-activation-functions-in-deep-learning/
+      \endverb
+      \verb{url}
+      \verb https://www.learnopencv.com/understanding-activation-functions-in-deep-learning/
+      \endverb
+    \endentry
+    \entry{krizhevsky_imagenet_2012}{incollection}{}
+      \name{author}{3}{}{%
+        {{hash=c5e3a676e2ac1164b3afcd539c131fc9}{%
+           family={Krizhevsky},
+           familyi={K\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+        {{hash=8d569d1d5b8b5a7836017a98b430f959}{%
+           family={Sutskever},
+           familyi={S\bibinitperiod},
+           given={Ilya},
+           giveni={I\bibinitperiod}}}%
+        {{hash=5aeb1de9b6c6f00a078230c628e6f41c}{%
+           family={Hinton},
+           familyi={H\bibinitperiod},
+           given={Geoffrey\bibnamedelima E},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \name{editor}{4}{}{%
+        {{hash=b4ac0d7da3c70152eb8651dd27648d63}{%
+           family={Pereira},
+           familyi={P\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=b70004bbac2b5517c4c32fc5cfe070be}{%
+           family={Burges},
+           familyi={B\bibinitperiod},
+           given={C.\bibnamedelimi J.\bibnamedelimi C.},
+           giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=27b0ff756cf36911b4cd7d704bfca7a4}{%
+           family={Bottou},
+           familyi={B\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=2cffb24bf1e4e0056d694659663c471c}{%
+           family={Weinberger},
+           familyi={W\bibinitperiod},
+           given={K.\bibnamedelimi Q.},
+           giveni={K\bibinitperiod\bibinitdelim Q\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Curran Associates, Inc.}%
+      }
+      \strng{namehash}{3ab31bf58af50e5ea6fa561177bf01a9}
+      \strng{fullhash}{3ab31bf58af50e5ea6fa561177bf01a9}
+      \strng{bibnamehash}{3ab31bf58af50e5ea6fa561177bf01a9}
+      \strng{authorbibnamehash}{3ab31bf58af50e5ea6fa561177bf01a9}
+      \strng{authornamehash}{3ab31bf58af50e5ea6fa561177bf01a9}
+      \strng{authorfullhash}{3ab31bf58af50e5ea6fa561177bf01a9}
+      \strng{editorbibnamehash}{c340ffe894b913b7a4a745c8f7f2a92d}
+      \strng{editornamehash}{ec8672532cfd2b7d8a936ae45345bc9c}
+      \strng{editorfullhash}{c340ffe894b913b7a4a745c8f7f2a92d}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in Neural Information Processing Systems 25}
+      \field{title}{{ImageNet} Classification with Deep Convolutional Neural Networks}
+      \field{year}{2012}
+      \field{dateera}{ce}
+      \field{pages}{1097\bibrangedash 1105}
+      \range{pages}{9}
+      \verb{urlraw}
+      \verb http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf
+      \endverb
+      \verb{url}
+      \verb http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf
+      \endverb
+    \endentry
+    \entry{zeiler_rectified_2013}{inproceedings}{}
+      \name{author}{11}{}{%
+        {{hash=f57caceb0ed6680ee015e2dd16062daf}{%
+           family={Zeiler},
+           familyi={Z\bibinitperiod},
+           given={M.\bibnamedelimi D.},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=cd218588457a5e8baf7951653efd7c9a}{%
+           family={Ranzato},
+           familyi={R\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=6ce2adcf2925686361ba0a05aeca766c}{%
+           family={Monga},
+           familyi={M\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=15ab79b3bc4da8c775870cbe250af16f}{%
+           family={Mao},
+           familyi={M\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=84871650a5c6718d396c15bd13d4e870}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=1c33ef04841c76b1531508d529ca774b}{%
+           family={Le},
+           familyi={L\bibinitperiod},
+           given={Q.\bibnamedelimi V.},
+           giveni={Q\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=2d9faf922ab51050aeda0e0858696c01}{%
+           family={Nguyen},
+           familyi={N\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=bf3fb5125970e39da0044801272d6c70}{%
+           family={Senior},
+           familyi={S\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9084a305697fded722dba9b5c26c8d8a}{%
+           family={Vanhoucke},
+           familyi={V\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+        {{hash=bcc19e41746ad75155bb324952309709}{%
+           family={Dean},
+           familyi={D\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=6b9475455390bf75201935e23fe0804d}{%
+           family={Hinton},
+           familyi={H\bibinitperiod},
+           given={G.\bibnamedelimi E.},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{1d993ac9a12f4e06570af0eb749fd47c}
+      \strng{fullhash}{ab7f61e1cf46dab993c3a9eea48da268}
+      \strng{bibnamehash}{ab7f61e1cf46dab993c3a9eea48da268}
+      \strng{authorbibnamehash}{ab7f61e1cf46dab993c3a9eea48da268}
+      \strng{authornamehash}{1d993ac9a12f4e06570af0eb749fd47c}
+      \strng{authorfullhash}{ab7f61e1cf46dab993c3a9eea48da268}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2013 {IEEE} International Conference on Acoustics, Speech and Signal Processing}
+      \field{month}{5}
+      \field{title}{On rectified linear units for speech processing}
+      \field{year}{2013}
+      \field{dateera}{ce}
+      \field{pages}{3517\bibrangedash 3521}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1109/ICASSP.2013.6638312
+      \endverb
+      \keyw{Accuracy,acoustic modeling,Deep Learning,deep neural networks,discriminative tasks,distributed environment,Encoding,Error analysis,gold standard,Hybrid System,key computational unit,large vocabulary speech recognition task,linear projection,logistic function,logistic units,Logistics,neural nets,Neural networks,Neural Networks,point-wise nonlinearity,rectified linear units,Rectified Linear units,sparse features,speech processing,speech recognition,supervised setting,Training,Unsupervised learning,Unsupervised Learning,vocabulary,word error rates}
+    \endentry
+    \entry{_cs231n_????-1}{online}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labeltitlesource}{title}
+      \field{title}{{CS}231n Convolutional Neural Networks for Visual Recognition - Linear classify}
+      \field{urlday}{23}
+      \field{urlmonth}{4}
+      \field{urlyear}{2018}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://cs231n.github.io/linear-classify/
+      \endverb
+      \verb{url}
+      \verb http://cs231n.github.io/linear-classify/
+      \endverb
+    \endentry
+    \entry{_neural_2018}{online}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labeltitlesource}{title}
+      \field{day}{4}
+      \field{month}{9}
+      \field{title}{Neural Networks Part 1: Setting up the Architecture}
+      \field{titleaddon}{cs231n.github.io}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb http://cs231n.github.io/neural-networks-1/
+      \endverb
+      \verb{url}
+      \verb http://cs231n.github.io/neural-networks-1/
+      \endverb
+    \endentry
+    \entry{brownlee_how_2017}{online}{}
+      \name{author}{1}{}{%
+        {{hash=915af163e2107106fced5dd3164d9a8e}{%
+           family={Brownlee},
+           familyi={B\bibinitperiod},
+           given={Jason},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{915af163e2107106fced5dd3164d9a8e}
+      \strng{fullhash}{915af163e2107106fced5dd3164d9a8e}
+      \strng{bibnamehash}{915af163e2107106fced5dd3164d9a8e}
+      \strng{authorbibnamehash}{915af163e2107106fced5dd3164d9a8e}
+      \strng{authornamehash}{915af163e2107106fced5dd3164d9a8e}
+      \strng{authorfullhash}{915af163e2107106fced5dd3164d9a8e}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Machine learning algorithms cannot work with categorical data directly. Categorical data must be converted to numbers. This applies when you are working with a sequence classification type problem and plan on using deep learning methods such as Long Short-Term Memory recurrent neural networks. In this tutorial, you will discover how to convert your input or …}
+      \field{day}{12}
+      \field{langid}{american}
+      \field{month}{7}
+      \field{title}{How to One Hot Encode Sequence Data in Python}
+      \field{titleaddon}{Machine Learning Mastery}
+      \field{urlday}{10}
+      \field{urlmonth}{5}
+      \field{urlyear}{2018}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:/home/havard/Zotero/storage/BZFC9BR4/how-to-one-hot-encode-sequence-data-in-python.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://machinelearningmastery.com/how-to-one-hot-encode-sequence-data-in-python/
+      \endverb
+      \verb{url}
+      \verb https://machinelearningmastery.com/how-to-one-hot-encode-sequence-data-in-python/
+      \endverb
+    \endentry
+    \entry{werbos_beyond_1974}{article}{}
+      \name{author}{2}{}{%
+        {{hash=41d235cb8144e9c007c710d456bb44a5}{%
+           family={Werbos},
+           familyi={W\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+        {{hash=f254482bf8eb5810badca4a321bc1b1b}{%
+           family={J.\bibnamedelimi (Paul\bibnamedelima John},
+           familyi={J\bibinitperiod\bibinitdelim (\bibinitperiod\bibinitdelim J\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{127a93f9bd983253a7418adda81dc2f1}
+      \strng{fullhash}{127a93f9bd983253a7418adda81dc2f1}
+      \strng{bibnamehash}{127a93f9bd983253a7418adda81dc2f1}
+      \strng{authorbibnamehash}{127a93f9bd983253a7418adda81dc2f1}
+      \strng{authornamehash}{127a93f9bd983253a7418adda81dc2f1}
+      \strng{authorfullhash}{127a93f9bd983253a7418adda81dc2f1}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Beyond regression : new tools for prediction and analysis in the behavioral sciences /}
+      \field{year}{1974}
+      \field{dateera}{ce}
+    \endentry
+    \entry{rumelhart_learning_1986}{article}{}
+      \name{author}{3}{}{%
+        {{hash=c84f9d607e83d071830e9667dc3cb31f}{%
+           family={Rumelhart},
+           familyi={R\bibinitperiod},
+           given={David\bibnamedelima E.},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=881b7655f3886f90a9400902a521acdb}{%
+           family={Hinton},
+           familyi={H\bibinitperiod},
+           given={Geoffrey\bibnamedelima E.},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=68500db67576d4d0a65080bb1c0f9b9b}{%
+           family={Williams},
+           familyi={W\bibinitperiod},
+           given={Ronald\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{ba1d15d4121bba06b3a9707e415adefc}
+      \strng{fullhash}{ba1d15d4121bba06b3a9707e415adefc}
+      \strng{bibnamehash}{ba1d15d4121bba06b3a9707e415adefc}
+      \strng{authorbibnamehash}{ba1d15d4121bba06b3a9707e415adefc}
+      \strng{authornamehash}{ba1d15d4121bba06b3a9707e415adefc}
+      \strng{authorfullhash}{ba1d15d4121bba06b3a9707e415adefc}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{9}
+      \field{journaltitle}{Nature}
+      \field{month}{10}
+      \field{shortjournal}{Nature}
+      \field{title}{Learning representations by back-propagating errors}
+      \field{volume}{323}
+      \field{year}{1986}
+      \field{dateera}{ce}
+      \field{pages}{533}
+      \range{pages}{1}
+      \verb{file}
+      \verb backprop_old.pdf:/home/havard/Zotero/storage/GSDZQGLZ/backprop_old.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1038/323533a0
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1038/323533a0
+      \endverb
+    \endentry
+    \entry{srivastava_dropout:_2014}{article}{}
+      \name{author}{5}{}{%
+        {{hash=6a147afa4569ce6cf23c0436e65d8486}{%
+           family={Srivastava},
+           familyi={S\bibinitperiod},
+           given={Nitish},
+           giveni={N\bibinitperiod}}}%
+        {{hash=f6214467aa94d722399344d1fe64c330}{%
+           family={Hinton},
+           familyi={H\bibinitperiod},
+           given={Geoﬀrey},
+           giveni={G\bibinitperiod}}}%
+        {{hash=c5e3a676e2ac1164b3afcd539c131fc9}{%
+           family={Krizhevsky},
+           familyi={K\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+        {{hash=8d569d1d5b8b5a7836017a98b430f959}{%
+           family={Sutskever},
+           familyi={S\bibinitperiod},
+           given={Ilya},
+           giveni={I\bibinitperiod}}}%
+        {{hash=bd2be300d445e9f6db7808f9533e66cb}{%
+           family={Salakhutdinov},
+           familyi={S\bibinitperiod},
+           given={Ruslan},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{20dc6cc3cd59bed5ac058072a514eb0c}
+      \strng{fullhash}{b2e84c2b61c73930139a6725bcf63c78}
+      \strng{bibnamehash}{b2e84c2b61c73930139a6725bcf63c78}
+      \strng{authorbibnamehash}{b2e84c2b61c73930139a6725bcf63c78}
+      \strng{authornamehash}{20dc6cc3cd59bed5ac058072a514eb0c}
+      \strng{authorfullhash}{b2e84c2b61c73930139a6725bcf63c78}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Deep neural nets with a large number of parameters are very powerful machine learning systems. However, overﬁtting is a serious problem in such networks. Large networks are also slow to use, making it diﬃcult to deal with overﬁtting by combining the predictions of many diﬀerent large neural nets at test time. Dropout is a technique for addressing this problem. The key idea is to randomly drop units (along with their connections) from the neural network during training. This prevents units from co-adapting too much. During training, dropout samples from an exponential number of diﬀerent “thinned” networks. At test time, it is easy to approximate the eﬀect of averaging the predictions of all these thinned networks by simply using a single unthinned network that has smaller weights. This signiﬁcantly reduces overﬁtting and gives major improvements over other regularization methods. We show that dropout improves the performance of neural networks on supervised learning tasks in vision, speech recognition, document classiﬁcation and computational biology, obtaining state-of-the-art results on many benchmark data sets.}
+      \field{langid}{english}
+      \field{month}{6}
+      \field{title}{Dropout: A Simple Way to Prevent Neural Networks from Overﬁtting}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \field{pages}{30}
+      \range{pages}{1}
+      \verb{file}
+      \verb Srivastava et al. - Dropout A Simple Way to Prevent Neural Networks f.pdf:/home/havard/Zotero/storage/V5L9T4N9/Srivastava et al. - Dropout A Simple Way to Prevent Neural Networks f.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{weisstein_eigen_????}{online}{}
+      \name{author}{1}{}{%
+        {{hash=5d54d442adc2a0d430f0728fd6530577}{%
+           family={Weisstein},
+           familyi={W\bibinitperiod},
+           given={Eric\bibnamedelima W.},
+           giveni={E\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{5d54d442adc2a0d430f0728fd6530577}
+      \strng{fullhash}{5d54d442adc2a0d430f0728fd6530577}
+      \strng{bibnamehash}{5d54d442adc2a0d430f0728fd6530577}
+      \strng{authorbibnamehash}{5d54d442adc2a0d430f0728fd6530577}
+      \strng{authornamehash}{5d54d442adc2a0d430f0728fd6530577}
+      \strng{authorfullhash}{5d54d442adc2a0d430f0728fd6530577}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The matrix decomposition of a square matrix A into so-called eigenvalues and eigenvectors is an extremely important one. This decomposition generally goes under the name "matrix diagonalization." However, this moniker is less than optimal, since the process being described is really the decomposition of a matrix into a product of three other matrices, only one of which is diagonal, and also because all other standard types of matrix decomposition use the term...}
+      \field{langid}{english}
+      \field{title}{Eigen Decomposition}
+      \field{type}{Text}
+      \field{urlday}{25}
+      \field{urlmonth}{4}
+      \field{urlyear}{2018}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:/home/havard/Zotero/storage/48398PGL/EigenDecomposition.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb http://mathworld.wolfram.com/EigenDecomposition.html
+      \endverb
+      \verb{url}
+      \verb http://mathworld.wolfram.com/EigenDecomposition.html
+      \endverb
+    \endentry
+    \entry{lecun_generalization_1989}{incollection}{}
+      \name{author}{1}{}{%
+        {{hash=d0ab8cbca75df7aa3e0b6024d60ac5f8}{%
+           family={Lecun},
+           familyi={L\bibinitperiod},
+           given={Yann},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \name{editor}{4}{}{%
+        {{hash=76e989942b207fdfc66173e9e116138e}{%
+           family={Pfeifer},
+           familyi={P\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=1bc0e89500ecacc41fdcf5aa7c0c8cb3}{%
+           family={Schreter},
+           familyi={S\bibinitperiod},
+           given={Z.},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=f3b053745e90352bd090fa394650dfb5}{%
+           family={Fogelman},
+           familyi={F\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=2ebc5b12f125e23157e04e78af535333}{%
+           family={Steels},
+           familyi={S\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{d0ab8cbca75df7aa3e0b6024d60ac5f8}
+      \strng{fullhash}{d0ab8cbca75df7aa3e0b6024d60ac5f8}
+      \strng{bibnamehash}{d0ab8cbca75df7aa3e0b6024d60ac5f8}
+      \strng{authorbibnamehash}{d0ab8cbca75df7aa3e0b6024d60ac5f8}
+      \strng{authornamehash}{d0ab8cbca75df7aa3e0b6024d60ac5f8}
+      \strng{authorfullhash}{d0ab8cbca75df7aa3e0b6024d60ac5f8}
+      \strng{editorbibnamehash}{06a6f457fa3c44a21186a4a69b98bd9f}
+      \strng{editornamehash}{7c9920967fd2fe9e5c11e4dc1f9f6410}
+      \strng{editorfullhash}{06a6f457fa3c44a21186a4a69b98bd9f}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Connectionism in perspective}
+      \field{title}{Generalization and network design strategies}
+      \field{year}{1989}
+      \field{dateera}{ce}
+    \endentry
+    \entry{nielsen_neural_2015}{book}{}
+      \name{author}{1}{}{%
+        {{hash=790b57a148d0102f1420b73dd7d8cb95}{%
+           family={Nielsen},
+           familyi={N\bibinitperiod},
+           given={Michael\bibnamedelima A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Determination Press}%
+      }
+      \strng{namehash}{790b57a148d0102f1420b73dd7d8cb95}
+      \strng{fullhash}{790b57a148d0102f1420b73dd7d8cb95}
+      \strng{bibnamehash}{790b57a148d0102f1420b73dd7d8cb95}
+      \strng{authorbibnamehash}{790b57a148d0102f1420b73dd7d8cb95}
+      \strng{authornamehash}{790b57a148d0102f1420b73dd7d8cb95}
+      \strng{authorfullhash}{790b57a148d0102f1420b73dd7d8cb95}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{Neural Networks and Deep Learning}
+      \field{urlday}{6}
+      \field{urlmonth}{3}
+      \field{urlyear}{2018}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:/home/havard/Zotero/storage/GXY886NM/neuralnetworksanddeeplearning.com.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb http://neuralnetworksanddeeplearning.com
+      \endverb
+      \verb{url}
+      \verb http://neuralnetworksanddeeplearning.com
+      \endverb
+    \endentry
+    \entry{zhou_computation_1988}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=b287e909c5a3fc053694314171e46d6c}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Y.\bibnamedelimi T.},
+           giveni={Y\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=80ea8436aa5533ab33927b2328f5f01c}{%
+           family={Chellappa},
+           familyi={C\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{b193c606e21500237b75eacae0f8adc7}
+      \strng{fullhash}{b193c606e21500237b75eacae0f8adc7}
+      \strng{bibnamehash}{b193c606e21500237b75eacae0f8adc7}
+      \strng{authorbibnamehash}{b193c606e21500237b75eacae0f8adc7}
+      \strng{authornamehash}{b193c606e21500237b75eacae0f8adc7}
+      \strng{authorfullhash}{b193c606e21500237b75eacae0f8adc7}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A method for computing optical flow using a neural network is presented. Usually, the measurement primitives used for computing optical flow from successive image frames are the image-intensity values and their spatial and temporal derivatives, and tokens such as edges, corners, and linear features. Conventional methods based on such primitives suffer from edge sparsity, noise distortion, or sensitivity to rotation. The authors first fit a 2-D polynomial to find a smooth continuous image-intensity function in a window and estimate the subpixel intensity values and their principal curvatures. Under the local rigidity assumption and smoothness constraints, a neural network is then used to implement the computing procedure based on the estimated intensity values and their principal curvatures. Owing to the dense measured primitives, a dense optical flow with subpixel accuracy is obtained with only a few iterations. Since intensity values and their principle curvatures are rotation-invariant, this method can detect both rotating and translating objects in the scene. Experimental results using synthetic image sequences demonstrate the efficacy of the method.{<}{>}}
+      \field{booktitle}{{IEEE} 1988 International Conference on Neural Networks}
+      \field{eventtitle}{{IEEE} 1988 International Conference on Neural Networks}
+      \field{month}{7}
+      \field{title}{Computation of optical flow using a neural network}
+      \field{year}{1988}
+      \field{dateera}{ce}
+      \field{pages}{71\bibrangedash 78 vol.2}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1109/ICNN.1988.23914
+      \endverb
+      \verb{file}
+      \verb IEEE Xplore Abstract Record:/home/havard/Zotero/storage/L92LWBM2/23914.html:text/html
+      \endverb
+      \keyw{neural nets,Neural networks,2-D polynomial,computerised picture processing,Image processing,neural network,optical flow,smooth continuous image-intensity function,synthetic image sequences}
+    \endentry
+    \entry{hochreiter_long_1997}{article}{}
+      \name{author}{2}{}{%
+        {{hash=41b31e29fb2bdbf9f5c9c1b0d5b3e815}{%
+           family={Hochreiter},
+           familyi={H\bibinitperiod},
+           given={Sepp},
+           giveni={S\bibinitperiod}}}%
+        {{hash=288bdbcfe1b91ad7484d7a24f74f99ed}{%
+           family={Schmidhuber},
+           familyi={S\bibinitperiod},
+           given={Jürgen},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{4c2e1e2e1ac91e1df9d4f7b85ebe39b4}
+      \strng{fullhash}{4c2e1e2e1ac91e1df9d4f7b85ebe39b4}
+      \strng{bibnamehash}{4c2e1e2e1ac91e1df9d4f7b85ebe39b4}
+      \strng{authorbibnamehash}{4c2e1e2e1ac91e1df9d4f7b85ebe39b4}
+      \strng{authornamehash}{4c2e1e2e1ac91e1df9d4f7b85ebe39b4}
+      \strng{authorfullhash}{4c2e1e2e1ac91e1df9d4f7b85ebe39b4}
+      \field{sortinit}{7}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Neural computation}
+      \field{title}{Long Short-term Memory}
+      \field{volume}{9}
+      \field{year}{1997}
+      \field{dateera}{ce}
+      \field{pages}{1735\bibrangedash 80}
+      \range{pages}{51}
+    \endentry
+    \entry{gers_learning_1999}{article}{}
+      \name{author}{3}{}{%
+        {{hash=016fddc27eee26ba043a94a90797c943}{%
+           family={Gers},
+           familyi={G\bibinitperiod},
+           given={Felix\bibnamedelima A.},
+           giveni={F\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=288bdbcfe1b91ad7484d7a24f74f99ed}{%
+           family={Schmidhuber},
+           familyi={S\bibinitperiod},
+           given={Jürgen},
+           giveni={J\bibinitperiod}}}%
+        {{hash=bdd8ffd78b64a16f8c61071ba7af7225}{%
+           family={Cummins},
+           familyi={C\bibinitperiod},
+           given={Fred},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{57959d32bb6623d9c8b8753cbf88a478}
+      \strng{fullhash}{57959d32bb6623d9c8b8753cbf88a478}
+      \strng{bibnamehash}{57959d32bb6623d9c8b8753cbf88a478}
+      \strng{authorbibnamehash}{57959d32bb6623d9c8b8753cbf88a478}
+      \strng{authornamehash}{57959d32bb6623d9c8b8753cbf88a478}
+      \strng{authorfullhash}{57959d32bb6623d9c8b8753cbf88a478}
+      \field{sortinit}{7}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Neural Computation}
+      \field{title}{Learning to Forget: Continual Prediction with {LSTM}}
+      \field{volume}{12}
+      \field{year}{1999}
+      \field{dateera}{ce}
+      \field{pages}{2451\bibrangedash 2471}
+      \range{pages}{21}
+    \endentry
+    \entry{chung_empirical_2014}{article}{}
+      \name{author}{4}{}{%
+        {{hash=7a79e6bb4ca772c9b3b38f4e9f45b83c}{%
+           family={Chung},
+           familyi={C\bibinitperiod},
+           given={Junyoung},
+           giveni={J\bibinitperiod}}}%
+        {{hash=2adc0c92c308f233c731321d55efe58f}{%
+           family={Gulcehre},
+           familyi={G\bibinitperiod},
+           given={Caglar},
+           giveni={C\bibinitperiod}}}%
+        {{hash=f8dfca934ead3a7cab6b2382a1baaaa1}{%
+           family={Cho},
+           familyi={C\bibinitperiod},
+           given={{KyungHyun}},
+           giveni={K\bibinitperiod}}}%
+        {{hash=40a8e4774982146adc2688546f54efb2}{%
+           family={Bengio},
+           familyi={B\bibinitperiod},
+           given={Yoshua},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{8d82bb00aa8ec41e75e0a4ff4ec7d97f}
+      \strng{fullhash}{7f2d21710b1589de5a0a24526a0e0f03}
+      \strng{bibnamehash}{7f2d21710b1589de5a0a24526a0e0f03}
+      \strng{authorbibnamehash}{7f2d21710b1589de5a0a24526a0e0f03}
+      \strng{authornamehash}{8d82bb00aa8ec41e75e0a4ff4ec7d97f}
+      \strng{authorfullhash}{7f2d21710b1589de5a0a24526a0e0f03}
+      \field{sortinit}{7}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{{arXiv} preprint {arXiv}:1412.3555}
+      \field{title}{Empirical evaluation of gated recurrent neural networks on sequence modeling}
+      \field{year}{2014}
+      \field{dateera}{ce}
+    \endentry
+    \entry{_understanding_2015}{online}{}
+      \field{sortinit}{7}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
+      \field{labeltitlesource}{title}
+      \field{day}{27}
+      \field{month}{8}
+      \field{title}{Understanding {LSTM} Networks -- colah's blog}
+      \field{urlday}{24}
+      \field{urlmonth}{4}
+      \field{urlyear}{2018}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://colah.github.io/posts/2015-08-Understanding-LSTMs/
+      \endverb
+      \verb{url}
+      \verb http://colah.github.io/posts/2015-08-Understanding-LSTMs/
+      \endverb
+    \endentry
+    \entry{cho_learning_2014}{article}{}
+      \name{author}{7}{}{%
+        {{hash=3da7501a79d9346572c7fd6e41b615df}{%
+           family={Cho},
+           familyi={C\bibinitperiod},
+           given={Kyunghyun},
+           giveni={K\bibinitperiod}}}%
+        {{hash=f9e21b9296b65ae02d9c70cdaa532562}{%
+           family={Van\bibnamedelima Merriënboer},
+           familyi={V\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Bart},
+           giveni={B\bibinitperiod}}}%
+        {{hash=2adc0c92c308f233c731321d55efe58f}{%
+           family={Gulcehre},
+           familyi={G\bibinitperiod},
+           given={Caglar},
+           giveni={C\bibinitperiod}}}%
+        {{hash=6d80adec79a13a33e73215c5f46f1605}{%
+           family={Bahdanau},
+           familyi={B\bibinitperiod},
+           given={Dzmitry},
+           giveni={D\bibinitperiod}}}%
+        {{hash=6deedc795e51da1bc7fd6289ab321a48}{%
+           family={Bougares},
+           familyi={B\bibinitperiod},
+           given={Fethi},
+           giveni={F\bibinitperiod}}}%
+        {{hash=449689e8c1ced50f608244e3a96fe6d3}{%
+           family={Schwenk},
+           familyi={S\bibinitperiod},
+           given={Holger},
+           giveni={H\bibinitperiod}}}%
+        {{hash=40a8e4774982146adc2688546f54efb2}{%
+           family={Bengio},
+           familyi={B\bibinitperiod},
+           given={Yoshua},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{cff21fcfceca8d90dc03dfd5c7b4306b}
+      \strng{fullhash}{e6c30778a1395b9fa17184f2908097ed}
+      \strng{bibnamehash}{e6c30778a1395b9fa17184f2908097ed}
+      \strng{authorbibnamehash}{e6c30778a1395b9fa17184f2908097ed}
+      \strng{authornamehash}{cff21fcfceca8d90dc03dfd5c7b4306b}
+      \strng{authorfullhash}{e6c30778a1395b9fa17184f2908097ed}
+      \field{sortinit}{8}
+      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{{arXiv} preprint {arXiv}:1406.1078}
+      \field{title}{Learning phrase representations using {RNN} encoder-decoder for statistical machine translation}
+      \field{year}{2014}
+      \field{dateera}{ce}
+    \endentry
+    \entry{kostadinov_understanding_2017}{online}{}
+      \name{author}{1}{}{%
+        {{hash=34205253e789317c9ae45ea3ab0739ae}{%
+           family={Kostadinov},
+           familyi={K\bibinitperiod},
+           given={Simeon},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{34205253e789317c9ae45ea3ab0739ae}
+      \strng{fullhash}{34205253e789317c9ae45ea3ab0739ae}
+      \strng{bibnamehash}{34205253e789317c9ae45ea3ab0739ae}
+      \strng{authorbibnamehash}{34205253e789317c9ae45ea3ab0739ae}
+      \strng{authornamehash}{34205253e789317c9ae45ea3ab0739ae}
+      \strng{authorfullhash}{34205253e789317c9ae45ea3ab0739ae}
+      \field{sortinit}{8}
+      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this article, I will try to give a fairly simple and understandable explanation of one really fascinating type of neural network…}
+      \field{day}{16}
+      \field{month}{12}
+      \field{title}{Understanding {GRU} networks}
+      \field{titleaddon}{Towards Data Science}
+      \field{urlday}{25}
+      \field{urlmonth}{4}
+      \field{urlyear}{2018}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:/home/havard/Zotero/storage/J59272XU/understanding-gru-networks-2ef37df6c9be.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://towardsdatascience.com/understanding-gru-networks-2ef37df6c9be
+      \endverb
+      \verb{url}
+      \verb https://towardsdatascience.com/understanding-gru-networks-2ef37df6c9be
+      \endverb
+    \endentry
+    \entry{chollet_keras_2015}{book}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=14134a39113404b1f80969c9ccc1f71e}{%
+           family={Chollet},
+           familyi={C\bibinitperiod},
+           given={François},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{2f3cf4de7406c8a08275677188d056f8}
+      \strng{fullhash}{2f3cf4de7406c8a08275677188d056f8}
+      \strng{bibnamehash}{2f3cf4de7406c8a08275677188d056f8}
+      \strng{authorbibnamehash}{2f3cf4de7406c8a08275677188d056f8}
+      \strng{authornamehash}{2f3cf4de7406c8a08275677188d056f8}
+      \strng{authorfullhash}{2f3cf4de7406c8a08275677188d056f8}
+      \field{sortinit}{8}
+      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Keras}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://keras.io
+      \endverb
+      \verb{url}
+      \verb https://keras.io
+      \endverb
+    \endentry
+  \enddatalist
+  \missing{_recurrent_????}
+\endrefsection
+\endinput
+

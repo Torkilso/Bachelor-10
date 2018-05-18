@@ -1,0 +1,17 @@
+[0] Config.pm:302> INFO - This is Biber 2.9
+[0] Config.pm:305> INFO - Logfile is 'Thesis.blg'
+[40] biber:313> INFO - === lø. mai 12, 2018, 18:21:53
+[71] Biber.pm:371> INFO - Reading 'Thesis.bcf'
+[168] Biber.pm:857> INFO - Found 42 citekeys in bib section 0
+[186] Biber.pm:3981> INFO - Processing section 0
+[198] Biber.pm:4154> INFO - Looking for bibtex format file '01_initial_try.bib' for section 0
+[205] bibtex.pm:1468> INFO - LaTeX decoding ...
+[317] bibtex.pm:1294> INFO - Found BibTeX data source '01_initial_try.bib'
+[665] Utils.pm:169> WARN - I didn't find a database entry for '_recurrent_????' (section 0)
+[702] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[702] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[702] Biber.pm:3809> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[702] Biber.pm:3815> INFO - No sort tailoring available for locale 'en-US'
+[759] bbl.pm:617> INFO - Writing 'Thesis.bbl' with encoding 'UTF-8'
+[791] bbl.pm:720> INFO - Output to Thesis.bbl
+[791] Biber.pm:110> INFO - WARNINGS: 1

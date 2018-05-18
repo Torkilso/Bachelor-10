@@ -1,0 +1,204 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {english}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Preface}{i}{dummy.1}
+\defcounter {refsection}{0}\relax 
+\vspace {1em}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Assignment}{ii}{dummy.2}
+\defcounter {refsection}{0}\relax 
+\vspace {1em}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Abstract}{iii}{dummy.3}
+\defcounter {refsection}{0}\relax 
+\vspace {1em}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{List of Figures}{vii}{dummy.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{List of Tables}{x}{dummy.7}
+\defcounter {refsection}{0}\relax 
+\vspace {2em}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}Motivation}{1}{section.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.2}Problem definition}{1}{section.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.3}Structure of the report}{1}{section.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.3.1}Chapter 1 Introduction}{1}{subsection.14}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.3.2}Chapter 2 Theory}{2}{subsection.15}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.3.3}Chapter 3 Technology and Method}{2}{subsection.16}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.3.4}Chapter 4 Results}{2}{subsection.17}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.3.5}Chapter 5 Discussion}{2}{subsection.21}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.3.6}Chapter 6 Conclusion}{3}{subsection.25}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.3.7}Attachments}{3}{subsection.26}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.4}Target audience}{3}{section.27}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.4.1}Application}{4}{subsection.28}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.5}Purpose}{4}{section.29}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.6}Abbreviations}{5}{section.30}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Theory}{6}{chapter.32}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Handwriting recognition}{6}{section.33}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.1}Main approaches}{7}{subsection.34}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.2}Common steps in handwriting recognition}{7}{subsection.36}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.1.2.1}Preprocessing}{8}{subsubsection.37}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.1.2.2}Segmentation}{9}{subsubsection.40}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.1.2.3}Classification of symbols}{10}{subsubsection.42}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.1.2.4}Postprocessing}{10}{subsubsection.43}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Recognition of handwritten mathematics}{10}{section.44}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.1}Previous work and existing solutions}{11}{subsection.46}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.2}InkML}{11}{subsection.47}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Machine learning}{12}{section.65}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.1}Supervised learning}{13}{subsection.66}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}Artificial neural networks}{13}{section.67}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.1}Activation functions}{15}{subsection.72}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.4.1.1}ReLU}{17}{subsubsection.76}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.4.1.2}Softmax}{18}{subsubsection.78}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.4.1.3}Sigmoid}{18}{subsubsection.80}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.4.1.4}Tanh}{19}{subsubsection.82}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.2}Loss functions}{19}{subsection.84}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.4.2.1}Crossentropy}{19}{subsubsection.86}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.3}Training neural networks}{20}{subsection.91}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.4.3.1}Training with backpropagation}{20}{subsubsection.92}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.4.3.2}Backpropagating through time}{21}{subsubsection.95}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.4}Dropout}{21}{subsection.96}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.5}Common problems}{22}{subsection.98}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.5}Feedforward neural networks}{23}{section.101}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.1}Convolutional Networks}{24}{subsection.102}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.6}Recurrent neural networks}{26}{section.115}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.6.1}Long short-term memory}{27}{subsection.116}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.6.2}Gated Recurrent Unit}{29}{subsection.118}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Technology and method}{31}{chapter.120}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Introduction}{31}{section.121}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Technology}{31}{section.122}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.1}Version control}{31}{subsection.123}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.2}Collaboration tools}{31}{subsection.124}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.3}Python and frameworks}{32}{subsection.125}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}Architecture}{32}{section.126}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.4}Preparing data}{33}{section.127}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.1}Traces}{33}{subsection.128}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.2}Images}{35}{subsection.131}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.5}The recognition system}{36}{section.134}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.5.1}Preprocessing and segmentation}{37}{subsection.135}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.5.2}Model architecture}{37}{subsection.136}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.5.2.1}RNN model}{37}{subsubsection.137}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.5.2.2}CNN model}{38}{subsubsection.139}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.5.2.3}Combined model}{39}{subsubsection.141}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.5.3}Interpretation and context search}{40}{subsection.143}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.5.3.1}The main function}{41}{subsubsection.145}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.5.3.2}Square roots}{42}{subsubsection.152}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.5.3.3}Fractions}{43}{subsubsection.155}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.5.3.4}Exponents}{44}{subsubsection.157}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.5.3.5}Special case symbols}{45}{subsubsection.160}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.5.4}Converting to \LaTeX }{46}{subsection.161}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.6}The project process}{46}{section.162}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.7}Teamwork and roles}{47}{section.163}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Results}{48}{chapter.164}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}Scientific results}{48}{section.165}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}Engineering results}{51}{section.172}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.1}User Interface}{52}{subsection.174}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}Administrative results}{52}{section.175}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Discussion}{53}{chapter.176}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}Scientific result}{53}{section.177}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1.1}}{54}{subsection.178}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.2}The final product}{54}{section.179}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.1}}{55}{subsection.180}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.2}Process, approach and technology}{55}{subsection.181}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.3}Strengths and weaknesses}{55}{subsection.182}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.3}}{56}{section.183}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.3.1}Ethics}{56}{subsection.184}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.4}The development process}{56}{section.185}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.4.1}Teamwork}{56}{subsection.186}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.4.2}Professional ethics}{56}{subsection.187}
+\defcounter {refsection}{0}\relax 
+\vspace {2em}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}System documentation}{57}{appendix.188}
+\defcounter {refsection}{0}\relax 
+\vspace {2em}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliography}{58}{dummy.189}

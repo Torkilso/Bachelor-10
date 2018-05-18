@@ -74,28 +74,17 @@ maxbibnames=99
 \preface{
 \addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
 
-% Interesting assignment, machine learning, want to learn more
-% Challenging
-% New technology
-% Curiosity
-
-
-
-
 % Hvorfor ble oppgaven valgt
-The assignment was chosen for several reasons. We were all interested in the contents of the assignment, and we saw this as a great opportunity to explore the machine learning world and learn new technologies. We had little to none prior experience with machine learning, and we knew this would be challenging. This however, made the assignment more interesting as we were motivated to learn and curious about ways to solve the problems related.
 
-Before we chose the assignment, we read about the basics of neural networks and the mathematics behind them. We quickly understood that a lot of the math we have learned in previous courses was relevant, and being able to make use of this knowledge further increased our interest for the assignment. % siste setning må omformuleres muligens, litt bedre flyt, ellers kung
+The assignment was chosen for several reasons. Our curiosity for handwriting recognition was high, since solutions typically involves artificial intelligence, machine learning and advanced software engineering. These were fields we all were interested in. We had little to no prior experience with machine learning, and we knew this would be challenging. This however, made the assignment more interesting as we were motivated to learn and curious about ways to solve the problems related.
 
-% New process
-The process throughout the project was demanding. There have been days and even week where we felt no progress was made, causing frustration and doubt. In the initial phase of the project we spent several weeks researching how the problem could be solved, which led to many different ideas. Since many of these were complicated and difficult to work on alone, we started used development methods with a high focus on cooperation.
+%The assignment was chosen for several reasons. Machine learning involves complex mathematics and advanced software engineering. Both mathematics and software engineering are interesting to us, thus a combination would be perfect. Curiosity was also a large part of our choice, without curiosity we would simply not have chosen this assignment in the first place. 
 
-%old process
-% TODO PROCESS ER IKKE FERDIG!
-%The process from start to finish was demanding, there were days, even weeks where no progress was made. This is of course frustrating and made us doubt our ideas very often. In the initial phase of the project time went by much faster than expected, we spent several weeks just researching the most optimal way to solve the product part of our project. After the initial phase of the project we all had basic ideas about how it could be solved in the best way possible. % Nevne noen?
-%Although we had a lot of different ideas, we all quickly understood that in the first phase of coding, we should all use a method for high interaction and cooperation between us. This need of a solid method led us to pair programming, even though we were three. At first, this was extremely helpful, and it led to some creativity and a way to quickly respond to changes.
+Before we chose the assignment, we read about the basics of neural networks and the mathematics behind them. We quickly understood that a lot of the math we have learned in previous courses was relevant, and being able to make use of this knowledge further increased our interest for the assignment.
 
-First of all, we would like to thank Ole Christian Eidheim for being both an inspiration and our mentor during this project. We would also like to thank our external mentors Tore Forbregd, Trygve Solstad and Hermund Andre Torkildsen for an exciting project and great inputs. %In addition to those respectable gentlemen, we would like to to mention CROHME, which has inspired our work and our thoughts on how to solve our assignment.
+Our process during the project has been demanding. There have been days, even weeks where we felt no progress was made, causing frustration and self-doubt. In the early stages of the project we quickly understood that we needed to cooperate more than ever before to be productive. Dealing with complex subjects it was vital for us to maintain an agile mindset, we enabled that with following principles from Modern Agile.\cite{agile_modern_????}
+
+First of all, we would like to thank Ole Christian Eidheim for being both an inspiration and our mentor during this project. We would also like to thank our external mentors Tore Forbregd, Trygve Solstad and Hermund Andre Torkildsen for an exciting project and great inputs.
 
 \vfill
 
@@ -119,28 +108,19 @@ First of all, we would like to thank Ole Christian Eidheim for being both an ins
 %Erfaring viser at oppgavetekster endres underveis. Dere kan lime inn oppgaveteksten slik den var opprinnelig dersom det fortsatt er i samsvar med virkeligheten. Ellers gjør derekort rede for oppgaven slik den opprinnelig var,og slik den har utviklet seg underveis. Hvorfor ting har blitt som de har blitt, hører kanskje hjemme lenger ut i rapporten –det kommer litt an på hva det er.
 
 \textit{
-In this project, a handwriting recognition system for mathematical signs will be developed. The system will be used in a web application, Matistikk, that is being developed at the Department of Teacher Education in collaboration with IDI. The system will use a standard machine learning algorithm such as convolutional neural networks that represent state-of-the-art handwriting recognition. Training data must be collected from students to train the network.
+In this project, a system for recognizing handwritten mathematical symbols will be developed. The system will be used in a web application, Matistikk, that is being developed at the Department of Teacher Education in collaboration with IDI. The system will use a standard machine learning algorithm such as convolutional neural networks that represent state-of-the-art handwriting recognition. Training data must be collected from students to train the network.
 }
 
 Since the beginning of the project, some changes were made to the assignment. In the initial phase it was not known if developing a system that would work well and enrich the functionality of the web application was actually achievable. It was therefore decided to go in the direction of developing a proof of concept, which could be developed further.
 
 After some discussion with our mentor the project was also limited to focus on the handwriting recognition system, and not how to implement it into the web application. Creating a robust and acceptable system would require a lot of work. In addition, with no prior experience with machine learning, a considerable amount of time would be needed to research relevant topics and read about existing solutions. 
 
-
-%The assignment quickly went in the direction of a proof of concept work, because it was not guaranteed that we would come up with something that would enrich the functionality of their current web application.
-%In addition to this, the assignment was limited to focus on the handwriting recognition itself, and not all the possible ways to implement it into their web application. \\
-%Nonetheless the assignment was challenging and finding a reasonable scientific problem related to the assignment was quite demanding. Especially if there was no direct correlation between the assignment and the scientific problem.
 }
 \clearpage % Assignment ended, start a new page 
-
 %% ----------------------------------------------------------------
-
 % The Abstract Page
 \abstract{
 \addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
-
-% Her kan vi legge til litt hvis det er nødvendig
-% ca 1 side
 
 In this thesis we researched different approaches for recognizing handwritten mathematical symbols and expressions. Interpreting different typographic styles has historically been a challenging task, however, recent improvements in both hardware and software for machine learning have made the task more approachable.
 
@@ -166,35 +146,12 @@ Through our research, we explored different methods in pre- and post-processing 
 \listoffigures  % Write out the List of Figures
 
 %% ----------------------------------------------------------------
-\lhead{\emph{List of Tables}}  % Set the left side page header to "List of Tables"
-\listoftables  % Write out the List of Tables
 
 
-\lhead{\emph{List of Listings (Code and Snippets)}}
-\lstlistoflistings
+
 %% ----------------------------------------------------------------
 %\setstretch{1.5}  % Set the line spacing to 1.5, this makes the following tables easier to read
 \clearpage  % Start a new page
-
-
-
-%% ----------------------------------------------------------------
-%\clearpage  %Start a new page
-%\lhead{\emph{Symbols}}  % Set the left side page header to "Symbols"
-%\listofnomenclature{lll}  % Include a list of Symbols (a three column table)
-%{
-% symbol & name & unit \\
-%$A$ & Matrix & \\
-%$a$ & distance & m \\
-%$P$ & power & W (Js$^{-1}$) \\
-%& & \\ % Gap to separate the Roman symbols from the Greek
-%$\omega$ & angular frequency & rads$^{-1}$ \\
-%}
-%% ----------------------------------------------------------------
-% End of the pre-able, contents and lists of things
-% Begin the Dedication page
-
-%\setstretch{1.3}  % Return the line spacing back to 1.3
 
 
 \addtocontents{toc}{\vspace{2em}}  % Add a gap in the Contents, for aesthetics
@@ -220,7 +177,7 @@ Through our research, we explored different methods in pre- and post-processing 
 
 \input{Chapters/Chapter5_Discussion}
 
-%\input{Chapters/Chapter6_Conclusion}
+\input{Chapters/Chapter6_Conclusion}
 
 
 %% ----------------------------------------------------------------

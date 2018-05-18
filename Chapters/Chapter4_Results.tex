@@ -2,15 +2,14 @@
 \lhead{\emph{Results}}
 
 \section{Scientific results}
-This section will contain data, visualizations and results from our work towards our scientific problem.  
+This section will contain data, visualizations and results from the work associated with the scientific problem described in section \ref{problem_definition}.\\
+In order to evaluate the different ANN models against each other, each model classified three different datasets in every iteration. Every training session therefore includes three different accuracy's, where each accuracy is calculated as correct predictions divided by total predictions.
 
-In order to evaluate the different ANN models against each other, each model classified three different datasets every iteration of training (epoch). Every training session therefore includes three different accuracies. These accuracies are calculated as $\frac{correct\  predictions}{total\ predictions}$.  
+The first dataset is the training set. This dataset consists of a large subset of data gathered from the CHROME dataset (90\%), and is the data the models used as training data. This dataset is labelled as \textit{train} in the accuracy graphs below. % små avsnitt? evt slå sammen?
 
-The first dataset is the training set. This dataset consists of a large subset of data gathered from the CHROME dataset (90\%), and is the data the models used as training data. This dataset is labeled as \textit{train} in the accuracy graphs below.
+The second dataset is the validation set, also called the test set. This dataset consists of the last 10\% of data from the CHROME dataset. None of the data in the validation set was used during training, and this data is therefore a good representation for how the model performs on unseen data. This dataset is labelled as \textit{test} in the accuracy graphs below.
 
-The second dataset is the validation set, also called the test set. This dataset consists of the last 10\% of data from the CHROME dataset. When evaluating the models on different dataset sizes, the total size is written in the title of the accuracy graphs. This total is then split 90/10, where 90\% of the data was included in the training set, and 10\% was included in the validation set. None of the data in the validation set was used during training, and this data is therefore a good representation for how the model performs on unseen data. This dataset is labeled as \textit{test} in the accuracy graphs below.
-
-The third dataset is a set of real data gathered from the example website, with symbols written by a few different people. This dataset is used to give an indication of the correctness of the preprocessing (as the data is from another source), as well as how the model responds to data from another source. The real dataset was an important inclusion because the main goal of this assignment was to produce good results under circumstances simulated by the example website. Notice that this dataset included a few mislabeled data points, contained only about three hundred data points, and includes only a subset of all the classes. The dataset is therefore only used as an indication of the accuracy on real data. This dataset is labeled as \textit{real} in the accuracy graphs below.
+The third dataset is a set of real data gathered from the example website, with symbols written by a three different people. This dataset is used to give an indication of the correctness of the preprocessing, as well as how the model responds to data from different sources. The real dataset was an important inclusion because the main goal of this assignment was to produce good results under circumstances simulated by the example website. Notice that this dataset included a few mislabelled data points, contained only about three hundred data points, and includes only a subset of all the classes. The dataset is therefore only used as an indication of the accuracy on real data. This dataset is labelled as \textit{real} in the accuracy graphs below.
 
 %TODO her må vi forklare hva train test og real er.
 \begin{figure}[H]
@@ -84,31 +83,24 @@ Table of the \textbf{real} dataset.
 \end{figure}
 
 \section{Engineering results}
-This section will contain how our example project/proof of concept has turned out in terms of goals set in earlier stages of the project. Since the project is not a traditional software engineering bachelors project evaluation in this section of the project is based on the goals set in some of the meetings with the product owners. % Resultat fra tester skal være lagt her
+This section will contain how our example project/proof of concept has turned out in terms of goals set in earlier stages of the project. The evaluation of engineering result is based on goals set in meetings with the product owners. % Resultat fra tester skal være lagt her
 %
-The engineering goal in this project was to create a proof of concept application which can display the potential of a handwriting recognition system for mathematical symbols. In the initial meetings with the product owners they concluded with that they were hoping to get an application/module that would enhance Matistikk. 
-% 
+The engineering goal in this project was to create a proof of concept application which can display the potential of a handwriting recognition system for mathematical symbols. In the initial meetings the product owners stated that a module that would enhance Matistikk was desired.
 
-% 
+%In the initial meetings with the product owners they concluded with that they were hoping to get an application/module that would enhance Matistikk. 
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{Assets/Chapter4_Result/predictor_example.png}
     \caption{Example of the graphical user interface. A simple HTML5 canvas is used to perform input, currently it does a HTTP post request to a back end to perform classification of buffer. The HTTP post method could be swapped with a WebSocket. The result is shown at the top right corner in human readable form, directly under the result is the result in \LaTeX, this is useful to further use it in some other API, for example Wolfram Alpha. Under the \LaTeX  is the probabilities of either a chosen symbol or the latest drawn.}
     \label{fig:predictor_example}
 \end{figure}
-In addition to being quite simple but functional, we have made choices on both back- and front-end code to make it modular and simple to integrate into a system. An example implementation of the proof of concept application is deployed on Heroku, a cloud application platform.
 
-\subsection{User Interface}
-% TODO brukertest osv
-
-
+Back and front end is engineered to become modular and simple tools that can easily be integrated into a system. An example implementation of the proof of concept application is deployed on Heroku, a cloud application platform.
 
 
 \section{Administrative results} % TODO prat rundt prosjekthåndbok
-Administrative results is the results of planning, implementing, researching and concluding the work done in this project.\\ The nature of the assignment made the planning part more of a dynamic process that needed to be done on the go. Even though planning was difficult we had an agile mindset from start to finish. In the initial software development phase which was done with an agile methodology like scrum productivity was quite high and it was easy to estimate number of hours required to complete a task. This ability to estimate number of hours did not follow the project out of the initial software development phase, software became more and more about tweaking our machine learning models. Although, we still had a mindset which enabled us to deliver results and improved results in small intervals. This mindset resembles the Lean startup methodology. % Ikke ferrrrrrri
+Administrative results is the results of planning, implementing, researching and concluding the work done in this project. 
 
-%The nature of this assignment led the project first into a software development phase, closely followed by a research phase. Both phases was highly influenced by an agile mindset, although the software development phase was actually planned with sprints and reviews. Attempts were made on planning the research phase, but much of the time went into learning the fundamentals of artificial neural networks. \\
-%In the software development phase an agile mindset was always in the background, every critical decision and choice was discussed, this was an important aspect of the teamwork. The project needed an quick mindset, new ideas were coming along all the time, but we would have to discard them before wasting too much time. This was only possible through our good cooperation and stand-up/status meetings each day. \\
-%Even though we call our phases software development and research it is important to understand the dynamic mindset behind this project, we would always think about new improvements to software even though we were deeply invested in some other issue. This constant chase of continuous improvement made the project as dynamic as necessary. % TODO review dette, semi ok ?
-
+Attributes of the assignment made the planning more of a dynamic process that needed to be done continuously. After each small period it was necessary to do a retrospective, to learn from mistakes and further improve the project flow and productivity. Incorporating iterations and reviews into the project flow enhanced the ability to respond to changes and new goals. Modern Agile principles were followed during the project, it was a good fit for a research based assignment. Detailed planning was achievable when developing the foundation of the web-based system. Detailed planning/cost estimates of software iterations is both well practised at NTNU and it is also common in part-time jobs. 
 

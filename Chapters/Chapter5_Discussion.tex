@@ -1,131 +1,146 @@
 \chapter{Discussion}
 \lhead{\emph{Discussion}}
 
-\section{Scientific result}
+\section{Scientific results}
 
-Her skal dere drøfte årsaker til at resultatene ble som de ble, spesielt der det er avvik fra planer og oppsatte mål. 
-Hvorfor holdt hypotesene, eller hvorfor holdt ikke hypotesene? 
-Drøft hvordan resultatene kan forstås i forhold til eller som svar på problemstillingen.
+%Her skal dere drøfte årsaker til at resultatene ble som de ble, spesielt der det er avvik fra planer og oppsatte mål. 
+%Hvorfor holdt hypotesene, eller hvorfor holdt ikke hypotesene? 
+%Drøft hvordan resultatene kan forstås i forhold til eller som svar på problemstillingen.
 
+% sjekk alt som står her, sørg for at dette ikke er kopi av noe som står i metode eller resultat.
 
-Starting out with recognizing symbols using a convolutional neural network was a decision made early in the project. A lot of previous research on recognizing similar images such as with the MNIST dataset already existed, and using images as input data was therefore a safe direction when creating a minimal viable product (MVP). 
+Starting out with recognizing symbols using a convolutional neural network was a decision made early in the project. A lot of previous research on recognizing similar images such as with the MNIST dataset already existed. Therefore, using images as input data was a safe direction when creating a minimal viable product (MVP).
 
-The convolutional neural network's performance can be seen in \ref{fig:CNN_44000}. Its performance on the test dataset was very good, and it kept increasing over time. However, as a consequence of our relativly small train dataset, the network did not show the same accuracy on the test/validation data, and the real dataset. This model was prone to overfitting, even when including several dropout layers.
+The MNIST dataset is greyscaled by default, this means that it's RGB pixel dimension is one. MNIST stores it's pixel values in the range of [0,255], this is an approach that does not get "edgy" or square like data such as ours. This is a possible error because of the information lost in pixel intensity and in object edges. Attempts were made at constructing greyscale images in order to use data from the MNIST dataset, but it was difficult to resemble and create data which could be used. The idea of resembling MNIST was dropped after finding more data with similar format to ours. Even though it is possible that we loose information and certain features, the bitmap approach works well with the CNN.
 
+Segmentation turned out to be the most complex and difficult issue to solve in this project, different approaches to segmentation led to different results. The focus in this project was to create both a working application and a solid classifier. The object detection or bounding box approach had so much potential to be the general solution for the segmentation problem in recognition of mathematical symbols. In order to get a bounding box solution to work we still needed to somehow learn fractions, exponentiation and context to each other. After failing on the bounding box idea we still had to handle the different types of fractions, exponents and contexts in general. 
+% viktig poeng her som kan være med i diskusjon
+This is where the idea of an recurrent network to simply handle context, but there was simply not enough time to explore this approach more than in thoughts. If we separated the segmentation issue from the context issue we could simply combine the two to correctly interpret symbols. Thoughts and brainstorming around this approach led to create rules (labelled vectors) with coordinates as inputs. % verifiser
+
+It was clear that some sort of machine learning solution on the segmentation and context issues would be preferable, but it was hard to see anything working better than some simple algorithms that searches in different directions.
+
+\subsection{Neural network accuracy}
+The convolutional neural network's performance can be seen in figure \ref{fig:CNN_44000}. Its performance on the test dataset was very good, and it kept increasing over time. However, as a consequence of our relatively small train dataset, the network did not show the same accuracy on the validation data and the real dataset. This model was prone to overfitting, even when including several dropout layers. 
 
 When traces are converted to images, a lot of sequential data is lost. Similar looking symbols are often drawn in different ways, however end up looking similar when the drawing is finished. This is information lost when turning the input data into images, and therefore may result in lower prediction accuracy than a network which includes this information.
 
-Recurrent neural networks has shown good results when predicting sequential data, for instance when predicting cursive handwriting, a comparable problem to predicting mathematical symbols. A recurrent neural network was therefore a natural choice in order to the include the sequential information form the test dataset. 
+Recurrent neural networks has shown good results when predicting sequential data, for instance when predicting cursive handwriting, a comparable problem to predicting mathematical symbols. A recurrent neural network was therefore a logical choice in order to the include sequential information from the test dataset. 
 
-Creating a RNN model includes its own challenges. Specifically the format on its input data. A tracegroup which should be converted to a prediction includes a large variance in amount of datapoints, and different number of traces. A lot of work was therefore spent on turning the input data into a format the RNN model could predict. This included reducing number of datapoints, padding the input arrays, and combining traces to a single trace, while still keeping information about which traces were seperate. A lot of inspiration was taken from google's quickdraw, and its open source code. \cite{_recurrent_????} 
+Creating a RNN model introduces its own challenges, especially the format on its input data. The tracegroup includes a large variance in amount of datapoints, and different number of traces. A lot of work was therefore spent on turning the input data into a format the RNN model could predict. Decimation to reduce number of points, padding the data arrays, combining traces to a single trace all while still keeping information about which traces were separate. A lot of inspiration was taken from Google's Quick Draw, and its open source code. \cite{_recurrent_2017} 
 
-It can be seen in \ref{fig:RNN_44000} that the recurrent neural network managed to perform better on the validation dataset, and did not have the same problems with overfitting as the CNN model. On the other side, the RNN model was actually underfitting the train dataset, even after 40 epochs.
+It can be seen in figure \ref{fig:RNN_44000} that the recurrent neural network managed to perform better on the validation dataset, and did not have the same problems with overfitting as the CNN model. The recurrent network had issues with underfitting the train dataset, even after 40 epochs. 
 
-The two different models were very different, both in model architecture, and the format of input data. Therefore, it was interesting to see whether the models could perform better predictions combined, than each model individually. As seen in \ref{fig:combined_CNN_RNN_44000}, the combined model performed better than both the CNN and RNN on the test dataset, and the real dataset. 
+The two different models were very different, both in model architecture, and the format of input data. Therefore, it was interesting to see whether the models could perform better predictions combined, than each model individually. As seen in figure \ref{fig:combined_CNN_RNN_44000}, the combined model performed better than both the CNN and RNN on both the test dataset and the real dataset. 
 
-With an accuracy of 98.28\% on the test dataset, the combined model had an accuracy of 1.77\% better than the CNN model, and an accuracy of 0.93\% better than the RNN. The difference was even larger on the real dataset, with 1.52\% better accuracy than the RNN. This indicates that the combined model handles data from different sources better, however the dataset is too small to make this conclusion.
+With an accuracy of 98.28\% on the test dataset, the combined model had an accuracy 1.77\% better than the CNN model, and an accuracy of 0.93\% better than the RNN. The difference was even larger on the real dataset, with 1.52\% better accuracy than the RNN. This indicates that the combined model handles data from different sources better. The 'real' dataset is small compared to the other datasets, so it is hard to make conclusions on the 'real' dataset. 
 
+This indicates that a combined artificial neural network could in many cases outperform a CNN or RNN with the similar datasets on this specific classification problem. 
 
-\subsection{}
+\subsection{Sources of error}
+% skrivemåte
+% overfitting, underfitting, vanishing, exploding, dead neurons (learning rate)
 
-\section{The final product}
+\section{Engineering results}
 
+%Hvordan ble sluttproduktet?
+%Fikk oppdragsgiver det som var forventet? 
+%Hvilke krav ble oppfylt? 
+%Hvilke krav ble ikke oppfylt?
 
+Since the product derived from a research project, there was never any requirements set other than some unofficial ones set at the first couple of meetings. Those requirements or goals was to have the application support the functionality of Matistikk, it should be contributing to the work flow of Matistikk and of course classify with an accuracy required to be a "resource". A lower bound of accuracy was not agreed upon because it was difficult to set realistic goals not knowing the potential of the product. 
 
-
-Hvordan ble sluttproduktet? 
-
-
-Fikk oppdragsgiver det som var forventet? 
-Hvilke krav ble oppfylt? 
-Hvilke krav ble ikke oppfylt?
-
-Det var ingen krav satt, vi skulle finne ut om det var mulig å gjøre noe slikt
-
-Hvorfor ble resultatene som de ble?
-
-enkelte områder kunne vært bedre, vi hadde ingen erfaring fra før
-
-Hva var bra?
-Hva var ikke så bra? 
-
-
-\subsection{}
-Sammenlign med andre løsninger: myscript, drawpix math, forskningsartikler
-
-
-\subsection{Process, approach and technology}
-
-Hva ble bra på grunn av valgt prosess, fremgangsmåte og teknologi? 
+%Hvorfor ble resultatene som de ble?
+Our results are based on the intensive work done in the last 20 weeks or so, every critical stage was reviewed and learned from. Initial stages was about finding the right data for the task, initially there was only sequential data from InkML files. The data formed the task in every extent. Even though we had sequential data it was quite complex and unrealistic to get a completely functional recurrent neural network classifier with the data from CROHME competitions. This is why the initial work was focused on CNN and its potential.  % mer ?
 
 
 
-Hva ble ikke bra på grunn av valgt prosess, fremgangsmåte og teknologi? 
-Hva ble bra eller dårlig uavhengig av valgt prosess, fremgangsmåte og teknologi?
+%enkelte områder kunne vært bedre, vi hadde ingen erfaring fra før
+
 
 \subsection{Strengths and weaknesses}
 
-The system developed has both strengths and weaknesses. In general, 
+The system developed has both strengths and weaknesses. There are details in all parts of the system that could have been better, however, many of these could be solved if the projects time scope lasted longer. Overall the system does a great job if the input data contains small amounts of noise and is able to segment the symbols correctly. % si noe om mengder detalj den kanskje ikke klarer?
 
-Strengths:
+%training
+In the training phase of the neural network there were some limitations in terms of training data. The training set was small and many of the symbols used did not have enough training samples to train the neural network optimally. More training samples could have been collected, a system for this would require some time to set up. However, the model trained handles most symbols well and achieves high accuracy for the validation sets.
 
-The classification model is accurate
-
-The model presents probabilities
-
-Live feedback to some degree
-
-The system is easy to implement
+% pre processing and segmentation
+%The preprocessing and segmentation step is heavy in terms of complexity and computation. % ikke i forhold til at et nevralt nettverk skal gjør jobben?
 
 
-Weaknesses:
+% interpretation
+Finding the context of the input data is accomplished with a recursive search and a set of hard coded rules. This will ensure consistency for similar input data, but is limited in terms of understanding mathematical notation. Each notation to support needs its own set of rules, and the complexity of the context search would increase with each of them. Complex structures such as integrals and sums is not supported since they require new methods to search for symbols within their bounds. In this project it was chosen to not focus on this, due to time restrictions.
 
-The training set used to train the final model was small.
-
-Some symbols did not have enough training samples.
-
-The system is sensitive to noisy input. 
-
-Correctly segmenting the input symbols requires them to not have any overlapping traces.
-
-Equals sign logic
-
-Multiplication sign logic is hardcoded
-
-Timestamps is not used.
-
-Deleting on the front end.
-
-Front end is a byte buggy.
-
-New user might find it unusual to use, maybe they dont understand the segmentation part
-
-A lot of data is sent to the server
-
-Heavy preprocessing
+Some of the rules in the context search uses static values instead of dynamic values, such as the propositions of a symbol. To find the multiplication sign dots the interpretation system only checks if a symbols is smaller than a threshold. This is not a general solution, as some persons might write larger multiplication dots than others. Finding a more general way of dealing with this is due for further work. 
 
 
+% front end 
+The front end demonstration developed in this project has 
+
+%Strengths:
+
+%The classification model is accurate
+%The model presents probabilities
+%Live feedback to some degree
+%The system is easy to implement
+%consistency in interpretation, can also be weakness
+
+%Weaknesses:
+
+%The training set used to train the final model was small.
+%Some symbols did not have enough training samples.
+%The system is sensitive to noisy input. 
+%Correctly segmenting the input symbols requires them to not have any overlapping traces.
+%Equals sign logic
+%Multiplication sign logic is hardcoded
+%Timestamps is not used.
+%Deleting on the front end.
+%Front end is a byte buggy.
+%New user might find it unusual to use, maybe they dont understand the segmentation part
+%A lot of data is sent to the server
+%Heavy preprocessing
+%can be difficult to add more signs to context search, 
+
+\subsection{Compared to other solutions}
+%Sammenlign med andre løsninger: myscript, drawpix math, forskningsartikler
+
+MyScript is a commercial solution which has participated in the CROHME competitions, they used a private dataset, thus it is not easy to compare other than by trial and error. There is however a demo of MyScript functionality which displays its great features and its support for many different symbols. MyScript has superior classification abilities than the solution made in this project. Khan Academy recently deployed recently a new app for iPads, which uses MyScript to recognize user input.
 
 
-\section{}
+[Compare our solution to others]
+
+
+%\section{Process, approach and technology}
+\section{Administrative results}
+%Hva ble bra på grunn av valgt prosess, fremgangsmåte og teknologi?
+From the project participants point of view, the project flow was decent. The project flow varied, but the choice of following an agile aproach such as modern agile with inspiration of lean startup turned out to be a good foundation to build upon. TriProgramming was also practised in the software development phases, which required at least two pair of eyes on the code, to discuss and form the fundation. The choice of python was an excellent choice because of it already exists in Matistikk, it enables high productivity, it is good for prototyping and it is extremely popular in the machine learning world. Keras has also been a success for us, it does do some things for you but it both feels and is extremely productive, it does also use TensorFlow which enables us to do our computations on a GPU. 
+
+%Hva ble ikke bra på grunn av valgt prosess, fremgangsmåte og teknologi?
+Using modern agile with lean startup inspiration worked well in the sprints/phases dominated by software development, phases which had most machine learning did not benefit in the same way simply because it is difficult to plan and estimate progression dealing with complex new subjects and approaches.
+
+%Hva ble bra eller dårlig uavhengig av valgt prosess, fremgangsmåte og teknologi?
+Independent of the choices made on process, approach and technology the teamwork worked well. Communication through Slack worked as expected, frequent status meetings and thorough discussions led to results in both software and classification accuracy.
+
+
+
+\section{Impact}
 
 %Dere skal også drøfte arbeidet i forhold til et helhetlig systemperspektiv. 
+% ??????????????????
 
+%Sett resultatene inn i en samfunnsmessig og økonomisk, eventuelt også miljømessig, sammenheng.
+The product created is meant to be a resource for Matistikk users sometime when the maintainers of Matistikk feel like it's functionality satisfies the requirements. It can function as both stand-alone and as a part of a larger system.
 
-%Sett resultatene inn i en samfunnsmessig og økonomisk, eventuelt også miljømessig, sammenheng. 
-No more need for paper, save the planet, save money
+The product created is created upon data distributed for academic use, so it cannot be used in a commercial setting. The system is meant as an addition to an already existing application which is initially meant for teacher students, that indicates that the technical level is sufficient to handle a web-application as this.
 
 \subsection{Ethics}
-Analyser relevante etiske problemstillinger i forhold til resultatene fra arbeidet
+The goal with this project is to enhance functionality in Matistikk, this project does not limit where and how Matistikk can be used other than in a non-commercial setting. This means, that unfortunately teachers with limited technical capabilities may one day indirectly use our product. The usage is not the issue, but it does require basic technical capability which if not present may limit the users ability to teach mathematics to its students.
 
-Less identity if everyone sends latex instead of handwriting.
-
-Do we need this section
-
-\section{The development process}
-\subsection{Teamwork}
-%Studenter som jobber i gruppe skal skrive et avsnittder de reflekterer over gruppearbeidet og hvordan det har fungert.(Dette kommer i tillegg til det individuelle refleksjonsnotatet som skal leveres.
+Both Matistikk and our project is digital, thus some of the personality from the work done disappears. This again could lead to unfair evaluation of students and miscalculating grades.
 
 \subsection{Professional ethics}
 %Alle skal reflektere kort over profesjonsetiske problemstillinger i forhold til egen eller gruppens gjennomføring av oppgaven,
-Can AI one day rule the world???
+
+\section{Teamwork}
+%Studenter som jobber i gruppe skal skrive et avsnittder de reflekterer over gruppearbeidet og hvordan det har fungert.(Dette kommer i tillegg til det individuelle refleksjonsnotatet som skal leveres.
+A quick reflection of the teamwork and team dynamics during this project reveals curious students eager to learn in an exciting field. It is though, not hard to conclude that in a difficult subject experiencing both productivity and motivational ups and downs is common. During the project Thursdays was often reserved for part-time jobs. Luckily everyone could work on Thursdays, so no other weekday went away to inefficient teamwork. Every team member was responsible for their own part of the work and to get the recommended amount of hours, which was about 30 hours per week. In retrospect, time working together is crucial so it is important to stay focused on the project and not work, although this has not been a limiting factor.
