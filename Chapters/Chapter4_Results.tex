@@ -2,14 +2,15 @@
 \lhead{\emph{Results}}
 
 \section{Scientific results}
-This section will contain data, visualizations and results from the work associated with the scientific problem described in section \ref{problem_definition}.\\
+This section will contain data, visualizations and results from the work associated with the scientific problem described in section \ref{problem_definition}.
+
 In order to evaluate the different ANN models against each other, each model classified three different datasets in every iteration. Every training session therefore includes three different accuracy's, where each accuracy is calculated as correct predictions divided by total predictions.
 
 The first dataset is the training set. This dataset consists of a large subset of data gathered from the CHROME dataset (90\%), and is the data the models used as training data. This dataset is labelled as \textit{train} in the accuracy graphs below. % små avsnitt? evt slå sammen?
 
 The second dataset is the validation set, also called the test set. This dataset consists of the last 10\% of data from the CHROME dataset. None of the data in the validation set was used during training, and this data is therefore a good representation for how the model performs on unseen data. This dataset is labelled as \textit{test} in the accuracy graphs below.
 
-The third dataset is a set of real data gathered from the example website, with symbols written by a three different people. This dataset is used to give an indication of the correctness of the preprocessing, as well as how the model responds to data from different sources. The real dataset was an important inclusion because the main goal of this assignment was to produce good results under circumstances simulated by the example website. Notice that this dataset included a few mislabelled data points, contained only about three hundred data points, and includes only a subset of all the classes. The dataset is therefore only used as an indication of the accuracy on real data. This dataset is labelled as \textit{real} in the accuracy graphs below.
+The third dataset is a set of real data gathered from the example website, with symbols written by three different people. This dataset is used to give an indication of the correctness of the preprocessing, as well as how the model responds to data from different sources. The real dataset was an important inclusion because the main goal of this assignment was to produce good results under circumstances simulated by the example website. Notice that this dataset included a few mislabelled data points, contained only about three hundred data points, and includes only a subset of all the classes. The dataset is therefore only used as an indication of the accuracy on real data. This dataset is labelled as \textit{real} in the accuracy graphs below.
 
 %TODO her må vi forklare hva train test og real er.
 \begin{figure}[H]
@@ -84,23 +85,22 @@ Table of the \textbf{real} dataset.
 
 \section{Engineering results}
 This section will contain how our example project/proof of concept has turned out in terms of goals set in earlier stages of the project. The evaluation of engineering result is based on goals set in meetings with the product owners. % Resultat fra tester skal være lagt her
-%
-The engineering goal in this project was to create a proof of concept application which can display the potential of a handwriting recognition system for mathematical symbols. In the initial meetings the product owners stated that a module that would enhance Matistikk was desired.
 
-%In the initial meetings with the product owners they concluded with that they were hoping to get an application/module that would enhance Matistikk. 
+The product was intended to be a proof of concept application, with functionality for recognizing handwritten mathematical symbols. In addition, it was meant to be used as a module to enhance Matistikk's functionality. Therefore, the product had to be easily integrable to the already existing Matistikk. 
+
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{Assets/Chapter4_Result/predictor_example.png}
-    \caption{Example of the graphical user interface. A simple HTML5 canvas is used to perform input, currently it does a HTTP post request to a back end to perform classification of buffer. The HTTP post method could be swapped with a WebSocket. The result is shown at the top right corner in human readable form, directly under the result is the result in \LaTeX, this is useful to further use it in some other API, for example Wolfram Alpha. Under the \LaTeX  is the probabilities of either a chosen symbol or the latest drawn.}
+    \caption{Example of the graphical user interface, with an HTML5 canvas. The result is shown at the top right corner in human readable form. Directly below is the corresponding \LaTeX script, which can be useful for further use in other APIs. The graph on the right contains the classification probabilities for either a chosen symbol or the latest drawn.}
     \label{fig:predictor_example}
 \end{figure}
 
-Back and front end is engineered to become modular and simple tools that can easily be integrated into a system. An example implementation of the proof of concept application is deployed on Heroku, a cloud application platform.
+The back- and front end is developed as two separate products. These can be integrated independently into a larger system. An example implementation of this is deployed on Heroku, a cloud application platform.
 
+Results from the algorithms behind segmentation and context was not easily measurable. They are however discussed in chapter \ref{engineering_results}.
 
-\section{Administrative results} % TODO prat rundt prosjekthåndbok
+\section{Administrative results}
 Administrative results is the results of planning, implementing, researching and concluding the work done in this project. 
 
-Attributes of the assignment made the planning more of a dynamic process that needed to be done continuously. After each small period it was necessary to do a retrospective, to learn from mistakes and further improve the project flow and productivity. Incorporating iterations and reviews into the project flow enhanced the ability to respond to changes and new goals. Modern Agile principles were followed during the project, it was a good fit for a research based assignment. Detailed planning was achievable when developing the foundation of the web-based system. Detailed planning/cost estimates of software iterations is both well practised at NTNU and it is also common in part-time jobs. 
-
+Due to the high uncertainty in the assignment, the planning had to be done in a dynamic process continuously through the project. After each small period it was necessary to do a retrospective, to learn from mistakes and further improve the project flow and productivity. Incorporating iterations and reviews into the project flow enhanced the ability to respond to changes and new goals. Modern Agile principles were followed during the project, and was a good fit for a research based assignment. Detailed planning was achievable when developing the foundation of the web-based system. 

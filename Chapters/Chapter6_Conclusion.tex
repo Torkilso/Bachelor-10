@@ -1,19 +1,19 @@
 \chapter{Conclusion and further work}
 \lhead{\emph{Conclusion and further work}}
-Classifying handwritten mathematical symbols and expressions is a challenging task, where each step in the recognition process is critical and vulnerable in their own way. In this project many approaches were explored, leading to valuable insight for solutions that might or might not work. 
+Classifying handwritten mathematical symbols and expressions is a challenging task, where each step in the recognition process is critical and vulnerable in their own way. 
 
-The results confirms that a combination of convolutional and recurrent networks outperformed a solution including only one of them. 
+The results confirmed that a combination of convolutional and recurrent networks outperformed both networks individually. However, these results are confined to our dataset and models.  
 
-Results confirmed that a combination of convolutional and recurrent artificial neural network outperformed a solution including only either one of the network types, in this case with the given sets of data. It is not easy to simply conclude a complex subject as classification of handwritten mathematical symbols and expressions, there are of course different approaches which could have made the classifications better or worse. It is hard to tell, but a solution including a recurrent network which can "remember" certain features of data is the most reasonable to achieve a neural network which can classify mathematical symbols and expressions in the best way.
+From experimentation with different data formats. It is likely that keeping the sequential information from the digital drawings is an important factor in getting good accuracies. By combining both the static information from the finished symbol, and information about how the symbol was drawn, a network was able to find features resulting in high accuracies on a relatively small dataset.
 
+In order to best classify an image, it seems that the sequential data contains more features that a RNN could extract than a CNN model could through static image data. Individually the recurrent network had better accuracy than the CNN, however, since the combined model achieved even better results, it is likely that both formats include different information, both important for the final classification.
 
 \section{Further Work}
-A pure recurrent neural network would also have been exciting to see and compare results with. During the project there was a constant search for improvements, with enough data it is not unrealistic to see a recurrent neural outperform it's competitors, not just in classification accuracy, but in segmentation and extending the symbol bank. It is worth to mention though, that a recurrent neural network is first powerful when trained with sufficient amount of data. A standalone recurrent neural network would need some help to handle the different contextual relations between symbols.
 
-Sequential data contains information which could be used to enhance segmentation, for example timestamps. Some of the InkML data contained timestamps between traces, these timestamps could possibly have been used to create some sort of function to enhance the segmentation. For this to work, one would need large quantities of data where the timestamps are preserved.
+A pure recurrent neural network would have been exciting to see and compare results with. During the project there was a constant search for improvements, with enough data it is not unrealistic to see a recurrent neural outperform it's competitors, not just in classification accuracy, but in segmentation and extending the symbol bank. It is worth to mention though, that a recurrent neural network is first powerful when trained with sufficient amount of data. A standalone recurrent neural network would need some help to handle the different contextual relations between symbols.
 
-Bounding boxes and context discoverer would also be an approach worth discovering more. A solution including those techniques could make a more general approach, which could make it easier to extend its symbol bank. 
+Sequential data contains information which could be used to enhance segmentation, for example timestamps. Some of the InkML data contained timestamps between traces, that could be utilized to enhance the segmentation. For this to work, one would need large quantities of data where the timestamps are preserved.
 
-% mer further work ?
+Both the bounding box approach and using machine learning for context would also be worth exploring more. A solution including these techniques could result in a more general solution, and make it easier to extend both the symbol bank and contextual understanding.
 
-%Some approaches, such as using object detection and bounding boxes for segmentation, had to be dropped due to being to difficult based on the time and insight at that point. Using artificial intelligence for segmentation with object detection is set for further work, however, it is hard to conclude whether this could perform better than simple algorithms.
+Regarding improvements in the currently produced models, there is still a lot of experimentation to be done. Trying different learning rates, safeguarding against dead neurons and different model architectures are all areas that could be changed to increase accuracy. Making use of state-of-the-art models, and retraining on this specific dataset, is another untested approach that could have increased the accuracy. 

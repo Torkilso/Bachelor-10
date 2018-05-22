@@ -1,118 +1,82 @@
 \chapter{Introduction}
-\lhead{\emph{Introduction}}  % Set the left side page header to "List if Figures"
+\lhead{\emph{Introduction}}
 
-\section{Motivation} % needs restructuring, we are finding out a way to combine cnn and rnn's, not develop 
-% proof of concept++++++
+\section{Motivation}
 
 Usage of digital tools in education is increasing, and testing student's performance is moving toward digital platforms. However, mathematics is a subject where most testing is still done on pen and paper. Few good digital tools exist for writing and validating mathematical handwritten expressions. By using machine learning to validate student's submission, the benefits of using digital tools for tests within the subject may improve, and therefore increase adoption of digital tools for mathematics.
-
-
-%In education, the usage of digital tools has increased. In mathematics this is also true, but the digital tools in mathematics have been falling behind on some areas. Take GeoGebra for example, it is an amazing tool which fulfills your needs with style. What digital mathematics tools are missing is a way to provide input in more dynamic ways. % FUCK dette er vanskelig...
-
-
-%In education the usage of digital tools to present and distribute tasks to students has increased [0]. % trenger kilde
-
-%This includes tasks with multiple choice, graphs, geometric models and algebra. Traditionally these tools does not support dynamic input in form of digital ink, which makes the tools somewhat unrealistic from classic math on paper.
 
 \section{Problem definition} 
 \label{problem_definition}
 
-Choosing a scientific problem or hypothesis turned out to be a challenge not knowing the potential of the assignment. Learning and experiencing from previous work on the same subject led us to explore the powers of a combination of convolutional and recurrent network.
+Choosing a scientific problem or hypothesis turned out to be a challenge not knowing the potential of the assignment. Learning and experiencing from previous work on the same subject led us to explore convolutional and recurrent networks. After experimentation with both recurrent- and convolutional networks, we saw a potential use case for a combination of both types of models. Therefore, the following hypothesis emerged.
 
 How does a combination of recurrent and convolutional neural network's accuracy perform towards classifying handwritten mathematical symbols?
 
 \section{Structure of the report}
 \subsection{Chapter 1 Introduction}
-The introduction consists of the motivation behind the project, the problem definition and some practical information about the thesis. In addition, a list of abbreviations is included at the end of the chapter.
+The introduction consists of the motivation behind the project, the problem definition and a list of abbreviations.
 
 \subsection{Chapter 2 Theory}
-To understand this thesis and choices made, a lot of theory has to be understood. This chapter consists of relevant topics in handwriting recognition, machine learning and in general theoretical concepts needed to understand our work.
+To understand this thesis and choices made, a lot of theory has to be understood. This chapter consists of various topics in handwriting recognition and machine learning that is relevant for the assignment.
 
 \subsection{Chapter 3 Technology and Method}
-This chapter will specify the technology and how the technology is applied into our product. The purpose of this chapter is to give insight to how the results can be reproduced. Details about the different steps our recognition system undergoes is presented.
+This chapter will specify the technology and how the technology is applied into our product. The purpose of this chapter is to give insight to how the results can be reproduced.
 
 \subsection{Chapter 4 Results}
-The results are divided into three parts:
 \begin{enumerate}
-    \item Scientific results
+    \item \textbf{Scientific results}
     
     This section will describe the results associated with the problem definition in section \ref{problem_definition}.
     
-    \item Engineering results
+    \item \textbf{Engineering results}
     
     This section will describe the status of the system at the time of delivery and how the system fulfils the assignment.
     
-    \item Administrative results
+    \item \textbf{Administrative results}
     
-    This sections will discuss the goals in terms of project planning and how we managed time. In addition, how these goals changed accordingly to progress 
-    
-    The section will also contain how these goals changed accordingly to the continuous progress and the methodology used in the development.
-    
+    This sections will describe the goals in terms of project planning and time management, as well as how these goals changed accordingly to progress and methodology used.
 \end{enumerate}
 
 \subsection{Chapter 5 Discussion}
-This chapter consist of discussion about the results and how they were achieved, the discussion is best described with questions. 
-As well as possible future improvements to the system.
-
-% vent med denne til vi har fylt kapitell 5 litt
-
-
+This chapter consist of discussion about the results and how they were achieved.
 \begin{enumerate}
-    \item Scientific results
-    An explanation of why or hypothesis did or did not hold, with focus on possible errors and areas of improvement.
+    \item \textbf{Scientific results}
     
-    \item Engineering results
+    An explanation of why our hypothesis did or did not hold, with focus on possible errors and areas of improvement.
+    
+    \item \textbf{Engineering results}
+    
     An explanation of the software created in this project. Discussion about whether the system fulfils the product owners expectations.
     
-    \item Administrative results
-    Describe what went good or bad as a result of choosing a specific process, approach or technology. Including what went good or bad regardless of the chosen process, method or technology.
+    \item \textbf{Administrative results}
+    
+    Describes what went good or bad as a result of choosing a specific process, approach or technology. Including what went good or bad regardless of the chosen process, method or technology.
     
 \end{enumerate}
-
 \subsection{Chapter 6 Conclusion}
 This chapter consists of our conclusion regarding our scientific problem and comments on further work.
-
 
 \section{Target audience}
 Machine learning is an extremely large field, with enormous potential. We encourage the reader to be open to some technical aspects including thoughts and choices made during the project. Machine learning is quite complex and we hope to inspire students and others new to machine learning. With that said, both our report and code is meant for a reader with some knowledge about software engineering, linear algebra and numerical mathematics. 
 
-%Mye fra forrige avsnitt blir gjentatt her
-%\subsection{Report} % Er dette et godt ord??
-%This project report is meant for everyone curious about an specific introduction to practical examples of machine learning using neural networks. The specific part is linked to this projects assignment, which is to use different approaches to achieve an respectable accuracy.\\
-% line break
-%Even though this report is meant as an introduction to a complicated field, we have based our writing on that the reader has knowledge equivalent to an 2nd year computer engineering student at Norwegian University of Science and Technology in Trondheim. Thus, some of the fundamentals are excluded. % ok setning?
-
-
-\subsection{Application}
-The application consists of an simple back end and a front end library and is available to use under the MIT license \cite{_mit_????}. As previously stated, the application is specifically created to fit the needs of our product owners, however, the front end library can be used in a more general matter. % TODO bruk bilder, figurer eller lignende av applikasjonen (?)
-
-
-%\section{CROHME} % Teori
-%CROHME is an abbreviation for Competition on Recognition of Online Handwritten Mathematical Expressions.
-%CROHME is a competition for recognizing online handwritten mathematical symbols. CROHME is organized by International Conference on Frontiers in Handwriting Recognition. \\ 
-%CROHME 2016 \parencite{mouchere_icfhr2016_2016} concluded with that handwriting is still a challenge to be solved, even after six years of competitions. Ratings on the individual tasks was accomplished, but overall it requires first of all, the segmentation to be perfect. An error in the segmentation process will supply the next steps with incorrect information and a bad foundation to perform classification on.
-% si noe om "junk" ? filtrering osv er ikke lett
-%The winner of CROHME 2016 and other competition years, was MyScript. MyScript has a commercial solution which has rich functionality and good results, but they managed to achieve those results with their own private data set. \parencite{mouchere_icfhr2016_2016}  \\ 
-
-%Tror egt ikke vi trenger den her, vi kan prøve å flette den litt sammen med motivation
 \section{Purpose}
 The purpose of this project is both to create something useful for our product owners, while exploring the possibilities and limitations of recognition of handwritten mathematical symbols. In addition, we hope to inspire further work on the subject. 
 
-%Litt rart og ha det her under purpose
-Choices made during the project were strongly influenced by previous work, for example Martin Thoma, 2015 \cite{thoma_-line_2015} and Catherine Lu and Karanveer Mohan \cite{lu_recognition_2015}.
-
-\section{Abbreviations}  % Set the left side page header to "Abbreviations"
+\section{Abbreviations}
 \begin{table}[H]
 \begin{tabular}{ l l }
 \textbf{ANN} & Artificial Neural Network \\
+\textbf{API} & Application Programming Interface \\
 \textbf{BMP} & Bitmap \\
 \textbf{CNN} & Convolutional Neural Network \\
 \textbf{CPU} & Central Processing Unit \\
 \textbf{CROHME} & Competition on Recognition of Online Handwritten Mathematical Expressions\\
 \textbf{CSS} & Cascading Style Sheets \\
 \textbf{GPU} & Graphics Processing Unit \\
+\textbf{GRU} & Gated Recurrent Unit \\
 \textbf{GUI} & Graphical User Interface \\
-\textbf{HTML} & HyperText Markup Language \\ 
+\textbf{HTML} & HyperText Markup Language \\
+\textbf{HTTP} & HyperText Transfer Protocol \\
 \textbf{ICFHR} & International Conference on Frontiers in Handwriting Recognition \\
 \textbf{IDE} & Integrated Development Environment \\
 \textbf{ILU} & Department of Teacher Education \\
@@ -124,9 +88,8 @@ Choices made during the project were strongly influenced by previous work, for e
 \textbf{NTNU} & Norwegian University of Science and Technology \\
 \textbf{OCR} & Optical Character Recognition \\
 \textbf{RDP} & Ramer-Douglas-Peucker algorithm \\
+\textbf{ReLU} & Rectified Linear Unit \\
 \textbf{RNN} & Recurrent Neural Network \\
-\textbf{GRU} & Gated Recurrent Unit \\
-\textbf{LSTM} & Long Short-Term Memory \\
 
 \end{tabular}
 \label{table:abbreviations}

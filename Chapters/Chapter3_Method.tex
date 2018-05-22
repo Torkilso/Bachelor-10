@@ -1,38 +1,32 @@
 \chapter{Technology and method}
 \lhead{\emph{Technology and method}}
 
-\section{Introduction}
-In this chapter the technology and methods applied in this project is reasoned. The approach chosen will be explained in such a way that the results can be reconstructed. The nature of the assignment required us to use tools which delivers high productivity and flexibility. 
+In this chapter the technology and methods applied in this project is reasoned. The approach chosen will be explained in such a way that the results can be reconstructed.
 
-\section{Technology} % syns denne kan eksistere fint her
-When collaboration tools were chosen the focus was on finding the best tool for the situation. Tools should handle rapid changes, collaboration tools needs a low response time and stability. % Share\LaTeX for document processing and collaboration, Slack for team communication and Office365 as a shared storage service. These tools combined with git and github make a powerful combination which easily could have been swapped with some other tool.  % er skrevet under
+\section{Technology}
 
 \subsection{Version control}
-Throughout this project git has been used as version control. The nature of the project made us choose Github. GitHub was chosen as git hosting service because it is a well established, stable product, which also enables remote collaboration.
+In this project git has been used for the version control system through the hosting service Github. The reason for choosing Github was to be able to collaborate remotely and to always have a safe backup of the most recent version made.
 
-%\subsection{Collaboration tools}
-%When collaboration tools were chosen the focus was on finding the best tool for the situation. Tools should handle rapid changes, collaboration tools needs a low response time and stability. % Share\LaTeX for document processing and collaboration, Slack for team communication and Office365 as a shared storage service. These tools combined with git and github make a powerful combination which easily could have been swapped with some other tool.  % er skrevet under
-
-%\subsubsection{Writing}
 \subsection{Collaboration tools}
-The different collaboration tools used in this project were.
 
-\LaTeX \ as document preparation system. \LaTeX \ makes it simpler to generate professional looking papers. It also has good support for writing equations, creating figures, and can be extended with packages to expand its functionality. ShareLaTeX for real time collaboration in the same \LaTeX \ document. 
+In addition to using git for version control, ShareLaTeX and Office365 was also used for collaboration. 
 
-For cloud storage and mail Office365 (OneDrive and Outlook), this is a tool provided by NTNU for it's students. Office365 enables us to easily communicate with our product owners and mentor in addition to storing our project documents and attachments.
+ShareLaTeX is an online platform where multiple users can collaborate on the same LaTeX project in real time. LaTeX is a document preparation system for creating professional papers with great support for many document elements, such as equations and figures. Various packages can be used to further extend the functionality. 
+
+Office 365 is available to all students at NTNU and offers cloud storage and emailing. The Office 365 platform enabled us to easily communicate with product owners and mentor in addition to storing project documents.
 
 
 \subsection{Python and frameworks}
-The choice of programming language was influenced mainly by its ability to integrate into already existing techonlogy, and the availability of machine learning tools. Python was a natural choice as the current application (Matistikk), was written in Django. TensorFlow, a popular machine learning library written by Google, also has bindings to Python. For machine learning, Keras\cite{chollet_keras_2015}, which is a higher level machine learning library with integration to TensorFlow, was chosen. Keras has good documentation and supports most of the common machine learning tasks. Keras is well suited for quick prototyping and it is therefore suitable to make proof of concepts.
+The choice of programming language was influenced mainly by its ability to integrate into already existing technology and the availability of machine learning tools. Python was a natural choice, as the Matistikk is written in Django, a Python framework. In addition, Python was chosen due to its popular machine learning libraries TensorFlow and Keras. These libraries are closely connected, where Keras is used as an abstraction layer on top of TensorFlow. Keras was chosen to simplify the coding process and to be able to create quick prototypes.
 
-A client application was also needed to draw symbols, collect data and present statistics. To keep the application architecture simple, it uses regular HTML, CSS and JavaScript with JQuery. Tornado  to serves the HTML file and the API. Tornado is a simple framework to build web servers in Python and  was preferred because of its simplicity and the availability of WebSockets.
+
+A client application was also needed to draw symbols, collect data and present statistics. To keep the application architecture simple, HTML5, CSS and JavaScript with JQuery is used. In addition, the Python framework Tornado is used to serve the API and the client application. Tornado was chosen due to its simplicity and high performance.
+
 
 \section{System Architecture}
-The data used in this project is both sequential coordinates from CROHME (InkML example: \ref{fig:InkML_ex}) and image data. Because our data was sequential it was reasonable to use a WebSocket in the initial development phase. Both to resemble data format and to preserve all the information in the sequential coordinates. 
+The data used in this project is sequential coordinates from CROHME (InkML example: \ref{fig:InkML_ex}). Communication between the server and client application initially used WebSockets, both to resemble data format and to preserve information in sequential coordinates. For the sake of simplicity, it was also implemented a way to do this over a HTTP POST request. Several ways to handle web requests means that future developers can incorporate the software to fit their own needs.
 
-For the sake of simplicity, it was also implemented a way to do this over a HTTP POST request, as an alternative to the WebSocket implementation. Several ways handle web requests means that future developers can incorporate the software to fit their own needs.
-
-%After discussion with our project owners, we were drawn to the direction of using a http post request. The test application also does not think about the amount of data it sends per classification request. If the canvas is changed, it still re-sends the entire buffer. This is both to easy re-evaluate the buffer, but in addition this can trigger changes in the segmentation process, which can eventually lead to a different classification. % tror ikke denne trengs
 
 \section{Preparing data}
 This section will go through the process from when each symbol was segmented, to how the symbols were converted to input in the neural networks.
@@ -47,7 +41,7 @@ The motivation for converting data to images was to use already existing models 
 \label{preparing_data_traces}
 The coordinates received from InkML and the front end application included coordinates at different scales. Therefore the coordinates had to be transformed within a chosen range $[-1, 1]$, while still keeping the same proportions. The scaling process is described in \ref{scale_linear_by_column}.
 
-An example of a trace received from InkML can be seen in \ref{fig:sqrt_not_processed}.
+An example of a trace received from InkML can be seen in figure \ref{fig:sqrt_not_processed}.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth,keepaspectratio]{Assets/Chapter3_Method/sqrt_before_preprocessing.png}
@@ -66,9 +60,9 @@ The traces were recorded with different sampling frequencies. Some traces includ
 
 \subsection{Images}
 
-To prepare trace data for the convolutional neural network, the traces were converted into an image. In order to turn traces into images, the traces were first scaled by applying the the same transformations as previously (\ref{scale_linear_by_column}), however within the range $[0, 26]$.
+To prepare trace data for the convolutional neural network, the traces were converted into an image. First, the traces were scaled by applying the the same transformations as previously (\ref{scale_linear_by_column}), however within the range $[0, 26]$.
 
-The next step was to generate an empty black image with 26x26 pixels (matrix of size 26x26 with only zeros). Afterwards, the pixels between each consecutive coordinate-pair were filled with white (255), and the resulting pixel grid was then normalized by dividing with 255. An example of the resulting grid presented as a matrix can be seen below, the example is simplified by using only a 8x10 matrix.
+The next step was to generate an empty black image with 26x26 pixels (matrix of size 26x26 with only zeros). Afterwards, the pixels between each consecutive coordinate-pair were filled with white (255), and the resulting pixel grid was then normalized by dividing with 255. An example of the resulting grid presented as a matrix can be seen below, the example is simplified by using a 8x10 matrix.
 
 \begin{figure}[H]
     \begin{center}
@@ -86,9 +80,11 @@ The next step was to generate an empty black image with 26x26 pixels (matrix of 
     \end{bmatrix}
     $
     \end{center}
-    \caption{An 8x10 matrix representing a pixel grid of a square root symbol.} % burde nok ha litt mer forklaring, TODO flytt forklaringen ovenfor ned i caption. (?)
+    \caption{A 8x10 matrix representing a pixel grid of a square root symbol.} % burde nok ha litt mer forklaring, TODO flytt forklaringen ovenfor ned i caption. (?)
     \label{fig:sqrt_matrix}
 \end{figure}
+
+An image taken directly from the training data is visualized in figure \ref{fig:sqrt_img}. The resolution of the image is 26x26 pixels.
 
 \begin{figure}[H]
     \centering
@@ -101,9 +97,6 @@ The next step was to generate an empty black image with 26x26 pixels (matrix of 
 \label{the_recognintion_system}
 The recognition system developed consists of several components, that together performs the steps mentioned in section \ref{handwriting_recognition} and \ref{recognition_of_handwritten_mathematics}. 
 
-%The recognition system consists of some hard coded logic and a neural network. As stated in chapter \ref{handwriting_recognition}, handwriting recognition includes several steps required to classify correctly.
-
-%[TODO] simple diagram of the whole process % vurder nødvendighet ?
 
 \subsection{Preprocessing and segmentation}
 \label{preprocessing_and_segmentation}
@@ -114,18 +107,14 @@ After the traces are grouped, they are placed into a symbol object. Each of thes
 
 Before the classification step the traces of each symbol is preprocessed as described in \ref{preparing_data_traces}. 
 
-%A large part of our approach relies on the segmentation of data, some symbols are put together by multiple traces, for example the number 4. Experimentation on finding the best solution for the segmentation issue led to object bounding boxes. Even though bounding boxes has potential to be the best solution for segmentation, it didn't perform as desired in terms of accuracy. In addition to it not proving to be as valuable as first thought we experienced good results with the previously mentioned "hard-coded" logic approach.
 
-%The project went initially for a solution with a CNN, we had to separate the system into different tasks in order to make prediction. The reason behind this is that the CNN itself, in our solution should solely work on the classification of a symbol. Since our assignment is to handle symbols and expressions, we then need to extract single symbols from multiple symbols or expressions.\\
-%This specific task was and is the most critical in order to get correct recognition with a CNN. If the segmentation turned out wrong, the classification would be handed bad data which makes a correct classification unlikely.\\ To solve the segmentation issue different approaches was attempted, among those were object localization and detection, with bounding boxes to easily detect symbols which consists of multiple strokes or traces. This idea of object detection was quite good and would have, if successful made the rest quite easy in comparison.\\ The attempts made on object detection was unsuccessful, we were getting results, but they were not proving to be better than solving it with a much simpler algorithm which did not require machine learning in the first place. 
-
-\subsection{Model architecture} % ?Classification | ?Models | ?Model architecture
+\subsection{Model architecture} 
 
 The following section describes the architecture of three different models used in this project. A convolutional neural network, a recurrent neural network and a model combining both networks.
 
 \subsubsection{RNN model}
 
-The RNN model includes two one-dimensional convolution layers with max pooling and batch normalization. It also includes two bidirectional Gated Recurrent Unit layers. This model was first inspired by the Google Quick Draw model \cite{_recurrent_2017}. It has been modified to correspond with the train dataset's input- and output data. The models architecture was also modified through experimentation, with the intention of producing better results on the test dataset.
+The RNN model includes two one-dimensional convolution layers with max pooling and batch normalization. It also includes two bidirectional Gated Recurrent Unit layers. This model was first inspired by the Google Quick Draw model \cite{_recurrent_2017}. It has been modified to correspond with the train dataset's input- and output data. The model's architecture was also modified through experimentation, with the intention of producing better results on the test dataset. All models were compiled using the Adam optimizer and categorical cross entropy loss function \cite{chollet_keras_2015}.
 \begin{figure}[H]
     \centering
     \begin{tikzpicture}
@@ -182,13 +171,14 @@ The RNN model includes two one-dimensional convolution layers with max pooling a
 
 
     \end{tikzpicture}
-    \caption{A visualisation of the layer architecture in the RNN model. In depth description of each layer is available in the Keras documentation \cite{_keras_????}.}
+    \caption{A visualisation of the layer architecture in the RNN model. In depth description of each layer is available in the Keras documentation \cite{chollet_keras_2015}.}
     \label{fig:RNN__model_visualization_1}
 \end{figure}
 
 \subsubsection{CNN model}
 
-The CNN model has two convolution layers, a max pooling layer and two fully connected layers. The model had issues with overfitting, and it therefore includes two dropout layers with  rate of 25\% and 50\% respectively. The model also includes a flatten layer. The flatten layer performs a dimensionality reduction on the matrix returned from the convolutional layers. This model is inspired by CNN models with good results on the MNIST dataset \cite{Multi-column Deep Neural Networks for Image Classification}.
+The CNN model has two convolution layers, a max pooling layer and two fully connected layers. The model had issues with overfitting, and it therefore includes two dropout layers with  rate of 25\% and 50\% respectively. The model also includes a flatten layer. The flatten layer performs a dimensionality reduction on the matrix returned from the convolutional layers. This model is inspired by CNN models with good results on the MNIST dataset. \cite{ciresan_multi-column_2012}
+
 \begin{figure}[H]
     \centering
     \begin{tikzpicture}
@@ -224,13 +214,13 @@ The CNN model has two convolution layers, a max pooling layer and two fully conn
         \node[] at (5, -10) {$Dense(units=38, act=Softmax)$};
 
     \end{tikzpicture}
-    \caption{A visualisation of the layer architecture in the CNN model. In depth description of each layer is available in the Keras documentation \cite{_keras_????}.}
+    \caption{A visualisation of the layer architecture in the CNN model. In depth description of each layer is available in the Keras documentation \cite{chollet_keras_2015}.}
     \label{fig:RNN__model_visualization_2}
 \end{figure}
 
 \subsubsection{Combined model}
 
-The combined model's architecture is a concatenation of the results from the CNN model, and the RNN model. The two models' last fully connected layer was removed before concatenation, to preserve as much information as possible. The combined model also has two fully connected layers and a dropout layer. The purpose of these layers is to enable the model to make its own predictions from the results of both input models.
+The combined model's architecture is a concatenation of the results from both the CNN- and RNN model. The two model's last fully connected layer was removed before concatenation, to preserve as much information as possible. The combined model also has two fully connected layers and a dropout layer. The purpose of these layers is to enable the model to make its own predictions from the results of both input models.
 \begin{figure}[H]
     \centering
     \begin{tikzpicture}
@@ -258,7 +248,7 @@ The combined model's architecture is a concatenation of the results from the CNN
         \node[] at (0,-7) {$Dense(units=38, act=Softmax)$};
 
     \end{tikzpicture}
-    \caption{A visualisation of the layer architecture in the combined model. In depth description of each layer is available in the Keras documentation \cite{_keras_????}.}
+    \caption{A visualisation of the layer architecture in the combined model. In depth description of each layer is available in the Keras documentation \cite{chollet_keras_2015}.}
     \label{fig:RNN__model_visualization_3}
 \end{figure}
 
@@ -266,7 +256,7 @@ The combined model's architecture is a concatenation of the results from the CNN
 \subsection{Interpretation and context search}
 \label{interpretation_context_search}
 
-The interpretation system consist of a recursive search function and a set of fixed rules to determine the context of how the symbols fit together. This step receives a list of the classified symbols from the classification step as input and outputs the interpreted context in a tree based format of objects. This tree is stored as a list of objects, where some of the might contain references to other objects. For example, a fraction object will contain references to the numerator- and denominator objects.
+The interpretation algorithm consist of a recursive search function and a set of fixed rules to determine the context of how the symbols fit together. This step receives a list of the classified symbols from the classification step as input and outputs the interpreted context in a tree based format of objects. This tree is stored as a list of objects, where some of them might contain references to other objects. For example, a fraction object will contain references to the numerator- and denominator objects.
 
 \begin{figure}[H]
 \begin{center}
@@ -289,8 +279,6 @@ The interpretation system consist of a recursive search function and a set of fi
     \node[main node] (12) [below right of=6, label=below:denominator] {2};
     
     \node[main node] (13) [below of=8, label=below:core] {3};
-    
-    
 
     \path[every node/.style={font=\sffamily\small}]
         (2) edge node [right] {} (3)
@@ -325,7 +313,7 @@ The main function in the interpretation system orchestrates the order of what el
     \item Power groups, base and exponent
 \end{enumerate}
 
-The recursive part of this system occur through the square roots, fraction and exponents. If the body of a square root contains more than one symbol or object, the whole group is sent recursively to the main function. The same applies for the numerator and denominator found in fractions and for exponent-groups. The reason for this is to further search for context in these subgroups. For instance, fractions can have fractions as their numerator and exponents can consist of smaller expressions. 
+The recursive part of this algorithm occur through the square roots, fraction and exponents. If the body of a square root contains more than one symbol or object, the whole group is sent recursively back to the main function. The same applies for the numerator and denominator found in fractions and for exponent-groups. The reason for this is to further search for context in these subgroups. For instance, fractions can have fractions as their numerator and exponents can consist of smaller expressions. 
 
 This search process can be illustrated by a flowchart:
 
@@ -542,14 +530,6 @@ These rules became such after many rounds of testing. The idea behind them was t
 
 To find the multiplication signs small symbols are searched for by looking at width, height and area. Symbols are classified as multiplication signs if their area, height and width is within a small threshold. In addition, the height and width has to be similar, one of them can't be more than twice the length of the other one.
 
-%To find the multiplication signs the system searches for small symbols by looking at width, height and area. Symbols are classified as multiplication signs if these rules are fulfilled:
-
-%\begin{itemize}
-%    \setlength\itemsep{0em}
-%    \item The area (height*width) of the symbol has to be less than 250.
-%    \item Both the height and width has to be less than 20.
-%    \item The height and width has to be similar. One of them cannot be more than twice the length of the other.
-%\end{itemize}
 
 \subsection{Converting to \LaTeX}
 After the context has been found, the results can be converted to the corresponding \LaTeX -code. For this, the truth values to all the output objects is combined in a string by a function. This function also has to be recursive, since the output objects might be fractions, square root or base-exponent groups. If a fraction is found, the contents of the numerator and denominator is sent through the same function. The same applies for the square root cores, exponents and bases.
@@ -557,10 +537,6 @@ After the context has been found, the results can be converted to the correspond
 \section{The project process} % 
 The project process in terms of software engineering methodology has been a mix between multiple concepts and paradigms. Modern Agile was used in this project, it emphasizes four basic principles that made our project flow optimal. The four principles are make people awesome, deliver value continuously, make safety a prerequisite and experiment and learn rapidly. \cite{agile_modern_????}
 
-% Skal seksjonen over være med i kap 3? 
 
 \section{Teamwork and roles} %
-Every project participant had roles as a full stack software engineer and research engineer. Initially the resources were distributed between three domains, front end, back end and machine learning research. No clear structure was enforced because different approaches can improve quality and productivity. The distribution of roles and tasks were simply based on the sprint goals.
-
-
-
+Every project participant had roles as a full stack software engineer and research engineer. Initially the resources were distributed between three domains, front end, back end and machine learning research. No clear structure was enforced because different approaches can improve quality and productivity. The distribution of roles and tasks were based on the sprint goals.

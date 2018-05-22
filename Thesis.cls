@@ -51,9 +51,9 @@
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{2.0ex plus0.5ex minus0.2ex}
 \usepackage{vmargin}
-\setmarginsrb           { 1.5in}  % left margin
+\setmarginsrb           { 1.2in}  % left margin
                         { 0.6in}  % top margin
-                        { 1.0in}  % right margin
+                        { 1.2in}  % right margin
                         { 0.8in}  % bottom margin
                         {  20pt}  % head height
                         {0.25in}  % head sep
@@ -239,8 +239,7 @@
 {
 \addtotoc{Abstract}
   \btypeout{Abstract Page}
-  \thispagestyle{empty}
-  \null\vfil
+  \thispagestyle{plain}
   \begin{center}
     \setlength{\parskip}{0pt}
     {\huge{\textit{Abstract}} \par}
