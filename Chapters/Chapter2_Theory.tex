@@ -10,7 +10,7 @@
 
 Handwriting recognition systems are computer systems that can recognize characters and symbols written by hand. These systems have been continuously developed and researched since the early days of computers \cite{simon_off-line_1992}, beginning with the optical character recognition (OCR) systems in the 1950s \cite{mori_historical_1992}. The early OCR systems were very limited in terms of hardware, which resulted in slow progress. Researchers had high aspirations for handwriting recognition, however, it quickly gained the reputation of being an extremely difficult problem \cite{simon_off-line_1992}. As hardware and computers became more advanced, the OCR and handwriting recognition systems followed in the same direction. However, hardware has often been a bottleneck for these systems \cite{mori_historical_1992}.
 
-When computational power increased, using artificial neural networks became more popular, also for handwriting recognition. For example, in \cite{fukushima_handwritten_????} by Fukushima et al., a neural network was trained to recognize 35 symbols. Since then, neural networks has been used in many solutions, and has proven to be a major contributor to the field, as it is one of the most used tools in leading solutions today (some of these are presented in section \ref{previous_work_existing_solutions}).
+When computational power increased, using artificial neural networks became more popular, also for handwriting recognition. For example, in a paper by Fukushima et al. \cite{fukushima_handwritten_????} , a neural network was trained to recognize 35 symbols. Since then, neural networks has been used in many solutions, and has proven to be a major contributor to the field, as it is one of the most used tools in leading solutions today (some of these are presented in section \ref{previous_work_existing_solutions}).
 
 This field has for a long time been a worldwide research project \cite{mori_historical_1992}, and many competitions on different handwriting recognition problems has been arranged. Researchers from all over the world has cooperated to produce various solutions, which further confirms the difficulty of a general handwriting recognition system. 
 
@@ -19,7 +19,7 @@ This field has for a long time been a worldwide research project \cite{mori_hist
 
 Handwriting recognition systems generally has two main approaches, online and offline \cite{priya_online_2016}. Online recognition uses data from pen strokes based on sampled coordinates of pen movements and the time difference between them. These pen strokes are also referred to as traces.  Each trace can be uniquely identified while drawing, which in many cases can aid in the segmentation problem (see section \ref{Segmentation}).
 
-While online recognition uses sequential data, offline recognition uses images. In this approach the recognition system relies solely on the pixel values in images. Traces can therefore not be uniquely identified, as opposed to online recognition.
+While online recognition uses sequential data, offline recognition uses images. In this approach the recognition system relies solely on the pixel values in images. Traces can therefore not be uniquely identified, as opposed to in online recognition.
 
 
 \begin{figure}[H]
@@ -50,7 +50,7 @@ A common task in preprocessing is to normalize the input data. This simply means
 
 Since the input can be offline or online, there are many techniques that can be used to prepare the data. Common tasks in preprocessing of offline data includes removal of noise from the images and converting greyscale images to binary images \cite{priya_online_2016}. The images could also be scaled and modified to not contain any blank or empty space.
 
-Online data can be processed in different ways than offline data. For example, the coordinates can be plotted and lines can be drawn between them. This is often called a polygonal chain. Without any preprocessing these plots can have sharp edges and overall be a inaccurate representation of handwriting. Smoothing could be applied to the coordinates to fix this by using interpolation of points. The data samples might also need to be parsed to a format that is more suitable for processing, such as matrices or arrays.
+Online data can be processed in different ways than offline data. For example, the coordinates can be plotted and lines can be drawn between them. This is often called a polygonal chain. Without any preprocessing these chains can have sharp edges and overall be a inaccurate representation of handwriting. Smoothing could be applied to the coordinates to fix this by using interpolation of points. The data samples might also need to be parsed to a format that is more suitable for processing, such as matrices or arrays.
 
 To normalize traces to have the same number of data points, a variation of the Ramer-Douglas-Peucker (RDP) \cite{h_algorithms_2011} algorithm can be used. The RDP algorithm attempts to simplify a polygonal chain, while minimizing the difference between the original and the simplified chain. The simplification process works by finding data points which influences the shape of the chain less than a fixed threshold.
 
@@ -82,7 +82,7 @@ The algorithm can be modified to decrease the number of data points to a fixed n
 
 In order to normalize traces from different sources, their coordinates needs to be scaled within the same range. A maximum and and minimum value, the roof and floor of the range specified, is used together with a list of x- or y-coordinates.
 
-First, the maximum and minimum values of the list are found, as well as the difference between them. The scaled values are then found with this formula \cite{_normalize_????}:
+First, the maximum and minimum values of the list are found, as well as the difference between them. The scaled values are then found with this formula \cite{perry_normalize_2013}:
 
 \begin{equation} \label{eqn:scale_linear_by_column}
 \centering
@@ -131,7 +131,7 @@ A popular approach for this is to use neural networks (see section \ref{artifici
 
 \subsubsection{Postprocessing}
 
-After the classification the results can be further analyzed and converted to the desired format. In \cite{hu_research_2011}, a dictionary based postprocessing method is used to improve the recognition results by checking if the classification results are valid. With a dictionary, the recognition system can filter out words that does not exist, and replace them with similar and valid words. 
+After the classification the results can be further analyzed and converted to the desired format. In a paper from 2011 \cite{hu_research_2011}, a dictionary based postprocessing method is used to improve the recognition results by checking if the classification results are valid. With a dictionary, the recognition system can filter out words that does not exist, and replace them with similar and valid words. 
 
 Another way to further improve the results is to use contextual analysis. With this approach the positions of the input data is analyzed with regards to the classification results. Grammatical errors and results that does not make sense might be revealed, and can be used to trigger a re-classification with the last results in mind.
 
@@ -167,11 +167,11 @@ A context of how all the symbols fit together has to be built by looking at posi
 
 \subsection{Previous work and existing solutions}
 \label{previous_work_existing_solutions}
-There is a lot of work previously done in recognition of handwritten mathematics, and many solutions has been made. The first work in this field dates back to the 60s and has gradually developed since \cite{mouchere_icfhr2016_2016}. Different solutions and ideas has been presented through many publications from all over the world. For example, in \cite{matsakis_recognition_????} from 1999, a system that uses a Gaussian classifier for recognition of handwritten mathematics is demonstrated.
+There is a lot of work previously done in recognition of handwritten mathematics, and many solutions has been made. The first work in this field dates back to the 60s and has gradually developed since then \cite{mouchere_icfhr2016_2016}. Different solutions and ideas has been presented through many publications from all over the world. For example, in a paper from 1999 \cite{matsakis_recognition_????}, a system that uses a Gaussian classifier for recognition of handwritten mathematics is demonstrated.
 
-In recent years a competition called \textit{Competition on Recognition of Online Handwritten Mathematical Expressions} hosted by ICFHR has been held \cite{mouchere_icfhr2016_2016} \cite{mouchere_advancing_2016}. In these competitions teams from around the world competed in various math recognition tasks. The main task was to recognize expressions, while subtasks for example was to recognize matrices and isolated symbols. This competition has contributed a lot to the math recognition field, by producing standardized data sets and evaluation metrics.
+In recent years a competition called \textit{Competition on Recognition of Online Handwritten Mathematical Expressions} hosted by ICFHR has been held \cite{mouchere_icfhr2016_2016} \cite{mouchere_advancing_2016}. In these competitions teams from around the world competed in various math recognition tasks. The main task was to recognize expressions, while subtasks was for example to recognize matrices and isolated symbols. This competition has contributed a lot to the math recognition field, by producing standardized data sets and evaluation metrics.
 
-In the CROHME competition held in 2016 the MyScript corporation won in all categories. To produce the best results, their system handles segmentation, classifying and interpretation concurrently. The system uses features from both bitmaps and digital ink traces that are sent through a combination of MLP and recurrent neural networks \cite{mouchere_icfhr2016_2016}. As of \mydate their technology is commercially available.
+In the CROHME competition held in 2016 the MyScript corporation won in all categories. To produce the best results, their system handles segmentation, classifying and interpretation concurrently. The system uses features from both bitmaps and digital ink traces that are sent through a combination of multilayer perceptron (MLP) and recurrent neural networks \cite{mouchere_icfhr2016_2016}. As of \mydate, their technology is commercially available.
 
 \subsection{InkML}
 InkML is a markup language based on XML to describe digital ink data. The format is specified by the World Wide Web Consortium (W3C) \cite{chee_ink_2011}. InkML groups it's content in specific XML-style elements called ink. These elements contains trace elements, which stores coordinates for the traces. 
@@ -196,7 +196,7 @@ InkML is a markup language based on XML to describe digital ink data. The format
 </traceGroup>
 \end{lstlisting}
 
-\caption{InkML example of three traces, each with an file-unique id. In addition to traces, a trace group is included to connect truths to traces. Truths are used when providing labels to use in supervised learning, and is explained in section \ref{supervised_learning}.}
+\caption{InkML example of three traces, each with an file-unique id. In addition to traces, a trace group is included to connect truths to traces. Truths are used when providing labels to use in supervised learning (see section \ref{supervised_learning}).}
 
 \label{fig:InkML_ex}
 \end{figure}
@@ -215,9 +215,9 @@ A supervised learning algorithm can study examples of the classification tasks, 
 \section{Artificial neural networks}
 \label{artificial_neural_networks}
 
-Artificial neural network (ANN) is a subset of supervised learning algorithms. These are algorithms inspired by biological neural networks.
+Artificial neural networks (ANNs) are a subset of supervised learning algorithms. These are algorithms inspired by biological neural networks.
 
-ANNs consists of a combination of artificial neurons, also referred to as computational units. These units takes a vector as input. The input is multiplied with the precomputed weights, and a bias is added. A bias is used in the same way as the constant b in the equation $y = ax + b$, in order to shift the function up or down. Then, the result is summed and used as input to the activation function \ref{activation_functions}. Lastly, the weighted sum is returned as output from the unit \cite{_cs231n_????} \cite{_multi-layer_????}.
+ANNs consists of a combination of artificial neurons, also referred to as computational units. These units take a vector as input. The input is multiplied with the precomputed weights, and a bias is added. A bias is used in the same way as the constant $b$ in the equation $y = ax + b$, in order to shift the function up or down. Then, the result is summed and used as input to the activation function \ref{activation_functions}. Lastly, the weighted sum is returned as output from the unit \cite{_cs231n_????} \cite{_multi-layer_????}.
 
 \begin{figure}[H]
   \centering
@@ -243,7 +243,7 @@ ANNs consists of a combination of artificial neurons, also referred to as comput
         \node at (8.8,0) {$f : R \rightarrow R$};
     
     \end{tikzpicture}
-    \caption{Diagram of a single artificial neuron. $W_{i}$ is the weight of input edge i, $x_{i}$ is the value coming from edge i and b is the bias.} % TODO denne trenger mer kjøtt, god forklaring fra a til å!
+    \caption{Diagram of a single artificial neuron. $W_{i}$ is the weight of input edge $i$, $x_{i}$ is the value coming from edge $i$ and $b$ is the bias.} % TODO denne trenger mer kjøtt, god forklaring fra a til å!
     \label{fig:single_neuron}
 
 \end{figure}
@@ -356,11 +356,11 @@ For this demonstration the network in figure \ref{fig:single_layered_neural_netw
         
 
     \end{tikzpicture}
-    \caption{The outputs of the hidden layer is calculated based on the inut values and the weights between the input layer and hidden layer.}
+    \caption{The outputs of the hidden layer are calculated based on the inut values and the weights between the input layer and hidden layer.}
     \label{fig:calculating_output_one}
 \end{figure}
 
-Each of the input values are multiplied with the weight to each unit in the hidden layer. All the inputs to a unit in the hidden layer is then summed. Matrix multiplication can be used for this, where a matrix containing all the weights is multiplied with a column-matrix containing the input values. The weights matrix in this example is a 3x3 matrix since there are 3 inputs and 3 units in the hidden layer.
+Each of the input values are multiplied with the weight to each unit in the hidden layer. All the inputs to a unit in the hidden layer are then summed. Matrix multiplication can be used for this, where a matrix containing all the weights is multiplied with a column-matrix containing the input values. The weight matrix in this example is a 3x3 matrix since there are 3 inputs and 3 units in the hidden layer.
 
 \begin{center}
 $
@@ -387,7 +387,7 @@ H_i
 $
 \end{center}
 
-To calculate the output from the hidden layer an activation function is used on these input values: $activation(H_i) = H_o$. More details about activation functions is explained in section \ref{activation_functions}.
+To calculate the output from the hidden layer an activation function is used on these input values: $activation(H_i) = H_o$. More details about activation functions are explained in section \ref{activation_functions}.
 
 %\begin{center}
 %$
@@ -438,7 +438,7 @@ The output from the hidden layer is then sent further in the network.
         \node at (7.5,0.5) {$Output$};
 
     \end{tikzpicture}
-    \caption{The final output is calculated}
+    \caption{The final output is calculated.}
     \label{fig:calculating_output_two}
 \end{figure}
 The same matrix and activation function calculation is then repeated. However, now performed on the output from the hidden layer and the weight to the output layer. This will calculate the final output from the neural network. Since the output layer consist of only one unit, the final output will be a single value.
@@ -451,7 +451,7 @@ For a larger neural network the same process is used but on a bigger scale. If a
 \subsection{Activation functions} % TODO  trim dette litt ned, siden core concepts tar for seg basics.
 \label{activation_functions}
 
-Activation functions in artificial neural networks has inspiration from how neurons in our brain works. In a mathematical model of an artificial neuron by McCulloch-Pitt \cite{mcculloch_logical_1943}, the activation of a neuron was modelled as the unit step function. This model has later been generalized to use functions such as sigmoid, rectified linear unit, softmax and tangens hyperbolicus \cite{jain_artificial_1996}.
+Activation functions in artificial neural networks has inspiration from how neurons in biology works. In a mathematical model of an artificial neuron by McCulloch-Pitt \cite{mcculloch_logical_1943}, the activation of a neuron was modelled as the unit step function. This model has later been generalized to use functions such as sigmoid, rectified linear unit, softmax and tangens hyperbolicus \cite{jain_artificial_1996}.
 
 \begin{figure}[H]
   \centering
@@ -459,7 +459,7 @@ Activation functions in artificial neural networks has inspiration from how neur
     \caption{Three activation functions plotted on the interval [-4,4].}
 \end{figure}
 
-One purpose of an activation function is to introduce nonlinearity into the model. A network without nonlinearity can't represent functions which are nonlinear, despite having multiple layers. On the other hand, it is proved that a multilayered feedforward network with nonlinear activation functions can approximate any function (under some constraints) \cite{leshno_multilayer_1993}.
+One purpose of an activation function is to introduce nonlinearity into the model. A network without nonlinearity can not represent functions which are nonlinear, despite having multiple layers. On the other hand, it is proved that a multilayered feedforward network with nonlinear activation functions can approximate any function (under some constraints) \cite{leshno_multilayer_1993}.
 
  An example of the importance of nonlinearity in neural networks can shown in the exclusive-OR problem illustrated in the figure below. The black dots can not be separated from the white using a single line. On the other hand, a combination of nonlinear functions can create arbitrary shapes to separate the white and black dots \cite{jain_artificial_1996} \cite{sharma_understanding_2018}.
 
@@ -578,7 +578,7 @@ Tanh, however, squashes the inputs to the range $[-1, 1]$, which means it does n
 \subsection{Loss functions}
 \label{loss_function}
 
-Loss functions, also called error functions or cost functions, is used to calculate the margin between the expected value, and the predicted value in a neural network. These are used in conjunction with gradient descent, in order to update the weights and biases.
+Loss functions, also called error functions or cost functions, are used to calculate the margin between the expected value, and the predicted value in a neural network. These are used in conjunction with gradient descent, in order to update the weights and biases.
 
 A commonly used loss function is mean squared error (MSE)
 \begin{equation}
@@ -592,7 +592,7 @@ In MSE, the error is measured by finding the mean error (Expected value - Predic
 
 Crossentropy is a loss function typically used for classification tasks. Binary crossentropy is used when there are only two different classes, while categorical crossentropy is used for multiclass classification.
 
-In order to represent the loss between a predicted class probability distribution and the correct distribution, we use a format called one-hot encoding. An example for predicting letters, we define three vectors; $C$ (classes), $\hat{Y}$ (truth) and $Y$ (prediction).
+In order to represent the loss between a predicted class probability distribution and the correct distribution, we use a format called one-hot encoding. Following is an example for predicting letters with crossentropy. We define three vectors; $C$ (classes), $\hat{Y}$ (truth) and $Y$ (prediction).
 
 
 % https://www.youtube.com/watch?v=ErfnhcEV1O8
@@ -621,7 +621,7 @@ Using the example from above. We calculate the error of prediction $\hat{Y}$ as.
     + 0.0 \cdot \log 0.1\\
     + 0.0 \cdot \log 0.2\\
     + 0.0 \cdot \log 0.1) \\
-    = - 1.0 \cdot \log 0.6 \approx -0.51
+    = - 1.0 \cdot \log 0.6 \approx 0.51
 \end{split}
 \end{equation}
 
@@ -630,7 +630,7 @@ The network's prediction on the correct answer A is the only number affecting th
 \subsection{Training neural networks}
 \label{training_with_backpropagation}
 
-Backpropagation is an algorithm used in the training of a neural network. The algorithm was introduced by Werbos et al. in 1974 \cite{werbos_beyond_1974}, however, it was not until in 1986, in \cite{rumelhart_learning_1986} by Rumelhart et al. that the importance of the algorithm was acknowledged \cite{_backpropagation_????-1}. This section will explain the algorithm without going into details for the underlying mathematics. 
+Backpropagation is an algorithm used in the training of a neural network. The algorithm was introduced by Werbos et al. in 1974 \cite{werbos_beyond_1974}, however, it was not until in 1986, in \cite{rumelhart_learning_1986} by Rumelhart et al. that the importance of the algorithm was acknowledged \cite{_backpropagation_????-1}. This section will explain the algorithm without going into details about the underlying mathematics. 
 
 The algorithm has two phases, the forward phase and the backward phase. In the forward phase the output from each layer is calculated as in section \ref{artificial_neural_networks}. The final output is then compared to a target output specified by the training sample. By comparing these values, an error can be calculated. This error is then sent backwards through the neural network.
 
@@ -684,7 +684,7 @@ The algorithm has two phases, the forward phase and the backward phase. In the f
     \label{fig:backprop_one} 
 \end{figure}
 
-To actually train a neural network the weights between each layer has to be modified to reduce the overall error of the output. Gradient descent is used for this, where the partial derivatives for the error produced by a unit is calculated with respect to each of the connected weights.
+To actually train a neural network the weights between each layer has to be modified to reduce the overall error of the output. Gradient descent is used for this, where the partial derivatives for the error produced by a unit are calculated with respect to each of the connected weights.
 
 For the neural network in figure \ref{fig:backprop_one}, the error from the output layer is first used to calculate the modifications for the weights between the hidden layer and the output layer. Then, the process is repeated for each of the hidden units. Three new errors is calculated, one for each of the hidden units. Finally, these errors are used to calculate the modifications for the weights between the input layer and hidden layer.
 
@@ -730,7 +730,6 @@ For the neural network in figure \ref{fig:backprop_one}, the error from the outp
     \caption{Using error from the hidden units to calculate modification for the connected weights. The same process is repeated for the other hidden units.}
     \label{fig:backprop_two} 
 \end{figure}
-
 
 \subsection{Dropout}
 \label{dropout}
@@ -878,13 +877,13 @@ Dropout is a technique used during training of a neural network. For a training 
 
 The purpose of dropout is to reduce the chance of overfitting a neural network. A neural network is overfitted when it is too closely related to the training samples, and not being as generalized as possible. An overfitted neural network will give good results if tested with the training data, but might fail on new data that the neural network has not seen before. Underfitting is the opposite of overfitting, and describes a too generalized network.
 
-In a paper by Srivastava et al. from 2014 \cite{srivastava_dropout:_2014}, classifiers and neural networks trained with and without dropout applied is compared using standardized data sets. These data sets covers several areas, including vision, speech and text. In every comparison, neural networks with dropout was ranked high, if not highest.
+In a paper by Srivastava et al. from 2014 \cite{srivastava_dropout:_2014}, classifiers and neural networks trained with and without dropout applied are compared using standardized data sets. These data sets covers several areas, including vision, speech and text. In every comparison, neural networks with dropout was ranked high, if not highest.
 
 \subsection{Common problems}
 \label{vanishing-gradient}
 \label{exploding-gradient}
 \label{dead-neurons}
-In artificial neural networks there are issues that optimization algorithms must overcome. The first issues to address is the vanishing and exploding gradient. These issues typically occur in deep feedforward- and recurrent networks (these types are described in the next sections). The common factor is that both types of artificial neural network generate long computational graphs. To explain this problem further, some mathematics is required.
+In artificial neural networks there are issues that optimization algorithms must overcome. The first issues to address are the vanishing and exploding gradient. These issues typically occur in deep feedforward- and recurrent networks (these types are described in the upcoming sections). The common factor is that both types of artificial neural network generate long computational graphs. To explain this problem further, some mathematics are required.
 
 A square matrix $A$ with $n$ linear eigenvectors $q_i (i=1..n)$ can be factorized as
 
@@ -898,7 +897,7 @@ In equation \ref{eqn:mat_decomp} $A$ is our original matrix, $Q$ is an $nxn$ mat
     A^{t} = Q diag(\lambda)^{t} Q^{-1}
 \end{equation}
 
-Both the vanishing and exploding gradient issues originate from the scaling according to the diagonal matrix with eigenvalues $diag(\lambda)$, with repeated multiplication by $A$. Vanishing gradient makes it difficult to find out in which direction parameters should move in order to move the cost function. While exploding gradients makes learning unstable \cite{goodfellow_deep_2016}.
+Both the vanishing and exploding gradient issues originate from the scaling according to the diagonal matrix with eigenvalues $diag(\lambda)$, with repeated multiplication by $A$. Vanishing gradient makes it difficult to find out in which direction parameters should move in order to move the cost function, while exploding gradients makes learning unstable \cite{goodfellow_deep_2016}.
 
 Another issue with artificial neural networks is "dead" neurons (units), and is a direct cause of using ReLU. ReLU is widely used to not get caught in between gradient issues, however, it can cause weights to be updated in a way that makes the neuron unable to activate again \cite{_cs231n_????}.
 
@@ -912,7 +911,7 @@ Feedforward neural networks, also referred to as deep feedforward networks or mu
 
 \subsection{Convolutional neural networks}
 
-Convolutional networks \cite{lecun_generalization_1989} is also often referred to as convolutional neural networks or CNNs. CNNs are specialized for processing data that has a known typology. An example could be images, which is a 2D-grid of pixels. This project uses both images and sequential coordinates.
+Convolutional networks \cite{lecun_generalization_1989} are also often referred to as convolutional neural networks or CNNs. CNNs are specialized for processing data that has a known typology. An example could be images, which are 2D-grids of pixels. This project uses both images and sequential coordinates.
 
 \begin{displayquote}
  \textit{Convolutional networks are simply neural networks that use convolution in place of general matrix multiplication in at least one of their layers.}{\cite{goodfellow_deep_2016}[p.~330]}
@@ -975,7 +974,7 @@ The actual function that usually exists in machine learning libraries is cross-c
     \caption{The cross-correlation function \cite{goodfellow_deep_2016}[p.~324].}
 \end{figure}
 
-Sparse interactions, connectivity or weights is a result of making the kernel smaller than the input. Even if an image has many thousands of pixels it is possible to extract small crucial features using smaller kernel sizes.
+Sparse interactions, connectivity or weights are a result of making the kernel smaller than the input. Even if an image has many thousands of pixels it is possible to extract small crucial features using smaller kernel sizes.
 
 \begin{figure}[H]
     \centering
@@ -987,7 +986,7 @@ Sparse interactions, connectivity or weights is a result of making the kernel sm
 %In summary the convolutional layer accepts a volume of size $W_1$ x $H_1$ x $D_1$. In addition to a volume, it needs to provide four hyperparameters. These hyperparameters are the number of filters K, their spartial extent F, the stride S and the ammount of zero padding P. 
 A convolutional layer has typically three stages, the first is to do the convolutions as illustrated in \ref{fig:kernel_applied}, these are linear activations. When all the convolutions are done, they are passed through a nonlinear activation function. An example of a nonlinear activation function is the sigmoid function from \ref{eqn:sigmoid}. Furthermore this stage is often referred to as the detector stage.
 
-The last stage of the a typical convolutional layer is when we apply a pooling function to further modify the output \parencite{zhou_computation_1988}. A pooling function is able to replace the output of a small area with a summary of the nearby outputs. An example of a pooling function is the max pooling, which function uses a pooling unit with a specified size, for example 2x2. The pooling unit in a max pooling function simply outputs the maximum activation of it's region (2x2). A max pooling function with this pooling unit would turn 24x24 units to 12x12 units \cite{goodfellow_deep_2016} \cite{nielsen_neural_2015}.
+The last stage of a typical convolutional layer is when we apply a pooling function to further modify the output \parencite{zhou_computation_1988}. A pooling function is able to replace the output of a small area with a summary of the nearby outputs. An example of a pooling function is the max pooling. The max pooling function uses a pooling unit with a specified size, for example 2x2. The pooling unit in a max pooling function simply outputs the maximum activation of it's region (2x2). A max pooling function with this pooling unit would turn 24x24 units to 12x12 units \cite{goodfellow_deep_2016} \cite{nielsen_neural_2015}.
 
 \section{Recurrent neural networks}
 
@@ -1027,7 +1026,7 @@ The first gate in the memory cell is the input gate. This gate is notated as the
 
 The following layer with sigmoid activation determines how much of the current input should influence the memory state. This process is similar to the input gate. The layer noted by the $tanh$ activation function decides what should be remembered. The output of the pointwise multiplication between the sigmoid and tanh layer, is then added to the state.
 
-The output of the memory cell is a filtered version of the current state, as seen top right in \ref{fig:lstm_cells}. The cell's state is run through a $tanh$ function, to squish the values in the range $[-1, 1]$, then the output is filtered through the output of the sigmoid function, similar to how state was removed and added in the previous steps. 
+The output of the memory cell is a filtered version of the current state, as seen top right in \ref{fig:lstm_cells}. The cell's state is passed through a $tanh$ function, to squish the values in the range $[-1, 1]$, then the output is filtered through the output of the sigmoid function, similar to how state was removed and added in the previous steps. 
 
 The sequential nature of these memory blocks makes LSTM networks good for predicting sequencial data. In pratice, most of the information we encounter is not needed for future predictions. By using gates, the LSTM network is able to decide which information should be remembered and to which scale the previously remembered information should influence future decisions \cite{gers_learning_1999} \cite{_understanding_2015}.
 
@@ -1048,6 +1047,6 @@ $h_{tmp}$ is calculated by adding the input at a timestep $x_t$ to a part of the
 
 To calculate the output of the GRU cell, the cell needs to decide how much of the previous state it is going to keep. This is decided by the update gate $z_t$. Through a element-wise multiplication of $z_t$ with $h_{t-1}$, only the important parts of the previous state is kept. $h_{tmp}$ is multiplied element-wise with $1 - z_t$, and thereby the state removed from previous state is substituted with the state calculated in the current cell.
 
-It is important to remember that the different gate's outputs is a value in the range $[0, 1]$, therefore if $z_t = 0$ then $1 - z_t = 1$
+It is important to remember that the different gate's outputs are values in the range $[0, 1]$, therefore if $z_t = 0$ then $1 - z_t = 1$
 
 If the update gate is 0, $z_t = 0$, and none of the previous state should be kept. This leads to $1 - z_t = 1$, and the all the current state will be kept. On the other hand, if $z_t = 1$, the cell's output will equal the previous cell's output $h_{t-1} = h_t$, and the current input will not influence the output of the cell ($1 - z_t = 0$) \cite{kostadinov_understanding_2017}.

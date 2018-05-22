@@ -25,7 +25,8 @@
 \usepackage{glossaries}
 \usepackage{graphicx}
 \usepackage{subcaption}
-
+\usepackage{pdfpages}
+\usepackage{appendix}
 
 \usepackage[
 backend=biber,
@@ -45,7 +46,6 @@ maxbibnames=120
 %% ----------------------------------------------------------------
 
 \begin{document}
-
 \frontmatter      % Begin Roman style (i, ii, iii, iv...) page numbering
 % Set up the Title Page
 \title  {Recognition of handwritten mathematical symbols and expressions}
@@ -70,11 +70,16 @@ maxbibnames=120
 
 
 %% ----------------------------------------------------------------
+% The title page
+%\includepdf[width=\textwidth, pages=-, width=\textwidth]{Assets/tittelside.pdf}
+    
+
+
 % The preface page
 \preface{
 \addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
 
-The assignment was chosen for several reasons. We were curious about handwriting recognition, since solutions typically involves artificial intelligence, machine learning and advanced software engineering. These were fields we all were interested in. We had little to no prior experience with machine learning, and expected this to be challenging. This however, made the assignment more interesting as we were motivated to learn and curious about ways to solve the problems related.
+The assignment was chosen for several reasons. We were curious about handwriting recognition, since solutions typically involves artificial intelligence, machine learning and advanced software engineering. These were fields we all were interested in. We had little to no prior experience with machine learning, and expected this to be challenging. However, this made the assignment more interesting as we were motivated to learn and curious about ways to solve the problems related.
 
 Before choosing the assignment, we read about the basics of neural networks and the mathematics behind them. We quickly understood that a lot of the math we have learned in previous courses was relevant, and being able to make use of this knowledge further increased our interest for the assignment.
 
@@ -85,6 +90,7 @@ First of all, we would like to thank Ole Christian Eidheim for being both an ins
 \vfill
 
 \begin{tabularx}{\textwidth}{XXX}
+\includegraphics[width=4cm, trim=0 4cm 0 4cm]{Assets/signatures/even.png} & \includegraphics[width=4cm, trim=0 3.5cm 0 3.5cm]{Assets/signatures/haavard.png} & \includegraphics[width=4cm, trim=0 4cm 0 4cm]{Assets/signatures/torkil_sign.png} \tabularnewline
 \centering{$\rule{4cm}{0.15mm}$} & \centering{$\rule{4cm}{0.15mm}$} & \centering{$\rule{4cm}{0.15mm}$} \tabularnewline
 \centering{Even Dalen} & \centering{Håvard Langdal} & \centering{Torkil Solheim} \\
 \end{tabularx}
@@ -109,7 +115,7 @@ In this project, a system for recognizing handwritten mathematical symbols will 
 
 Since the beginning of the project, some changes were made to the assignment. In the initial phase it was not known if developing a system that would work well and enrich the functionality of the web application was actually achievable. It was therefore decided to go in the direction of developing a proof of concept, which could be developed further.
 
-After some discussion with our mentor the project was also limited to focus on the handwriting recognition system, and not how to implement it into the web application. Creating a robust and acceptable system would require a lot of work. In addition, with no prior experience with machine learning, a considerable amount of time would be needed to research relevant topics and read about existing solutions. 
+After some discussion with our mentor, the project was also limited to focus on the handwriting recognition system, and not how to implement it into the web application. Creating a robust and acceptable system would require a lot of work. In addition, with no prior experience with machine learning, a considerable amount of time would be needed to research relevant topics and read about existing solutions. 
 
 }
 \clearpage % Assignment ended, start a new page 
@@ -178,20 +184,27 @@ Through our research, we explored different methods in pre- and post-processing 
 % Now begin the Appendices, including them as separate files
 
 \addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
+\backmatter
+%% ----------------------------------------------------------------
+%% ----------------------------------------------------------------
+\printbibliography
 
+\clearpage
 \appendix % Cue to tell LaTeX that the following 'chapters' are Appendices
+%\renewcommand\thechapter{}
+%\renewcommand\thesection{\arabic{section}}
+%\chapter{Appendix}
+%\SuspendCounters{Chapter}
+%\thispagestyle{plain}
 
-\input{Appendices/AppendixA}	% Appendix Title
 
+%\section{System documentation}
+%\includepdf[ pages=1, width=\textwidth]{Appendices/systemdokumentasjon.pdf}
+%\includepdf[ pages=2-, width=\textwidth]{Appendices/systemdokumentasjon.pdf}
 %\input{Appendices/AppendixB} % Appendix Title
 
 %\input{Appendices/AppendixC} % Appendix Title
 
-\addtocontents{toc}{\vspace{2em}}  % Add a gap in the Contents, for aesthetics
-\backmatter
-%% ----------------------------------------------------------------
-\printglossary
-%% ----------------------------------------------------------------
-\printbibliography
+
 % END
 \end{document}

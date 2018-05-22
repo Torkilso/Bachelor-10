@@ -1,7 +1,7 @@
 \chapter{Technology and method}
 \lhead{\emph{Technology and method}}
 
-In this chapter the technology and methods applied in this project is reasoned. The approach chosen will be explained in such a way that the results can be reconstructed.
+In this chapter the technology and methods applied in this project are reasoned. The approach chosen will be explained in such a way that the results can be reconstructed.
 
 \section{Technology}
 
@@ -18,10 +18,10 @@ Office 365 is available to all students at NTNU and offers cloud storage and ema
 
 
 \subsection{Python and frameworks}
-The choice of programming language was influenced mainly by its ability to integrate into already existing technology and the availability of machine learning tools. Python was a natural choice, as the Matistikk is written in Django, a Python framework. In addition, Python was chosen due to its popular machine learning libraries TensorFlow and Keras. These libraries are closely connected, where Keras is used as an abstraction layer on top of TensorFlow. Keras was chosen to simplify the coding process and to be able to create quick prototypes.
+The choice of programming language was influenced mainly by its ability to integrate into already existing technology and the availability of machine learning tools. Python was a natural choice, as Matistikk is written in Django, a Python framework. In addition, Python was chosen due to its popular machine learning libraries TensorFlow and Keras. These libraries are closely connected, where Keras is used as an abstraction layer on top of TensorFlow. Keras was chosen to simplify the coding process and to be able to create quick prototypes.
 
 
-A client application was also needed to draw symbols, collect data and present statistics. To keep the application architecture simple, HTML5, CSS and JavaScript with JQuery is used. In addition, the Python framework Tornado is used to serve the API and the client application. Tornado was chosen due to its simplicity and high performance.
+A client application was also needed to draw symbols, collect data and present statistics. To keep the application architecture simple, HTML5, CSS and JavaScript with JQuery are used. In addition, the Python framework Tornado is used to serve the API and the client application. Tornado was chosen due to its simplicity and high performance.
 
 
 \section{System Architecture}
@@ -95,18 +95,16 @@ An image taken directly from the training data is visualized in figure \ref{fig:
 
 \section{The recognition system}
 \label{the_recognintion_system}
-The recognition system developed consists of several components, that together performs the steps mentioned in section \ref{handwriting_recognition} and \ref{recognition_of_handwritten_mathematics}. 
-
+The recognition system developed consists of several components, that together performs the common steps in handwriting recognition.
 
 \subsection{Preprocessing and segmentation}
 \label{preprocessing_and_segmentation}
 
-The system begins with the segmentation, as the traces are sequential data and does not need to be preprocessed for the segmentation method chosen. The recognition system uses a simple approach for this, where traces that overlap are considered to be part of the same symbol. To find these groups, the coordinates of the traces is used to calculate distances and check for overlaps. If the distance between a coordinate in a trace to a coordinate in another trace is within a small threshold, the traces are grouped together.
+The system begins with the segmentation, as the traces are sequential data and does not need to be preprocessed for the segmentation method chosen. The recognition system uses a simple approach for this, where traces that overlap are considered to be part of the same symbol. To find these groups, the coordinates of the traces are used to calculate distances and check for overlaps. If the distance between a coordinate in a trace to a coordinate in another trace is within a small threshold, the traces are grouped together.
 
-After the traces are grouped, they are placed into a symbol object. Each of these symbol object receives a set of positional and proportional attributes based on the coordinates in the traces. Maximum and minimum values for both x- and y-coordinates is found, as well as width, height and the centre point. These attributes is used in the context search, described in section \ref{interpretation_context_search}. In addition, each symbol contains a truth value, which holds the classification results received in the next step.
+After the traces are grouped, they are placed into a symbol object. Each of these symbol object receives a set of positional and proportional attributes based on the coordinates in the traces. Maximum and minimum values for both x- and y-coordinates are found, as well as width, height and the centre point. These attributes are used in the context search, described in section \ref{interpretation_context_search}. In addition, each symbol contains a truth value, which holds the classification results received in the next step.
 
-Before the classification step the traces of each symbol is preprocessed as described in \ref{preparing_data_traces}. 
-
+Before the classification step the traces of each symbol are preprocessed as described in \ref{preparing_data_traces}. 
 
 \subsection{Model architecture} 
 
@@ -299,7 +297,7 @@ The interpretation algorithm consist of a recursive search function and a set of
 \label{fig:interpretation-tree1}
 \end{figure}
 
-The system understands several mathematical notation elements, including square roots, fractions and exponents. Each of these elements has their own set of grammatical or positional rules that is used to find them (explained in section \ref{interpretation-square-roots} - \ref{interpretation-exponents}). In addition to these elements, some special symbols such as the equal sign and the multiplication dot is found and classified in this step (see section \ref{interpretation-special-symbols}).
+The system understands several mathematical notation elements, including square roots, fractions and exponents. Each of these elements has their own set of grammatical or positional rules that are used to find them (explained in section \ref{interpretation-square-roots} - \ref{interpretation-exponents}). In addition to these elements, some special symbols such as the equal sign and the multiplication dot are found and classified in this step (see section \ref{interpretation-special-symbols}).
 
 \subsubsection{The main function}
 The main function in the interpretation system orchestrates the order of what element to search for. The order of elements searched for is:
@@ -350,12 +348,12 @@ To find the contents of a body (numerators, denominators, square roots), the int
 
 If a square root-, fraction- or exponent-element is found, the system creates an object of the correct type and links the relevant symbols to it. When creating one of these objects the traces for each of the input symbols are combined and new positional and proportional attributes are found.
 
-Details about how these elements are found is described in the next sections.
+Details about how these elements are found are described in the next sections.
 
 \subsubsection{Square roots}
 \label{interpretation-square-roots}
 
-The symbols classified as square roots is first inserted into a new list and sorted by width, to make sure that the recursive logic is maintained. The widest one is most likely the outermost one if there are roots within roots, and is evaluated first. To find a square root body the system searches for objects within the bounds specified by the positional attributes of the square root. In addition to using the attributes described in section \ref{preprocessing_and_segmentation}, the square roots also uses the x-value of the lowest point, which is the bottom left corner in the image below.
+The symbols classified as square roots are first inserted into a new list and sorted by width, to make sure that the recursive logic is maintained. The widest one is most likely the outermost one if there are roots within roots, and is evaluated first. To find a square root body the system searches for objects within the bounds specified by the positional attributes of the square root. In addition to using the attributes described in section \ref{preprocessing_and_segmentation}, the square roots also uses the x-value of the lowest point, which is the bottom left corner in the image below.
 
 \begin{figure}[H]
 \centering
@@ -405,7 +403,7 @@ To find fractions the system searches for fraction bars by running the input sym
     \item Be the only minus sign in the input list and have at least one symbol in the area over or under itself.
 \end{itemize}
 
-To find the numerator and denominator of a fraction, the system searches for symbols in the area over and under the minus signs. The width of this area is specified by the leftmost and rightmost coordinate of the minus sign, and the height is limited only if the area is between two fraction bars (the area that searches for the number 3 in the image below). The denominators and numerators found is also sent recursively through the main function to further look for context.
+To find the numerator and denominator of a fraction, the system searches for symbols in the area over and under the minus signs. The width of this area is specified by the leftmost and rightmost coordinate of the minus sign, and the height is limited only if the area is between two fraction bars (the area that searches for the number 3 in the image below). The denominators and numerators found are also sent recursively through the main function to further look for context.
 
 \begin{figure}[H]
 \centering
@@ -466,7 +464,7 @@ In addition, there is a special case rule if the exponent is an operator (-, +).
 \caption{Example of a power group and visualization of the first and second rule.}
 \end{figure}
 
-The system also supports groups of symbols and objects as base or exponent. Exponents within exponents is also supported. When a base and exponent is found, the system continues to check if the next symbol also is an exponent for the same base. This search continues until a symbol conflicts with one of the rules. All the found symbols is then sent recursively through the main function again.
+The system also supports groups of symbols and objects as base or exponent. Exponents within exponents are also supported. When a base and exponent are found, the system continues to check if the next symbol also is an exponent for the same base. This search continues until a symbol conflicts with one of the rules. All the found symbols are then sent recursively through the main function again.
 
 \begin{figure}[H]
     \centering
@@ -515,9 +513,9 @@ The system also supports groups of symbols and objects as base or exponent. Expo
 \subsubsection{Special case symbols}
 \label{interpretation-special-symbols}
 
-In this system there are two special case symbols: the equal sign and the multiplication dot operator. These require special treatment due to how the segmentation and classification is done. An equal sign usually consist of two traces which would be interpreted as two minus signs since the segmentation step splits them up. The multiplication sign is a small dot that, when preprocessed and scaled up, would look similar to other round symbols like 0 and $\theta$. It would therefore most likely be misclassified.
+In this system there are two special case symbols: the equal sign and the multiplication dot operator. These require special treatment due to how the segmentation and classification steps are designed. An equal sign usually consist of two traces which would be interpreted as two minus signs since the segmentation step splits them up. The multiplication sign is a small dot that, when preprocessed and scaled up, would look similar to other round symbols like 0 and $\theta$. It would therefore most likely be misclassified.
 
-To find equal signs the system searches for minus signs that are of similar size and lined up like an equal sign. To do this, each possible pair of minus signs in the input list is tested against some rules. The pair is classified as an equal sign only if these points are fulfilled:
+To find equal signs the system searches for minus signs that are of similar size and lined up like an equal sign. To do this, each possible pair of minus signs in the input list are tested against some rules. The pair is classified as an equal sign only if these points are fulfilled:
 
 \begin{itemize}
     \setlength\itemsep{0em}
@@ -528,15 +526,15 @@ To find equal signs the system searches for minus signs that are of similar size
 
 These rules became such after many rounds of testing. The idea behind them was to be as general as possible.
 
-To find the multiplication signs small symbols are searched for by looking at width, height and area. Symbols are classified as multiplication signs if their area, height and width is within a small threshold. In addition, the height and width has to be similar, one of them can't be more than twice the length of the other one.
+To find the multiplication signs small symbols are searched for by looking at width, height and area. Symbols are classified as multiplication signs if their area, height and width are within a small threshold. In addition, the height and width has to be similar, one of them can't be more than twice the length of the other one.
 
 
 \subsection{Converting to \LaTeX}
-After the context has been found, the results can be converted to the corresponding \LaTeX -code. For this, the truth values to all the output objects is combined in a string by a function. This function also has to be recursive, since the output objects might be fractions, square root or base-exponent groups. If a fraction is found, the contents of the numerator and denominator is sent through the same function. The same applies for the square root cores, exponents and bases.
+After the context has been found, the results can be converted to the corresponding \LaTeX -code. For this, the truth values to all the output objects are combined in a string by a function. This function also has to be recursive, since the output objects might be fractions, square root or base-exponent groups. If a fraction is found, the contents of the numerator and denominator are sent through the same function. The same applies for the square root cores, exponents and bases.
 
 \section{The project process} % 
 The project process in terms of software engineering methodology has been a mix between multiple concepts and paradigms. Modern Agile was used in this project, it emphasizes four basic principles that made our project flow optimal. The four principles are make people awesome, deliver value continuously, make safety a prerequisite and experiment and learn rapidly. \cite{agile_modern_????}
 
 
 \section{Teamwork and roles} %
-Every project participant had roles as a full stack software engineer and research engineer. Initially the resources were distributed between three domains, front end, back end and machine learning research. No clear structure was enforced because different approaches can improve quality and productivity. The distribution of roles and tasks were based on the sprint goals.
+Every project participant had roles as a full stack software engineer and research engineer. Initially the resources were distributed between three domains, front end, back end and machine learning research. No clear structure was enforced and the roles were unconstrained, because it was thought that different mindsets could improve quality and productivity. The distribution of roles and tasks were based on the sprint goals.
