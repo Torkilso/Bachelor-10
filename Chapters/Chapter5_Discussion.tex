@@ -3,23 +3,22 @@
 
 \section{Scientific results}
 
-Starting out with recognizing symbols using a convolutional neural network was a decision made early in the project. A lot of previous research on recognizing similar images such as with the MNIST dataset already existed. Therefore, using images as input data was a safe direction when creating a minimal viable product (MVP).
-
+Starting out with recognizing symbols using a convolutional neural network was a decision made early in the project. A lot of previous research on recognizing similar images such as with the MNIST dataset already existed. Therefore, using images as input data was a safe direction when creating the initial product prototype. The initial product prototype was important for further experimentation on segmentation, context search and classification. % for eventually collecting datasets.
 
 \subsection{Neural network accuracy}
-The convolutional neural network's performance can be seen in figure \ref{fig:CNN_44000}. Its performance on the test dataset was very good, and it kept increasing over time. However, as a consequence of our relatively small train dataset, the network did not show the same accuracy on the validation data and the real dataset. This model was prone to overfitting, even when including several dropout layers. 
+The convolutional neural network's performance can be seen in figure \ref{fig:CNN_44000}. Its performance on the test dataset was very good, and it kept increasing over time. However, as a consequence of our relatively small training dataset, the network did not show the same accuracy on the validation data and the real dataset. This model was prone to overfitting, even when including several dropout layers. 
 
 When traces are converted to images, a lot of sequential data is lost. Similar looking symbols are often drawn in different ways, however end up looking similar when the drawing is finished. This is information lost when turning the input data into images, and therefore may result in lower prediction accuracy than a network which includes this information.
 
-A recurrent neural network was used in order to include the sequential information in our data. Creating a RNN model introduces its own challenges, especially the format on its input data. A trace group may include data with different number of coordinates and different number of traces. A lot of work was therefore spent on turning the input data into a format the RNN model could predict. Downsampling to reduce the number of points, padding the data arrays, combining traces to a single trace all while still keeping information about which traces were separate. A lot of inspiration was taken from Google's Quick Draw, and its open source code. \cite{_recurrent_2017} 
+A recurrent neural network was used in order to include the sequential information in our data. Creating an RNN model introduces its own challenges, especially the format on its input data. A trace group may include data with different number of coordinates and different number of traces. A lot of work was therefore spent on turning the input data into a format the RNN model could predict. Downsampling to reduce the number of points, padding the data arrays, combining traces to a single trace all while still keeping information about which traces were separate. A lot of inspiration was taken from Google's Quick Draw, and its open source code. \cite{_recurrent_2017} 
 
-As figure \ref{fig:RNN_44000} displays, the recurrent neural network managed to perform better on the validation dataset, and did not have the same problems with overfitting as the CNN model. The recurrent network had issues with underfitting the train dataset, even after 40 epochs. 
+As figure \ref{fig:RNN_44000} displays, the recurrent neural network managed to perform better on the validation dataset, and did not have the same problems with overfitting as the CNN model. The recurrent network had issues with underfitting the training dataset, even after 40 epochs. 
 
 The two different models were very different, both in model architecture, and the format of input data. Therefore, it was interesting to see whether the models could perform better predictions combined, than each model individually. As seen in figure \ref{fig:combined_CNN_RNN_44000}, the combined model performed better than both the CNN and RNN on both the test dataset and the real dataset. 
 
 With an accuracy of 98.28\% on the test dataset, the combined model had an accuracy 1.77\% better than the CNN model, and an accuracy of 0.93\% better than the RNN. The difference was even larger on the real dataset, with 1.52\% better accuracy than the RNN. This indicates that the combined model handles data from different sources better. The 'real' dataset is small compared to the other datasets, so it is hard to make conclusions on the 'real' dataset. 
 
-This indicates that a combined artificial neural network could in many cases outperform a CNN or RNN with the similar datasets on this specific classification problem. 
+This indicates that a combined artificial neural network can outperform a CNN or RNN on this specific classification problem.
 
 \subsection{Sources of error}
 % skrivemåte
@@ -48,7 +47,7 @@ Since the product derived from a research project, there was never any requireme
 
 Segmentation turned out to be the most complex and difficult issue to solve in this project, and is why it's included in engineering results. The focus in this project was to create both a working application and a solid classifier. Making a general solution for segmentation of symbols was attempted early in the project. The solution consisted of making a CNN model generate bounding boxes around symbols. After bounding boxes were generated, we could extract the traces inside the bounding box and combine them to a segmented trace group. Because of poor results in generating bounding boxes as a consequence of a small dataset and an unfit model, we abandoned this solution.
 
-Using a recurrent neural network to determine the symbols' context was proposed, however there was not enough time to attempt this approach. The context determination could be done by sending predicted bounding boxes and the classified symbols to a RNN, which would thereby generate a resulting latex expression. 
+Using a recurrent neural network to determine the symbols' context was proposed, however there was not enough time to attempt this approach. The context determination could be done by sending predicted bounding boxes and the classified symbols to an RNN, which would thereby generate a resulting latex expression. 
 
 It was clear that some sort of machine learning solution on the segmentation and context issues would be preferable. In the case of segmenting the symbols, it was difficult to create a solution that got better results than an algorithm recognizing overlapping traces. In context search, limited time and experience with machine learning caused us to choose an algorithmic solution to find context.
 
@@ -59,7 +58,7 @@ As machine learning was a new concept for all the team members, some of the deci
 
 \subsection{Strengths and weaknesses}
 
-The system developed has both strengths and weaknesses. There are details in all parts of the system that could have been better, however, many of these could be solved if with a longer project scope. Overall the system does a great job if the input data contains small amounts of noise and is able to segment the symbols correctly.
+The system developed has both strengths and weaknesses. There are details in all parts of the system that could have been better, however, many of these could be solved if with a longer project scope. Overall the system does a great job if the input data contains small amounts of noise and it is able to segment the symbols correctly.
 
 % Traing data
 In the training phase of the neural network there were some limitations in terms of training data. The training set was small and many of the symbols used did not have enough training samples to train the neural network optimally. More training samples could have been collected, a system for this would require some time to set up. However, the model trained handles most symbols well and achieves high accuracy for the validation sets.
@@ -89,7 +88,7 @@ From the project participants point of view, the project progress had ups and do
 From the aspect of technology, we were very pleased with using Python, Keras and Tensorflow. These were technologies which hid much of the complexity with machine learning. Especially Keras worked well with the agile principles, through quick prototyping and the ability to create an early MVP. Tensorflow as a Keras back end enabled us to do the computations on a GPU, which increased our ability experimentation with different models.
 
 %Hva ble ikke bra på grunn av valgt prosess, fremgangsmåte og teknologi?
-Using modern agile with inspiration from lean startup worked well in the sprints dominated by software development. Phases with mostly machine learning did not benefit in the same way because it is difficult to plan and estimate progression dealing with complex new subjects and approaches. However, small incremental steps were inspired by these methods, which helped us make continuous progress.
+Using modern agile with inspiration from lean startup worked well in the sprints dominated by software development. Phases with mostly machine learning did not benefit in the same way because it is difficult to plan and estimate progression dealing with complex new subjects and approaches. However, small incremental steps were inspired by these methods, and helped us to make continuous progress.
 
 %Hva ble bra eller dårlig uavhengig av valgt prosess, fremgangsmåte og teknologi?
 Independent of the choices made on process, approach and technology, the teamwork worked well. Communication through Slack worked as expected, frequent status meetings and thorough discussions led to good results in both software and classification accuracy.
@@ -106,16 +105,14 @@ The product created is meant to be a resource for Matistikk. It can function as 
 
 As the data used is this product is based on data distributed for academic use, there are some restrictions to its usage. The model generated from the data may therefore not be used in a commercial setting, and in order for Matistikk to be proprietary software, it would need its own dataset.
 
-The technical proficiency needed to use this product is average. Either drawing has to be done through a touch screen, iPad or similar, which is technologies most people has experience with. This product will be an addition to an already existing application Matistikk, where the target audience are education students. Education students are expected to have a technical proficiency sufficient to handle this web application.
+The technical proficiency needed to use this product is average. Either drawing has to be done through a touch screen, iPad or similar, which is technologies most people have experience with. This product will be an addition to an already existing application Matistikk, where the target audience are education students. Education students are expected to have a technical proficiency sufficient to handle this web application.
 
 \subsection{Ethics}
-%however, some modifications will have to be done to use the product in a commercial setting
-
-The project does not limit where and how Matistikk in a non-commercial setting. This indicates that teachers with limited technical capabilities may have to use our product. If the technical proficiency is insufficient, this can have a negative impact on the quality of education these teacher can provide. 
+The project does not limit where and how Matistikk can be used in a non-commercial setting, and the product can therefore be used by an audience other than education students. This indicates that teachers with limited technical capabilities may have to use our product. If the technical proficiency is insufficient, this can have a negative impact on the quality of education these teacher can provide. 
 
 The product created gives the opportunity to reduce people's handwriting to a general Latex format. This increases the objectivity in test evaluation, as people with different handwriting styles are evaluated equally. On the other hand, a misclassification will give teachers less opportunity for subjectively evaluating students, in cases where this would be advantageous.
 
-\subsection{Professional ethics}
+\subsection{Professional ethics and teamwork}
 
 When developing the product, a lot of attention was directed to writing good maintainable code. As this is code that may be worked on by future developers, we wished to give them the best opportunity possible to quickly learn and use our product. Giving credit for code not written by us was also important, and all code taken from other people has been documented. 
 
@@ -123,6 +120,4 @@ Relative to our work as a team. We wished to make each other's workday as good a
 
 In addition to having good internal teamwork we also communicated, respected and included our product owners where we felt it was suitable. Sharing progress was an important aspect of our project flow. Using email and setting up meetings in order to make our product owners included and up to date, was therefore a priority.
 
-\section{Teamwork}
-%Studenter som jobber i gruppe skal skrive et avsnittder de reflekterer over gruppearbeidet og hvordan det har fungert.(Dette kommer i tillegg til det individuelle refleksjonsnotatet som skal leveres.
-A quick reflection of the teamwork and team dynamics during this project reveals curious students eager to learn in an exciting field. It is though, not hard to conclude that in a difficult subject experiencing both productivity and motivational ups and downs are common. During the project, Thursdays were often reserved for part-time jobs. Luckily everyone could work on Thursdays, so no other weekday went away to inefficient teamwork. Every team member was responsible for their own part of the work and to get the recommended amount of hours, which was about 30 hours per week. In retrospect, time working together is crucial so it is important to stay focused on the project and not work, although this has not been a limiting factor.
+A reflection of the teamwork and team dynamics during this project reveals curious students eager to learn in an exciting field. It is though, not hard to conclude that in a difficult subject experiencing both productivity and motivational ups and downs are common. Each team member was responsible to contribute and perform their best in order to create a successful product. In retrospect, time working together was crucial, therefore it was important to stay focused on the project, although this has not been a limiting factor.
